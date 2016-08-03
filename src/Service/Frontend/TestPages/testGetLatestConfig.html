@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test: Get latest FetchClimate configuration</title>
+    <link rel="stylesheet" type="text/css" href="../css/testPages.css" />
+    <script src="../v1/Script/jquery-1.8.0.min.js"></script>
+    <script src="../v1/Script/FetchClimate.Request.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            FetchClimate.getConfiguration().then(
+                function (config) {
+                    $("#config").addClass("json-data").html(JSON.stringify(config));
+                    $("#result").addClass("successful-test").html("Test succeeded");
+                },
+                function () {
+                    $("#result").addClass("failed-test").html("Test failed: getConfiguration returns error");
+                });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="config"></div>
+</body>
+</html>

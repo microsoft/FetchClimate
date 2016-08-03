@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>2.7</ProductVersion>
+    <ProjectGuid>077d5419-2806-48ce-8b6b-fffc30b0ad44</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebService.Azure</RootNamespace>
+    <AssemblyName>WebService.Azure</AssemblyName>
+    <StartDevelopmentStorage>True</StartDevelopmentStorage>
+    <Name>AzureDeployment</Name>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <UseEmulatorExpressByDefault>False</UseEmulatorExpressByDefault>
+    <UseWebProjectPorts>False</UseWebProjectPorts>
+    <PackageEnableRemoteDebugger>False</PackageEnableRemoteDebugger>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- Items for the project -->
+  <ItemGroup>
+    <ServiceConfiguration Include="ServiceConfiguration.template.cscfg" />
+    <ServiceDefinition Include="ServiceDefinition.csdef" />
+    <ServiceConfiguration Include="ServiceConfiguration.ver2.1-main-public-instnace.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.fc2matthew.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.cloud staging5.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.cloud staging.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.cloud staging3.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.cloud staging6.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.FCApp.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.FCAppStaging.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.Sample.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.Local.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.Cloud.cscfg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FetchWorker\FetchWorker.csproj">
+      <Name>FetchWorker</Name>
+      <Project>{a0a7dc23-2aa4-44d7-b9db-1211c16e7379}</Project>
+      <Private>True</Private>
+      <RoleType>Worker</RoleType>
+      <RoleName>FetchWorker</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>False</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
+    <ProjectReference Include="..\Frontend\Frontend.csproj">
+      <Name>Frontend</Name>
+      <Project>{23261d05-5d07-4453-93a3-efc20d009558}</Project>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <RoleName>Frontend</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FetchWorkerContent\" />
+    <Folder Include="FrontendContent\" />
+    <Folder Include="FrontendContent\bin" />
+    <Folder Include="Profiles" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishProfile Include="Profiles\FCApp.azurePubxml" />
+    <PublishProfile Include="Profiles\FCAppStaging.azurePubxml" />
+    <PublishProfile Include="Profiles\fetchclimate2.1-production.azurePubxml" />
+    <PublishProfile Include="Profiles\fetchclimate2-staging.azurePubxml" />
+    <PublishProfile Include="Profiles\fetchclimate2-staging3.azurePubxml" />
+    <PublishProfile Include="Profiles\FetchDev2-001Staging.azurePubxml" />
+    <PublishProfile Include="Profiles\fetchclimate2-production.azurePubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FrontendContent\bin\startup.cmd">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <DiagnosticsConfiguration Include="FetchWorkerContent\diagnostics.wadcfgx" />
+    <DiagnosticsConfiguration Include="FrontendContent\diagnostics.wadcfgx" />
+  </ItemGroup>
+  <!-- Import the target files for this project template -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\2.7\</CloudExtensionsDir>
+  </PropertyGroup>
+  <Import Project="$(CloudExtensionsDir)Microsoft.WindowsAzure.targets" Condition="Exists('$(CloudExtensionsDir)')" />
+</Project>

@@ -1,0 +1,75 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Microsoft.Research.Science.FetchClimate2.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FC_TEMPERATURE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">airt</Value>
+    </Setting>
+    <Setting Name="FC_LAND_AIR_TEMPERATURE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">airt_land</Value>
+    </Setting>
+    <Setting Name="FC_ELEVATION" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">elev</Value>
+    </Setting>
+    <Setting Name="FC_LAND_ELEVATION" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">elev_land</Value>
+    </Setting>
+    <Setting Name="FC_SOIL_MOISTURE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">soilmoist</Value>
+    </Setting>
+    <Setting Name="FC_RELATIVE_HUMIDITY" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">relhum</Value>
+    </Setting>
+    <Setting Name="FC_LAND_AIR_RELATIVE_HUMIDITY" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">relhum_land</Value>
+    </Setting>
+    <Setting Name="FC_LAND_WIND_SPEED" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">windspeed</Value>
+    </Setting>
+    <Setting Name="FC_LAND_DIURNAL_TEMPERATURE_RANGE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">dtr</Value>
+    </Setting>
+    <Setting Name="FC_LAND_FROST_DAY_FREQUENCY" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">frs</Value>
+    </Setting>
+    <Setting Name="FC_LAND_WET_DAY_FREQUENCY" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">wet</Value>
+    </Setting>
+    <Setting Name="FC_LAND_SUN_PERCENTAGE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sunp</Value>
+    </Setting>
+    <Setting Name="FC_PRECIPITATION" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">prate</Value>
+    </Setting>
+    <Setting Name="CRU_CL_2_0" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CRU CL 2.0</Value>
+    </Setting>
+    <Setting Name="NCEP_REANALYSIS_1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">NCEP/NCAR Reanalysis 1 (regular grid)|NCEP/NCAR Reanalysis 1 (Gauss T62)</Value>
+    </Setting>
+    <Setting Name="GHCNv2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">GHCNv2</Value>
+    </Setting>
+    <Setting Name="CPC_SOIL_MOSITURE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CpcSoilMoisture</Value>
+    </Setting>
+    <Setting Name="ETOPO1_ICE_SHEETS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ETOPO1</Value>
+    </Setting>
+    <Setting Name="GTOPO30" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">GTOPO30</Value>
+    </Setting>
+    <Setting Name="WORLD_CLIM_1_4" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">WorldClim 1.4</Value>
+    </Setting>
+    <Setting Name="ServiceUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://fetchclimate2.cloudapp.net</Value>
+    </Setting>
+    <Setting Name="FC_OCEAN_DEPTH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">depth_ocean</Value>
+    </Setting>
+    <Setting Name="FC_OCEAN_AIR_TEMPERATURE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">airt_ocean</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

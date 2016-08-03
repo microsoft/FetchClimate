@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{3F690B3A-F595-469E-99CB-CE1FE9FEBAE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FetchCore", "..\..\src\Core\FetchCommon\FetchCore.csproj", "{BB21AD9B-37C3-4120-8AC5-236153A85E89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FetchStructures", "..\..\src\Libraries\FetchRequest\FetchStructures.csproj", "{C5BB5E4F-A9E8-41E0-BC8B-FBECC24F8E27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteFetch", "..\..\src\Service\RemoteFetch\RemoteFetch.csproj", "{8AE6B2F9-E06A-47DA-896D-99E80A3915F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureBlobDataSet", "..\..\src\Libraries\AzureBlobDataSet\AzureBlobDataSet.csproj", "{203BD1D2-822E-44C3-A0A4-12DD6FE5147E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FetchClimate", "..\..\src\Utils\FetchClimate\FetchClimate.csproj", "{621144D8-2DE4-4D0B-A626-2A942AF56A86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{7597FFA5-B25D-4796-9432-B804F4A1A85F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://vstfmsrc:8080/tfs/cscience
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\..\\src\\Core\\FetchCommon\\FetchCore.csproj
+		SccProjectTopLevelParentUniqueName1 = DotNetClient.sln
+		SccProjectName1 = ../../src/Core/FetchCommon
+		SccLocalPath1 = ..\\..\\src\\Core\\FetchCommon
+		SccProjectUniqueName2 = ..\\..\\src\\Libraries\\FetchRequest\\FetchStructures.csproj
+		SccProjectTopLevelParentUniqueName2 = DotNetClient.sln
+		SccProjectName2 = ../../src/Libraries/FetchRequest
+		SccLocalPath2 = ..\\..\\src\\Libraries\\FetchRequest
+		SccProjectUniqueName3 = ..\\..\\src\\Service\\RemoteFetch\\RemoteFetch.csproj
+		SccProjectTopLevelParentUniqueName3 = DotNetClient.sln
+		SccProjectName3 = ../../src/Service/RemoteFetch
+		SccLocalPath3 = ..\\..\\src\\Service\\RemoteFetch
+		SccProjectUniqueName4 = ..\\..\\src\\Libraries\\AzureBlobDataSet\\AzureBlobDataSet.csproj
+		SccProjectTopLevelParentUniqueName4 = DotNetClient.sln
+		SccProjectName4 = ../../src/Libraries/AzureBlobDataSet
+		SccLocalPath4 = ..\\..\\src\\Libraries\\AzureBlobDataSet
+		SccProjectUniqueName5 = ..\\..\\src\\Utils\\FetchClimate\\FetchClimate.csproj
+		SccProjectName5 = ../../src/Utils/FetchClimate
+		SccLocalPath5 = ..\\..\\src\\Utils\\FetchClimate
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB21AD9B-37C3-4120-8AC5-236153A85E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB21AD9B-37C3-4120-8AC5-236153A85E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB21AD9B-37C3-4120-8AC5-236153A85E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB21AD9B-37C3-4120-8AC5-236153A85E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5BB5E4F-A9E8-41E0-BC8B-FBECC24F8E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5BB5E4F-A9E8-41E0-BC8B-FBECC24F8E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5BB5E4F-A9E8-41E0-BC8B-FBECC24F8E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5BB5E4F-A9E8-41E0-BC8B-FBECC24F8E27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AE6B2F9-E06A-47DA-896D-99E80A3915F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AE6B2F9-E06A-47DA-896D-99E80A3915F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AE6B2F9-E06A-47DA-896D-99E80A3915F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AE6B2F9-E06A-47DA-896D-99E80A3915F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{203BD1D2-822E-44C3-A0A4-12DD6FE5147E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{203BD1D2-822E-44C3-A0A4-12DD6FE5147E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{203BD1D2-822E-44C3-A0A4-12DD6FE5147E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{203BD1D2-822E-44C3-A0A4-12DD6FE5147E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{621144D8-2DE4-4D0B-A626-2A942AF56A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621144D8-2DE4-4D0B-A626-2A942AF56A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621144D8-2DE4-4D0B-A626-2A942AF56A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621144D8-2DE4-4D0B-A626-2A942AF56A86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB21AD9B-37C3-4120-8AC5-236153A85E89} = {7597FFA5-B25D-4796-9432-B804F4A1A85F}
+		{C5BB5E4F-A9E8-41E0-BC8B-FBECC24F8E27} = {3F690B3A-F595-469E-99CB-CE1FE9FEBAE1}
+		{8AE6B2F9-E06A-47DA-896D-99E80A3915F9} = {3F690B3A-F595-469E-99CB-CE1FE9FEBAE1}
+		{203BD1D2-822E-44C3-A0A4-12DD6FE5147E} = {3F690B3A-F595-469E-99CB-CE1FE9FEBAE1}
+	EndGlobalSection
+EndGlobal

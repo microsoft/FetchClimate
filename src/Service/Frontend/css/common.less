@@ -1,0 +1,289 @@
+html {}
+
+@import "_variables";
+@import "_mixins";
+@import "_sprites";
+
+// Fonts.
+// -------------------------
+/*
+@font-face {
+  font-family: "Segoe Print";
+  src: url("../fonts/segoepr.ttf");
+}
+
+@font-face {
+  font-family: "Segoe Print Bold";
+  src: url("../fonts/segoeprb.ttf");
+}
+
+@font-face {
+  font-family: "Segoe Script";
+  src: url("../fonts/segoesc.ttf");
+}
+
+@font-face {
+  font-family: "Segoe Script Bold";
+  src: url("../fonts/segoescb.ttf");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/segoeui.ttf");
+}
+
+@font-face {
+  font-family: "Segoe UI Bold";
+  src: url("../fonts/segoeuib.ttf");
+}
+
+@font-face {
+  font-family: "Segoe UI Italic";
+  src: url("../fonts/segoeuii.ttf");
+}
+
+@font-face {
+  font-family: "Segoe UI Light";
+  src: url("../fonts/segoeuil.ttf");
+}
+
+@font-face {
+  font-family: "Segoe UI Light Italic";
+  src: url("../fonts/segoeuili.ttf");
+}
+
+@font-face {
+  font-family: "Segoe UI Semibold";
+  src: url("../fonts/segoeuisb.ttf");
+}
+
+@font-face {
+  font-family: "Segoe UI Semibold Italic";
+  src: url("../fonts/segoeuisbi.ttf");
+}
+
+@font-face {
+  font-family: "Segoe UI Semilight";
+  src: url("../fonts/segoeuisl.ttf");
+}
+
+@font-face {
+  font-family: "Segoe UI Semilight Italic";
+  src: url("../fonts/segoeuisli.ttf");
+}
+
+@font-face {
+  font-family: "Segoe UI Symbol";
+  src: url("../fonts/segoeuisym.ttf");
+}
+
+@font-face {
+  font-family: "Segoe UI Bold Italic";
+  src: url("../fonts/segoeuiz.ttf");
+}
+*/
+
+// Common.
+// -------------------------
+
+html,
+body {
+  .square(100%);
+  color: @body-primary-color;
+  font-family: "Segoe UI Light", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", "sans-serif";
+}
+
+a {
+  text-decoration: none;
+
+  &:link, &:visited {
+    color: @link-color;
+  }
+
+  &:hover, &:active {
+    color: @link-active-color;
+  }
+}
+
+.connection-failed-msg {
+  .box-sizing(border-box);
+
+  display: none;
+  padding: 20px;
+  height: 100%;
+
+  h1 {
+    font-weight: normal;
+  }
+}
+
+// Main Menu.
+// -------------------------
+
+nav {
+  .size(@nav-width, 100%);
+  .box-sizing(border-box);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 40px 0;
+  background-color: @nav-primary-bg;
+
+  ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .fc2-menu-icon {
+      .square(@nav-width);
+
+      &.geography {
+        background-image: @img-geography-icon;
+        
+        &:hover,
+        &.active {
+          background: @img-geography-icon-active @nav-icon-active-bg;
+        }
+      }
+
+      &.layers {
+        background-image: @img-layers-icon;
+        
+        &:hover,
+        &.active {
+          background: @img-layers-icon-active @nav-icon-active-bg;
+        }
+      }
+
+      &.time {
+        background-image: @img-time-icon;
+        
+        &:hover,
+        &.active {
+          background: @img-time-icon-active @nav-icon-active-bg;
+        }
+      }
+
+      &.results {
+        background-image: @img-results-icon;
+        
+        &:hover,
+        &.active {
+          background: @img-results-icon-active @nav-icon-active-bg;
+        }
+      }
+
+      &.export {
+        background-image: @img-export-icon;
+        
+        &:hover,
+        &.active {
+          background: @img-export-icon-active @nav-icon-active-bg;
+        }
+      }
+
+      &.about {
+        background-image: @img-about-icon;
+        
+        &:hover,
+        &.active {
+          background: @img-about-icon-active @nav-icon-active-bg;
+        }
+      }
+    }
+  }
+
+  .fc2-logo {
+    .rotate(270deg);
+    .transform-origin(0 0);
+    .text-overflow();
+    .unselectable();
+    color: @text-white;
+    font: @fc2-logo-font;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+
+// Main Area.
+// -------------------------
+
+main {
+  .square(100%);
+  .box-sizing(border-box);
+  padding-left: @nav-width;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #fff;
+
+  section {
+    .square(100%);
+    display: none;
+  }
+}
+
+.template-invisible {
+  display: none;
+}
+
+.fc-panel {    
+  display: none;  
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1;
+  background: #fff;
+
+  .fc-panel-header {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    font-size: 36px;
+  }
+
+  .fc-panel-message {
+    display: none;
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+}
+
+input {
+  .box-sizing(border-box);
+
+  height: 2em;
+  border: 2px solid @input-border-color;
+  padding: 0 .5em;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    border: 2px solid darken(@input-border-color, 20%);
+  }
+}
+
+select {
+  .box-sizing(border-box);
+  
+  height: 2em;
+  border: 2px solid @input-border-color;
+}
+
+button {
+  height: 32px;
+  min-width: 100px;
+  border: 2px solid @button-border-color;
+  background-color: #fff;
+  color: #797979;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    border: 2px solid @button-hover-color;
+    background-color: @button-hover-color;
+    color: #fff;
+  }
+}

@@ -1,0 +1,887 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="38d401db-aefe-4b9c-aecc-c1388da56ba7"
+  name="Adapters"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="6fe9aaed-22b2-43cd-a35e-d8b0cbf811b3"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="3a4dd07d-4967-45e2-85d7-086193116e4c"
+        name="BatchUncertatintyEvaluatorAdapter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="5308d66a-bd7b-4dd4-bb69-f6bde2ea9580"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchUncertatintyEvaluatorAdapter GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2b2cd2ee-4076-4270-b771-2cc4b6e0eb14"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2858ae3c-2a75-4787-b940-eb7d5623e4f1">
+                <propertyInstance
+                  Id="c7dc733c-7a14-4923-8f18-9c7413d7f5fb"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="44d8d962-1d8c-44ab-8d38-90eb005096e6">
+                <propertyInstance
+                  Id="9420d33e-e281-4b96-a33f-dc73e490075a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eccfbcd2-da9a-4bcc-ad9f-d87c594661f0">
+                <propertyInstance
+                  Id="9c1b7155-fefc-4f22-86e3-97525a396b58"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cd156bc8-333b-4ca3-b12c-17e48ba12993">
+                <propertyInstance
+                  Id="0cd6a6be-9700-4f19-8c2a-2da838fe42c5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="77b454ea-6024-472f-80a0-1a785c724f47">
+                <propertyInstance
+                  Id="45818180-9532-49ac-84d8-cf7976ee4957"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="04a933af-422f-4810-9686-3fed6f4411c2">
+            <interfaceMoniker
+              Id="c931a90d-a797-42e1-8d10-5dec412f3c44"
+              LastKnownName="IUncertaintyEvaluator"
+              LastKnownLocation="Package_1236.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="03e23381-a355-4069-b671-872dff1484c6"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="0ffa9c9c-b419-4874-aac7-5ae0681dda39"
+              LastKnownName="IBatchValueAggregator"
+              LastKnownLocation="Package_1236.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="31b84b1d-0e9d-47f3-910c-b132b74cee6e"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cb7aaf28-ed36-4fb3-94f8-cf87a3f3ef52"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="f04214e2-3b91-4695-a067-9601839efc30"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="486496c4-2186-4ea9-a40b-13f1695065de">
+                <referencesInternal>
+                  <reference
+                    Id="216d678d-3159-451b-af24-76f4c79560be"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchUncertatintyEvaluatorAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="de687b1a-f642-4dd4-812e-e756be2f8b74"
+                    name="TComputationalContext"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1278eae1-aaca-4ed8-aa49-ee86d4123e8a"
+            name="BatchUncertatintyEvaluatorAdapter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="348ed5a7-c5ed-40c1-a249-a662b660ac81"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchUncertatintyEvaluatorAdapter GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers Type%3D(Name%3DIBatchUncertaintyEvaluator GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchUncertatintyEvaluatorAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="afc73cf1-aed1-4b86-a6b8-5cbe00738735"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dcbec398-2540-4269-96fc-e8037d662a78">
+                    <propertyInstance
+                      Id="a54a270f-a6c1-464f-8985-c5d400ccb7d6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1bb62e43-fce7-4782-8fd6-ebd70db9a880">
+                    <propertyInstance
+                      Id="aee57e11-3c7b-4126-b72d-1bb46e9f9067"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88a638fa-e8fc-4b45-9b88-1ee4cbcf166e">
+                    <propertyInstance
+                      Id="28329f40-409d-4b89-830d-ceccb4d36789"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3db097c-513f-4beb-9e19-21ad5ad76e31">
+                    <propertyInstance
+                      Id="e0f56da3-1766-471f-bb0b-fbe06bf7d1c4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be809335-e9ad-4137-949b-54665dfdf749">
+                    <propertyInstance
+                      Id="1825534a-d03c-457a-8801-661af5d00c1b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="921b685a-3e7a-40ae-88b1-471f5327426e">
+                    <propertyInstance
+                      Id="e86cbf9f-63c3-43ed-9f5a-2228c570c3e3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6d43c81a-4a21-4079-aa73-74d31a9ee881"
+                  name="batchUncertatintyEvaluator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fb6b0860-cc26-45e6-966c-6cd112ec2254"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchUncertatintyEvaluatorAdapter GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers Type%3D(Name%3DIBatchUncertaintyEvaluator GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchUncertatintyEvaluatorAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0)]))]) ParameterIdentifier%3DbatchUncertatintyEvaluator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2b276c73-1688-47d2-8544-650874215a82"
+            name="EvaluateAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c922f261-5b2e-46cd-925b-2b73154cbc79"
+                  name="context"
+                  direction="In">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="deba4f54-8ad5-491a-8b68-010bbcf6dea6"
+                      LastKnownName="IRequestContext"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c1c722c0-c0ba-42f7-b605-2078334c039c"
+                  name="computationalContext"
+                  direction="In">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5d05edd7-d03e-4043-8428-32e9b20c3e71"
+                      LastKnownName="TComputationalContext"
+                      LastKnownLocation="Package_1236.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="15cc723b-f4f7-42d2-8bcf-ad119635dd18"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3bcfe7b8-49cb-4098-907a-539d3959cbc7"
+                      LastKnownName="Task&lt;Array‎&gt;"
+                      LastKnownLocation="Package6_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9039e74e-e3bf-40b4-bdaa-5e31da826b7d"
+        name="BatchValueAggregatorAdapter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e374b135-6940-477e-853a-695f75b0806b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchValueAggregatorAdapter GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e7aa0a61-4f38-4e34-b695-ec6551766709"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9a978d0a-b398-4182-93f5-32330c813afd">
+                <propertyInstance
+                  Id="70b03b3f-92c0-4dc1-8001-1bd0b50cda8d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="22d21901-a20d-4483-8e73-63aba327125c">
+                <propertyInstance
+                  Id="8308f0d9-8be8-4c49-ac2a-70bae189dc86"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="01e5661c-d5c1-48e6-b47a-d08e5ed60aa4">
+                <propertyInstance
+                  Id="d80ea4cd-0731-4c82-82d7-f98a2ee988fa"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="840f74b4-143b-40aa-bad9-80950833aa34">
+                <propertyInstance
+                  Id="5951dd36-f708-4780-b7f4-fe536b8ef511"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f2a6b780-ee03-4a65-87c1-abd25a9e05fa">
+                <propertyInstance
+                  Id="942647e0-4298-4544-a40c-21987189f792"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="efdb0a8b-9ab6-4551-ae7f-41c4ffa27ee1">
+            <interfaceMoniker
+              Id="ee026687-21a8-4467-801d-50392c5ca6f7"
+              LastKnownName="IValuesAggregator"
+              LastKnownLocation="Package_1236.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="b7c13dfd-da7d-4a30-b1fa-922924078333"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="a0a59b3c-0d7b-4187-a6ab-506f1ebae0bb"
+              LastKnownName="IBatchUncertaintyEvaluator"
+              LastKnownLocation="Package_1236.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="20a59fc9-0c7f-4778-b97d-b07e959e9e04"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3bfbcb97-ccfb-424f-8454-9b1089800013"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="50391c90-18df-45f2-9552-967fc4133de0"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="471191ae-bbee-4cdc-ad8b-19a764e47849">
+                <referencesInternal>
+                  <reference
+                    Id="5dded7bb-5e13-4886-bea9-f4cce64d2414"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchValueAggregatorAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="ff65292e-e414-43cc-90a1-7564c25393f4"
+                    name="TComputationalContext"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="47ae1f13-acf6-4a0a-9fb0-6faf738cdd48"
+            name="BatchValueAggregatorAdapter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7464405f-6167-423e-b5f7-1a4ef06f4daf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchValueAggregatorAdapter GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers Type%3D(Name%3DIBatchValueAggregator GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchValueAggregatorAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b53ae90f-1ad8-4012-a535-f27ecea893e5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3080d4f5-ed55-49bf-a6ae-ac20e7c7c15d">
+                    <propertyInstance
+                      Id="b800abb3-3bca-4883-9b72-56a20fb9b56f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b63e472f-a8d3-4591-acfc-31b87af93f14">
+                    <propertyInstance
+                      Id="d7891e26-902f-4996-b445-d6194de16b4e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="efebaa00-49fd-4cf2-b717-f3f49df29a03">
+                    <propertyInstance
+                      Id="33e91867-7f56-4df4-ad7d-39c292155be7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fcf6fad7-fdd5-4790-b13d-4628dab7d661">
+                    <propertyInstance
+                      Id="c3bc95a9-3bfd-4480-a88f-fc8bcc945c26"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="13d91bdf-7866-48ac-a864-a85a3a512682">
+                    <propertyInstance
+                      Id="cc1d68c9-0c06-4205-9087-1cd1ca67be8f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94b67e9f-874d-492e-84c1-1d0e19bc1437">
+                    <propertyInstance
+                      Id="046501d8-74fb-4373-98d2-5b12a291693a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2853e4cf-f753-46bc-a664-48e59220df4f"
+                  name="batchValueAggregator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f8ea2e64-1e56-4e43-a600-c87f7a0daa1d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchValueAggregatorAdapter GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers Type%3D(Name%3DIBatchValueAggregator GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchValueAggregatorAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0)]))]) ParameterIdentifier%3DbatchValueAggregator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1223ea36-70a3-4e8a-8d7f-c874f65d0f53"
+            name="AggregateAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="101f6c54-5231-4e2e-8b61-bd59eed83adb"
+                  name="context"
+                  direction="In">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="deba4f54-8ad5-491a-8b68-010bbcf6dea6"
+                      LastKnownName="IRequestContext"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="37674d69-7aa7-4fb4-84c1-0f52375667a5"
+                  name="computationalContext"
+                  direction="In">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5865eaf0-93bb-4dd4-9b8a-c0b92621d89f"
+                      LastKnownName="TComputationalContext"
+                      LastKnownLocation="Package_1236.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="baa1120e-44ff-4752-946c-d495d460bbc9"
+                  name="mask"
+                  direction="In">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c7941106-a61a-4f8f-995c-70752992cc65"
+                      LastKnownName="Array"
+                      LastKnownLocation="Package4_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="587aed0b-89d1-4ccf-91ed-fb17484d5dd4"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3bcfe7b8-49cb-4098-907a-539d3959cbc7"
+                      LastKnownName="Task&lt;Array‎&gt;"
+                      LastKnownLocation="Package6_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="857b2365-9614-4795-9c0e-3e534be609f0"
+        name="BatchComputationalContextFactoryAdapter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c8585fc4-9245-4beb-b018-99a26029e210"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchComputationalContextFactoryAdapter GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="4fc7bd51-cfd3-489d-845b-14e09f1822c6"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="33d610ed-bed0-4a81-9a51-4d524b20e59e">
+                <propertyInstance
+                  Id="e108eb1c-451c-4e7e-89d6-ad03cf07ee46"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="01d5bd72-1b2a-4970-838a-7819c6bade6c">
+                <propertyInstance
+                  Id="4d212ff0-f3fe-4cfa-a067-392e83d191dd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f17289f6-4e68-4c96-ad62-477bb69fcfbc">
+                <propertyInstance
+                  Id="de485654-98d5-47d8-be00-b72069b2f07d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4e5250d0-7bda-4d98-b444-2ad9457775f8">
+                <propertyInstance
+                  Id="589f3497-3a6f-491c-914f-b4441e342dfb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5502e9d4-061f-4b70-958a-b89250f5d1f9">
+                <propertyInstance
+                  Id="3a824153-d0c4-4d88-92f2-0f4225003e0c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="6256acc4-7118-4f15-831a-b3ecaaf819f1">
+            <interfaceMoniker
+              Id="784a8cc1-2d2d-495e-a388-8274e7d37f77"
+              LastKnownName="IComputationalContextFactory"
+              LastKnownLocation="Package_1236.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="b50111b6-d515-4b22-8240-df0eb2895728"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="48df8229-35a5-4e65-ba33-7a39988e5b47"
+              LastKnownName="IBatchComputationalContextFactory"
+              LastKnownLocation="Package_1236.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f51942c5-17a8-4c8f-8b91-f14e544f1c98"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a11007d0-f910-4fd5-bcc7-0e052a8266ab"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="88b4c373-987b-4ef4-a46b-5a6a25a5b7a3"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="9ebc267d-298d-473b-b9b4-f647ac8f70fe">
+                <referencesInternal>
+                  <reference
+                    Id="6d4d1762-a477-4bb7-bbe1-3853b9eb866b"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchComputationalContextFactoryAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="15759316-24d8-49f9-ba92-43367bacab97"
+                    name="TComputationalContext"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6694a836-2040-431c-bb3c-d8fe34736392"
+            name="BatchComputationalContextFactoryAdapter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7fd21aca-b563-4a31-ac3d-2010f4f8ac64"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchComputationalContextFactoryAdapter GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers Type%3D(Name%3DIBatchComputationalContextFactory GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchComputationalContextFactoryAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="272a54bc-b174-46a7-b421-6103e3cf090e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6fbe4e3-3893-4599-b813-47b86417468f">
+                    <propertyInstance
+                      Id="424f89fc-85d7-4c75-9c68-aea3e494528a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a078eeeb-f60b-4c1e-ac49-625fde4be6f8">
+                    <propertyInstance
+                      Id="186c170f-4e86-4135-a790-6f9f1f6c3c70"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5d30d63-85d1-4bc3-8b13-c7afbf4b9a02">
+                    <propertyInstance
+                      Id="b485cad1-3680-4ef1-8920-9e8705334a2d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14694f01-3339-4858-982b-b6edc2386224">
+                    <propertyInstance
+                      Id="1f64e9f4-c07b-4101-b16c-0bf484aaa1c9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="716b6bdb-2ac1-48ac-a0b2-fa781181933b">
+                    <propertyInstance
+                      Id="f08c7679-399a-4d68-bfe6-66265fbb6ccb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3bbe393-b6d8-47f3-ab06-9d2b2107364d">
+                    <propertyInstance
+                      Id="76528bfd-b1de-4fbe-af14-9610e079d400"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="067442f4-3b64-4fe1-b73f-36cbaf582b05"
+                  name="component"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="49a28d1e-c192-4645-893f-ccfb2c32adb3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchComputationalContextFactoryAdapter GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers Type%3D(Name%3DIBatchComputationalContextFactory GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchComputationalContextFactoryAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0)]))]) ParameterIdentifier%3Dcomponent"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a5bc2e5f-a511-4745-ba6e-e92d48c8c50f"
+            name="BatchComputationalContextFactoryAdapter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="05281d82-7358-45a5-9f24-4b8c2675f466"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchComputationalContextFactoryAdapter GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers Type%3D(Name%3DIBatchComputationalContextFactory GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchComputationalContextFactoryAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="68c6f590-cca7-4e03-a4cf-772e0da017af"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74c4ab25-9552-411e-86cc-482609870955">
+                    <propertyInstance
+                      Id="79ba40d9-f22e-487d-9ac3-d9c5ca77ae47"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86787075-fcb9-4d47-be14-a3559a31d295">
+                    <propertyInstance
+                      Id="1f99d292-2a66-495b-99ed-55035079f02e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8b041cb-796a-45fa-9baf-263571968116">
+                    <propertyInstance
+                      Id="38a02fca-fca1-43f3-af53-0a218f4f0b08"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51410a21-c3f6-4d87-8771-81a84741285d">
+                    <propertyInstance
+                      Id="d66ac668-63b6-4cff-ba14-c62bb508ce48"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd393012-e9f2-4d07-bae5-212c851de429">
+                    <propertyInstance
+                      Id="009ed60e-212c-4208-afaf-359722582941"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31e5e00e-cf6f-46b4-b8f8-8edd258d1d63">
+                    <propertyInstance
+                      Id="46f82b9a-75ea-4912-92d9-d2872ef4ed1c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9cf94fd8-4564-46a4-a604-1d7b748d6dbc"
+                  name="component"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="cb8c388e-0358-4850-b4f8-320c1dc426a2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchComputationalContextFactoryAdapter GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers Type%3D(Name%3DIBatchComputationalContextFactory GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.Adapters Type%3D(Name%3DBatchComputationalContextFactoryAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0)]))]) ParameterIdentifier%3Dcomponent"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ae346d96-4a15-4a4d-b922-85b6814f3739"
+            name="CreateAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="71d11a06-e1d7-4f01-8282-7d94b25a7232"
+                  name="context"
+                  direction="In">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="6da73ff7-8d42-4339-9ac5-2687c86a115f"
+                      LastKnownName="IStorageContext"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c1425666-bb54-428e-a11a-7fd5c7ae89bc"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f593d79c-edac-47a8-bb37-4bf7e8388cb8"
+                      LastKnownName="Task&lt;TComputationalContext‎&gt;"
+                      LastKnownLocation="Package6_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

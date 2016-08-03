@@ -1,0 +1,83 @@
+html {}
+
+// More mixins:
+// https://github.com/twbs/bootstrap/blob/master/less/mixins.less
+// http://css-tricks.com/snippets/css/useful-css3-less-mixins/
+
+// Utilities
+// -------------------------
+
+// Sizing shortcuts
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+.square(@size) {
+  .size(@size, @size);
+}
+
+// Placeholder text
+.placeholder(@color) {
+  &:-moz-placeholder            { color: @color; } // Firefox 4-18
+  &::-moz-placeholder           { color: @color; } // Firefox 19+
+  &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.noselect() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+// CSS3 PROPERTIES
+// -------------------------
+
+// Transformations
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees); // IE9+
+          transform: rotate(@degrees);
+}
+
+.transform-origin(@origin){
+  -webkit-transform-origin: @origin;
+     -moz-transform-origin: @origin;
+          transform-origin: @origin;
+}
+
+// Box sizing
+.box-sizing(@boxmodel: border-box) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
+
+// No selection.
+.unselectable()
+{
+  cursor: default;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.transition(@args) {
+    -webkit-transition: @args;
+    -moz-transition: @args;
+    transition: @args;
+}

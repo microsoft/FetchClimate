@@ -1,0 +1,635 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>FetchClimate2</title>
+
+    <script src="scripts/old-browser.js"></script>
+
+    <script src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+    <script src="scripts/external/jquery-2.0.3.min.js"></script>
+    <script src="scripts/external/jquery.ui-1.10.3.js"></script>
+    <script src="scripts/external/jquery.dotdotdot.js"></script>
+    <script src="scripts/external/rx.js"></script>
+    <script src="scripts/external/rx.binding.js"></script>
+    <script src="scripts/external/rx.jquery.js"></script>
+    <script src="scripts/external/d3.js"></script>
+    <script src="scripts/external/jquery.nanoscroller.min.js"></script>
+    <script src="scripts/external/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="scripts/jquery.plugins.js"></script>
+    <script src="scripts/plugins.js"></script>
+
+    <script src="scripts/settings.js"></script>
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/request.js"></script>
+    <script src="scripts/client-state.js"></script>
+    
+    <script src="scripts/main.js"></script>
+    <script src="scripts/geography.js"></script>
+    <script src="scripts/layers.js"></script>
+    <script src="scripts/time.js"></script>
+    <script src="scripts/results.js"></script>
+    <script src="scripts/export.js"></script>
+    <script src="scripts/map.js"></script>
+
+    <script src="scripts/controls/area-selection.js"></script>
+    <script src="scripts/controls/const-line-plot.js"></script>
+    <script src="scripts/controls/area-plot.js"></script>
+    <script src="scripts/controls/provenance-palette.js"></script>
+    <script src="scripts/controls/data-info-control.js"></script>
+    <script src="scripts/controls/time-chart-control.js"></script>
+    <script src="scripts/controls/panels.js"></script>
+    <script src="scripts/controls/tiles.js"></script>
+    <script src="scripts/controls/time-section-controls-panel.js"></script>
+    <script src="scripts/controls/layers-selection-panel.js"></script>
+    <script src="scripts/controls/time-selectors.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link href="css/d3.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/nano-scroller.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Main Menu. -->
+    <nav>
+        <ul>
+            <li class="fc2-menu-icon geography" title="Where?"></li>
+            <li class="fc2-menu-icon layers" title="What?"></li>
+            <li class="fc2-menu-icon time" title="When?"></li>
+            <li class="fc2-menu-icon results" title="Fetch!"></li>
+            <li class="fc2-menu-icon export" title="Export"></li>
+            <li class="fc2-menu-icon about" title="About"></li>
+        </ul>
+        <h3 class="fc2-logo">Fetch Climate</h3>
+    </nav>
+
+    <!-- Main Area. -->
+    <main>
+        <!-- Shared map control. -->
+        <div class="geo-panel">
+            <div id="geo-map" class="geo-map" data-d3-plot="bingMaps"
+                 data-d3-mapkey="AvR0E-CdUXzV9xQwQe_bxBOsz2BFM0uwn1bQwzCV44uNajThw-9-TQzpRM7GL5FH">
+            </div>
+
+            <div id="geo-plot" class="geo-plot" data-d3-plot="plot">
+            </div>
+
+            <div class="geo-map-controls">
+                <ul>
+                    <li class="fc-map-icon zoom-in" title="Zoom in"></li>
+                    <li class="fc-map-icon zoom-out" title="Zoom out"></li>
+                    <li class="fc-map-icon options" title="Map options"></li>
+                    <li class="fc-map-icon search" title="Search for a location"></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Geography section -->
+        <section class="geography">
+            <div class="map-area-selection-panel">
+                <div class="fc-panel-header">Select geography</div>
+                <div class="area-selection-panel-controls">
+                    <div class="controls-btn add-grid-btn" title="Add region"></div>
+                    <div class="controls-btn add-point-btn" title="Add point"></div>
+                    <div class="controls-btn remove-areas-btn" title="Remove all selected areas"></div>
+                </div>
+                <div class="separator-horizontal"></div>
+                <div class="fc-panel-message"></div>
+                <div class="nano-scroller">
+                    <div class="fc-panel-content content">
+                        <!-- Selected Areas -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Templates -->            
+            <div id="area-selection-grid" class="template-invisible">
+                <div class="area-selection area-grid">
+                    <div class="area-name"></div>
+                    <input type="text" class="area-name-input" />
+                    <div class="area-shorten"></div>
+                    <div class="area-coords-table">
+                        <div class="area-coords-row">
+                            <div class="area-coords-header">Min position</div>
+                            <div class="area-coords-cell">
+                                <label for="">Lat:</label>
+                                <input type="text" class="area-coords-input" />
+                            </div>
+                            <div class="area-coords-cell">
+                                <label for="">Lon:</label>
+                                <input type="text" class="area-coords-input"/>
+                            </div>
+                        </div>
+                        <div class="area-coords-row">
+                            <div class="area-coords-header">Max position</div>
+                            <div class="area-coords-cell">
+                                <label for="">Lat:</label>
+                                <input type="text" class="area-coords-input" />
+                            </div>
+                            <div class="area-coords-cell">
+                                <label for="">Lon:</label>
+                                <input type="text" class="area-coords-input"/>
+                            </div>
+                        </div>
+                        <div class="area-coords-row">
+                            <div class="area-coords-header">Cell resolution:</div>
+                            <div class="area-coords-cell">
+                                <label for="">Lat:</label>
+                                <input type="text" class="area-coords-input" />
+                            </div>
+                            <div class="area-coords-cell">
+                                <label for="">Lon:</label>
+                                <input type="text" class="area-coords-input"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="area-controls">
+                        <div class="save-btn" title="Update"></div>
+                        <div class="toggle-edit-btn" title="Edit"></div>
+                        <div class="remove-area-btn" title="Remove"></div>
+                    </div>
+                    <div class="separator-horizontal"></div>
+                </div>
+            </div>
+
+            <div id="area-selection-point" class="template-invisible">
+                <div class="area-selection area-point">
+                    <div class="area-name"></div>
+                    <input type="text" class="area-name-input" />
+                    <div class="area-shorten"></div>
+                    <div class="area-coords-table">
+                        <div class="area-coords-row">
+                            <div class="area-coords-cell">
+                                <label for="">Lat:</label>
+                                <input type="text" class="area-coords-input" />
+                            </div>
+                            <div class="area-coords-cell">
+                                <label for="">Lon:</label>
+                                <input type="text" class="area-coords-input"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="area-controls">
+                        <div class="save-btn" title="Update"></div>
+                        <div class="toggle-edit-btn" title="Edit"></div>
+                        <div class="remove-area-btn" title="Remove"></div>
+                    </div>
+                    <div class="separator-horizontal"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info layers section -->
+        <section class="layers">
+            <div class="layers-selection-area">
+                <div class="fc-panel-header">Select info layers</div>
+                <div class="layers-selection-panel-controls">
+                    <input type="search" placeholder="Filter" class="control-search" />
+                    <div class="controls-btn remove-layers-btn" title="Remove all selected layers"></div>
+                </div>
+                <div class="separator-horizontal"></div>
+                <div class="nano-scroller">
+                    <div class="fc-panel-message"></div>
+                    <div class="fc-panel-content content">
+                        <!-- Selected layers -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel with layer tiles and navigation control-->
+            <div class="layers-tiles-area">
+                <div class="section-header">
+                    <div class="nav-back"></div>
+                    <div class="nav-path"></div>
+                    <div class="control-sort"></div>
+                </div>
+                <br />
+                <div class="layer-tiles">
+                    <div class="nano-scroller variables-list">
+                        <div class="content"></div>
+                    </div>
+                    <div class="nano-scroller data-sources-list">
+                        <div class="content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Element Templates -->
+
+            <!-- Selected variable tile template (for left panel) -->
+            <div id="selected-variable-template" class="template-invisible">
+                <div class="selected-variable">
+                    <div class="variable-name">Air temp</div>
+                    <div class="variable-data-sources" title="Details"></div>
+                    <div class="layer-controls">
+                        <div class="toggle-edit-btn" title="Edit data sources for layer"></div>
+                        <div class="remove-layer-btn" title="Remove layer"></div>
+                    </div>
+                    <div class="separator-horizontal"></div>
+                </div>
+            </div>
+
+            <!-- Variable Tile Template -->
+            <div id="variable-template" class="template-invisible">
+                <div class="variable">
+                    <div class="variable-header">
+                        <div class="variable-name"></div>
+                        <div class="tile-selected-icon" title="Selected"></div>
+                    </div>
+                    <div class="variable-description"></div>
+                    <div class="variable-data-sources"></div>
+                </div>
+            </div>
+
+            <!-- Data Source Tile Template -->
+            <div id="data-source-template" class="template-invisible">
+                <div class="data-source">
+                    <div class="data-source-header">
+                        <div class="data-source-name"></div>
+                        <div class="tile-selected-icon"></div>
+                    </div>
+                    <div class="data-source-description"></div>
+                    <div class="data-source-info"></div>
+                </div>
+            </div>
+
+            <!-- Variables Category Container Template -->
+            <div id="category-template" class="template-invisible">
+                <div class="layer-category">
+                    <div class="category-name"></div>
+                    <div class="category-content"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Time section -->
+        <section class="time">
+
+            <div class="time-selection-panel">
+                <div class="fc-panel-header">Select time</div>
+                <div class="time-selection-panel-controls">
+                    <div class="controls-btn reset-time-btn" title="Reset time settings to defaults"></div>
+                </div>
+                <div class="separator-horizontal"></div>
+
+                <div class="fc-panel-content">
+                    
+                    <!-- Years selection tile -->
+                    <div class="time-selection-years-tile">
+                        <div class="tile-extra-info default-days-label">Average days over the whole year</div>
+                        <div class="tile-extra-info default-hours-label">Average hours over the whole day</div>
+                    </div>
+
+                    <!-- Days selection tile -->
+                    <div class="time-selection-days-tile">
+                        <div class="tile-extra-info default-hours-label">Average hours over the whole day</div>
+                    </div>
+
+                    <!-- Hours selection tile is generated by default -->
+                </div>
+            </div>
+            <div class="time-selection-control-wrapper">
+
+                <div class="time-selection-tabs-container">
+                    <div class="time-selection-tab-header selected" data-mode="years">Years</div>
+                    <div class="time-selection-tab-header" data-mode="days">Days</div>
+                    <div class="time-selection-tab-header" data-mode="hours">Hours</div>
+                </div>
+
+                <!-- Year Selection Control. -->
+                <div class="time-selection-control year-control">
+                    <div class="control-controls">
+                        <select class="time-control-select">
+                            <option value="individual">Individual years</option>
+                            <option value="avg">Average over the years</option>
+                            <option value="chunk">Average over chunks</option>
+                        </select>
+                        <div class="chunk-select-container">
+                            <span> of </span>
+                            <input type="text" class="time-control-input" maxlength="4">
+                            <span> years each</span>
+                        </div>
+                        <label for="start-year"> from year </label>
+                        <input type="text" id="start-year" class="time-input time-control-input" maxlength="4">
+                        <label for="end-year"> to </label>
+                        <input type="text" id="end-year" class="time-input time-control-input" maxlength="4">
+                    </div>
+                    <div class="control-content">
+                        <div class="years-nav">
+                            <div class="prev-btn" title="Earlier"></div
+                            ><div class="next-btn" title="Later"></div>
+                        </div>
+                        <table class="year-table">                            
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Day Selection Control. -->
+                <div class="time-selection-control day-control">
+                    <div class="control-controls">
+                        <select class="time-control-select">
+                            <option value="wholeyear">Average over the whole year</option>
+                            <option value="monthlyavg">Twelve monthly averages</option>
+                            <option value="avg">Average for the part of the year</option>
+                            <option value="individual">Individual days</option>
+                            <option value="chunk">Average over chunks</option>
+                        </select>
+                        <div class="chunk-select-container">
+                            <span> of </span>
+                            <input type="text" class="time-control-input" maxlength="3">
+                            <span> days each</span>
+                        </div>
+                        <div class="days-select-container">
+                            <label for="start-day"> starting from day </label>
+                            <input type="text" id="start-day" class="time-input time-control-input" maxlength="3">
+                            <label for="end-day"> to day </label>
+                            <input type="text" id="end-day" class="time-input time-control-input" maxlength="3">
+                        </div>
+                    </div>
+                    <div class="control-content">
+                        <table class="day-table">                            
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Hour Selection Control. -->
+                <div class="time-selection-control hour-control">
+                    <div class="control-controls">
+                        <select class="time-control-select">
+                            <option value="wholeday">Average over the whole day</option>
+                            <option value="avg">Average for the part of the day</option>
+                            <option value="individual">Individual hours</option>
+                            <option value="chunk">Average over chunks</option>
+                        </select>
+                        <div class="chunk-select-container">
+                            <span> of </span>
+                            <input type="text" class="time-control-input" maxlength="2">
+                            <span> hours each</span>
+                        </div>
+                        <div class="hours-select-container">
+                            <label for="start-hour"> starting from hour </label>
+                            <input type="text" id="start-hour" class="time-input time-control-input" maxlength="2">
+                            <label for="end-hour"> to hour </label>
+                            <input type="text" id="end-hour" class="time-input time-control-input" maxlength="2">
+                        </div>
+                    </div>
+                    <div class="control-content">
+                        <table class="hour-table">                            
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Results section -->
+        <section class="results">
+            <div class="results-panel">
+                <div class="fc-panel-header">View results</div>
+                <div class="fc-panel-controls">
+                    <div class="tab layers">Layers</div>
+                    <div class="tab details">Details</div>
+                    <div class="toggle-probemode" title="Enable probe mode"></div>
+                </div>
+                <div class="fc-panel-content">
+                    <div class="horizontal-separator"></div>
+
+                    <div class="data-info-control">
+                        <div class="data-mode-selector fc-wrapper-dropdown">
+                            <span></span>
+                            <ul class="fc-dropdown prior">
+                                <li>Values</li>
+                                <li>Uncertainty</li>
+                                <li>Provenance</li>
+                            </ul>
+                        </div>
+                        <div class="units-label">degrees C</div>
+                        <div class="fc-palette-control">
+                            <div class="fc-palette-marker"></div>
+                            <!-- Palettes: http://colorbrewer2.org/ -->
+                            <div class="fc-palette-selector">
+                                <ul class="fc-dropdown">
+                                    <!-- 1-color palettes -->
+                                    <li>
+                                        <div class="fc-palette-control" data-selected="true"
+                                             data-palette="#ffffffff,#ff3c00ff">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fc-palette-control"
+                                             data-palette="#ffffffff,#ED1C24ff">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fc-palette-control"
+                                             data-palette="#ffffffff,#400080ff">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fc-palette-control"
+                                             data-palette="#ffffffff,#004080ff">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fc-palette-control"
+                                             data-palette="#ffffffff,#004000ff">
+                                        </div>
+                                    </li>
+
+                                    <!-- 2-color palettes -->
+                                    <li>
+                                        <div class="fc-palette-control"
+                                             data-palette="#004000ff,white=white,#ED1C24ff">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fc-palette-control"
+                                             data-palette="#004080ff,white=white,#ED1C24ff">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fc-palette-control"
+                                             data-palette="#ff3c00ff,white=white,#004000ff">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fc-palette-control"
+                                             data-palette="#ED1C24ff,white=white,#400080ff">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fc-palette-control"
+                                             data-palette="#004080ff,white=white,#004000ff">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span>Value:</span>
+                            <div class="data-info-value"></div>
+                        </div>
+
+                        <div class="fc-provenance-control"></div>
+
+                        <div class="palette-option">
+                            <input id="palette-discrete-mode" type="checkbox" class="palette-discrete-mode-input" />
+                            <label for="palette-discrete-mode">Discrete</label>
+                        </div>
+
+                        <div class="palette-option right">
+                            <input type="text" class="palette-bands-input" />
+                            <label for="">Bands:</label>
+                        </div>
+
+                        <div class="palette-option">
+                            <label for="">Min:</label>
+                            <input type="text" class="palette-min-input" />
+                        </div>
+
+                        <div class="palette-option right">
+                            <input type="text" class="palette-max-input" />
+                            <label for="">Max:</label>
+                        </div>
+                    </div>
+
+                    <div class="horizontal-separator"></div>
+
+                    <div class="nano-scroller">
+                        <div class="tab-content details content">
+                            <div class="time-chart-control">
+                                <div class="header-controls">
+                                    <div class="timeseries-axis-selector fc-wrapper-dropdown">
+                                        <span></span>
+                                        <ul class="fc-dropdown prior">
+                                            <li>Years</li>
+                                            <li>Days</li>
+                                            <li>Hours</li>
+                                        </ul>
+                                    </div>
+                            
+                                    <div class="zoom-controls">
+                                        <div class="zoom-icon out"></div>
+                                        <div class="zoom-icon in"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="time-chart" data-d3-plot="figure">
+                                    <div id="slice-line" data-d3-plot="constLines"
+                                         data-d3-style="colorX: cyan;">
+                                    </div>
+                                    <div id="grid" data-d3-plot="grid"
+                                         data-d3-placement="center" data-d3-yaxis="vertical-axis"
+                                         data-d3-style="stroke: darkgray; thickness: 1px;">
+                                    </div>
+                                    <div id="vertical-axis" data-d3-axis="numeric" data-d3-placement="left"></div>
+                                    <div class="d3-verticalTitle" data-d3-placement="left">
+                                        <div class="left-title"></div>
+                                    </div>
+                                    <div class="bottom-title d3-horizontalTitle" data-d3-placement="bottom"></div>
+                                </div>
+                            </div>
+                        
+                            <div class="horizontal-separator"></div>
+                        
+                            <div class="toggle-slice-panel-btn-container">
+                                Show timeline
+                                <div class="toggle-slice-panel-btn-wrapper">
+                                    <b>On</b
+                                    ><div class="toggle-slice-panel-btn on"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nano-scroller">
+                        <div class="tab-content layers content">
+                            <div class="results-tiles">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fc-panel-message"></div>
+            </div>
+            <div class="time-slice-panel">
+                <div class="time-slice-value"></div>
+                <div class="fc-time-slider hour" data-min="" data-max=""></div>
+                <div class="fc-time-slider day" data-min="" data-max=""></div>
+                <div class="fc-time-slider year" data-min="" data-max=""></div>
+            </div>
+        </section>
+
+        <!-- Export section -->
+        <section class="export">
+            <div class="export-panel">
+                <div class="fc-panel-header">Export</div>
+                <div class="fc-panel-message"></div>
+                <div class="fc-panel-content">
+                    <div class="action-type">
+                        <strong>Download</strong>
+                        <div class="action-row">
+                            <div class="action-img action-data-to-file"></div
+                            ><div class="action-desc">Download as .csv file</div>                    
+                        </div>
+                        <!-- This option is replaced with screenshot (Ctrl+PrtSc) -->
+                        <!--<div class="action-row">
+                            <div class="action-img action-data-to-image"></div
+                            ><div class="action-desc">Download as .png file</div>
+                        </div>-->
+                    </div>
+
+                    <div class="action-type">
+                        <strong>Share</strong>
+                        <div class="action-row">
+                            <div class="action-img action-copy-url"></div
+                            ><div class="action-desc">Link to clipboard</div>
+                        </div>
+                        <div class="action-row">
+                            <a class="action-img action-send-by-email"></a
+                            ><div class="action-desc">Link to email</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dialog-overlay"></div>
+            <div class="copy-to-clipboard-dialog">
+                <div class="dialog-header">Copy data-link to clipboard</div>
+                <p>Press Ctrl+C to copy data-link to clipboard.</p>
+                <br>
+                <label for="">Data-link</label>
+                <br>
+                <input type="text" class="url-input">
+                <button class="close-button">Close</button>
+            </div>
+        </section>
+        <section class="about">
+            <div class="fc-section-header">About Fetch Climate</div>
+            <p>FetchClimate provides rapid access to complex geographical information, including but not limited to climatological information. All you need to specify is what you want to know, where on the Earth you want to know it for (any set of points or grids), and when in time you want to know it for (and combination of averages over, or steps through, years, days, and hours). FetchClimate will then select the best data-set for your query, and do all the necessary regridding in space and time, returning a best guess, uncertainty, and provenance for your query, packaged into a visual explorer.</p>
+
+            <p>To read more about the history of FetchClimate, or if you are interested in starting your own instance of FetchClimate to serve up your own geographical information, please see the <a target="blank" href="http://research.microsoft.com/en-us/projects/fetchclimate/">FetchClimate page at Microsoft Research</a>.</p>
+
+            <p>
+                <a href="mailto:fetchclimate@microsoft.com" target="_top">Contact Us</a>
+                <br />
+                <a href="http://go.microsoft.com/fwlink/?LinkId=386394">Terms of Use</a>
+                <br />
+                <a href="http://www.microsoft.com/privacystatement/en-us/Research/Default.aspx">Privacy Statement</a>
+                <br />
+                ©2014 Microsoft Corporation all rights reserved
+                <br />
+                <img src="images/msr-logo.png" height="20">
+            </p>
+        </section>
+
+        <div class="connection-failed-msg">
+            <h1>
+                Connection to FetchClimate service failed :(</br>
+                Please, try again later.
+            </h1>
+        </div>
+    </main>
+</body>
+</html>

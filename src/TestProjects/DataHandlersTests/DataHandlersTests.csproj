@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60EEC367-790A-480A-95C9-2FCD574C57CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataHandlersTests</RootNamespace>
+    <AssemblyName>DataHandlersTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Research.Science.Data, Version=1.3.14517.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ext\sds_1_3\Microsoft.Research.Science.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.Science.Data.AzureDataSet, Version=1.3.14517.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Caching\HashBasedTimeSegmentEquatibleTests.cs" />
+    <Compile Include="Caching\VariogramProviderCachingFactoryTests.cs" />
+    <Compile Include="Math\CoveredDataMaskProviderTests.cs" />
+    <Compile Include="Math\LinearGridIntegratorTests.cs" />
+    <Compile Include="CoverageProviders\MonthlyMeansOverYearsStepIntegrator.cs" />
+    <Compile Include="Math\StepFunctionDataMaskProviderTests.cs" />
+    <Compile Include="Math\StepFunctionYearsIntegratorTests.cs" />
+    <Compile Include="Math\UtilsModeArrayTests.cs" />
+    <Compile Include="RequestStubs.cs" />
+    <Compile Include="FinalDataHandlers\CpcTests.cs" />
+    <Compile Include="FinalDataHandlers\CruTests.cs" />
+    <Compile Include="DataSourceStorageContextFactory.cs" />
+    <Compile Include="Math\ClusteringTests.cs" />
+    <Compile Include="Math\LinearCycledLonsGridAggrigatorTests.cs" />
+    <Compile Include="Math\LinearWeightsProviderTests.cs" />
+    <Compile Include="Math\MonthlyMeansOverYearsStepInterpolationTests.cs" />
+    <Compile Include="Math\StepFunctionTests.cs" />
+    <Compile Include="ScatteredPoints\HashBasedEquatibleRealValueNodesTests .cs" />
+    <Compile Include="ScatteredPoints\LinearCombinationAggregatorTests.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Stubs\GeoCellStub.cs" />
+    <Compile Include="UncertatintyEvaluators\ThinningTests.cs" />
+    <Compile Include="UncertatintyEvaluators\LinearCombination1DVarianceCalcTests.cs" />
+    <Compile Include="UncertatintyEvaluators\CoverageEvaluators.cs" />
+    <Compile Include="ValueAggregators\DecoratorsTests.cs" />
+    <Compile Include="UncertatintyEvaluators\DecoratorsTests.cs" />
+    <Compile Include="FinalDataHandlers\Etopo1Tests.cs" />
+    <Compile Include="GeoCellTupleToPointLinearInterpolatorAdapterTests.cs" />
+    <None Include="app.config" />    
+    <Compile Include="FinalDataHandlers\Gtopo30Tests.cs" />
+    <Compile Include="FinalDataHandlers\HADCM3Tests.cs" />
+    <Compile Include="IValueNodes.cs" />
+    <Compile Include="LinearWeightsContextFactoryFacadeTests.cs" />
+    <Compile Include="FinalDataHandlers\NcepReanalysisTests.cs" />
+    <None Include="FinalDataHandlers\OnlySpatialTpsTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestContextStub.cs" />
+    <Compile Include="ScatteredPoints\HashBasedEquatibleNodesTests.cs" />
+    <Compile Include="ScatteredPoints\InterpolationContextCacheDecoratorTests.cs" />
+    <Compile Include="TestConstants.cs" />
+    <Compile Include="ValueAggregators\MonthlyMeans.cs" />
+    <Compile Include="ValueAggregators\UnitTest1.cs" />
+    <Compile Include="VirtualVariables\VirtualVariablesTests.cs" />
+    <Compile Include="VirtualVariables\VirtVarRequestContextStub.cs" />
+    <Compile Include="FinalDataHandlers\WorldClimTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="air_8times.nc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="air_9times.nc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\423b28bf6a4357f14b64f2b16ab759cb6b5961db.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\8e76e8f7c5f465a13fa016125ff5bf3583aeec5b.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\airt_10x10_monthly.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\airt_5d.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\elevation.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\prate_10x10.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\prate_10x10_monthly.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\prate_41x21_monthly.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\prate_5_points.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\relhum_10x10_monthly.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GHCNv2_part.nc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\DataSource\DataSource.csproj">
+      <Project>{3773d82b-f9f4-4d9a-907e-3bd2e5cbdf55}</Project>
+      <Name>DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\FetchCommon\FetchCore.csproj">
+      <Project>{bb21ad9b-37c3-4120-8ac5-236153a85e89}</Project>
+      <Name>FetchCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\CPCDataSource\CPCDataSource.csproj">
+      <Project>{2f4509c0-545c-4a58-85fd-30ee0e37412d}</Project>
+      <Name>CPCDataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\CRUCL2DataSource\CRUCL2DataSource.csproj">
+      <Project>{2f15247f-a3de-40a3-bffb-48f8463c7eeb}</Project>
+      <Name>CRUCL2DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\ETOPO1DataSource\ETOPO1DataSource.csproj">
+      <Project>{b0b9a3ef-0010-408c-8cba-04a48a9209b9}</Project>
+      <Name>ETOPO1DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\FC1LegacySupport\FC1LegacySupport.fsproj">
+      <Project>{62f5465f-4a33-4a36-849d-2aace896cdd6}</Project>
+      <Name>FC1LegacySupport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\GFDLDataSource\GFDLDataSource.csproj">
+      <Project>{2d09646b-4420-4ef7-a0c7-d4da4e6fbc71}</Project>
+      <Name>GFDLDataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\GTOPO30DataSource\GTOPO30DataSource.csproj">
+      <Project>{e59ad189-7484-40b5-ab58-62b2d17da660}</Project>
+      <Name>GTOPO30DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\HADCM3DataSource\HADCM3DataSource.csproj">
+      <Project>{ccf88d30-286c-46d4-835d-df92c12f3e2b}</Project>
+      <Name>HADCM3DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\LandFilterDataSource\LandFilterDataSource.fsproj">
+      <Project>{eb924af8-1312-4258-ae8d-5188fbc2cf97}</Project>
+      <Name>LandFilterDataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\MalmstromPET\MalmstromPET.fsproj">
+      <Project>{5808cfd9-df8e-4873-af58-99bb4f11ae18}</Project>
+      <Name>MalmstromPET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\MDLDataSource\MLDDataSource.csproj">
+      <Project>{cbf2f736-6162-4416-a373-4955e9723562}</Project>
+      <Name>MLDDataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\NCEPDataSource\NCEPDataSource.csproj">
+      <Project>{31386e31-56c8-462d-a6fb-09c879fa1b0f}</Project>
+      <Name>NCEPDataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\WagnerWVSP\WagnerWVSP.fsproj">
+      <Project>{aad334b2-50a6-458e-8815-0d320e30c94d}</Project>
+      <Name>WagnerWVSP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataHandlers\WorldClim14DataSource\WorldClim14DataSource.csproj">
+      <Project>{5135fdc4-25db-4bda-94b8-b7add0a11a4d}</Project>
+      <Name>WorldClim14DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\DmitrovStorageContext\DmitrovStorageContext.csproj">
+      <Project>{45384fb5-e5d6-4d84-ac6b-8cb1ea461458}</Project>
+      <Name>DmitrovStorageContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\FetchMath\FetchMath.csproj">
+      <Project>{59a0bafa-32c0-44f6-a022-b7ba63cb1fc5}</Project>
+      <Name>FetchMath</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\FetchRequest\FetchStructures.csproj">
+      <Project>{c5bb5e4f-a9e8-41e0-bc8b-fbecc24f8e27}</Project>
+      <Name>FetchStructures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\StatUtilities\StatUtilities.fsproj">
+      <Project>{870334b5-9dc7-453b-8e9f-e9ff227d34f4}</Project>
+      <Name>StatUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VirtualVariablesFsTests\VirtualVariablesFsTests.fsproj">
+      <Project>{27995c3c-8244-4805-bc86-e9da44458096}</Project>
+      <Name>VirtualVariablesFsTests</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

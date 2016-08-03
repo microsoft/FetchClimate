@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/Form.css" />    
+    <meta charset="utf-8" />
+    <title>FetchClimate2 Performance Benchmark</title>
+    
+    <script src="../v1/script/jquery-1.8.0.min.js"></script>
+    <script src="../v1/Script/FetchClimate.Utilities.js"></script>
+    <script src="../v1/script/FetchClimate.Request.js"></script>
+
+     <script type="text/javascript">
+
+         var logElement, inputElement;         
+
+         function print(s) {
+             var text = logElement.text();
+             logElement.text(text + s);
+         }
+
+         function println(s) {
+             print(s + "\r\n");
+         }
+
+         var eps = 0.001;
+
+         function shiftLat(lat) {
+             do 
+                 lat += eps * (Math.random() - 0.5);
+             while (lat < -90 || lat > 90)                 
+             return lat;
+         }
+
+         function shiftLon(lon) {
+             do
+                 lon += eps * (Math.random() - 0.5);
+             while (lon < -180 || lon > 180)
+             return lon;
+         }
+
+         function isString(o) {
+             return typeof o == "string" || (typeof o == "object" && o.constructor === String);
+         }
+
+         function parseRequest(r) {
+             var d = r.Domain;
+             if (isString(d.Lats))
+                 d.Lats = FetchClimate.parseMatlabSequence(d.Lats);
+             if (isString(d.Lons))
+                 d.Lons = FetchClimate.parseMatlabSequence(d.Lons);
+             if (d.Lats2 && isString(d.Lats2))
+                 d.Lats2 = FetchClimate.parseMatlabSequence(d.Lats2);
+             if (d.Lons2 && isString(d.Lons2))
+                 d.Lons2 = FetchClimate.parseMatlabSequence(d.Lons2);
+
+             var tr = r.Domain.TimeRegion;
+             if (isString(tr.Years))
+                 tr.Years = FetchClimate.parseMatlabSequence(tr.Years);
+             if (isString(tr.Hours))
+                 tr.Hours = FetchClimate.parseMatlabSequence(tr.Hours);
+             if (isString(tr.Days))
+                 tr.Days = FetchClimate.parseMatlabSequence(tr.Days);
+             return r;
+         }
+
+         function shiftRequest(r) {
+             var lats = r.Domain.Lats;
+             var lons = r.Domain.Lons;
+             for (var i = 0; i < lats.length; i++) {
+                 lats[i] = shiftLat(lats[i]);
+                 lons[i] = shiftLon(lons[i]);
+             }
+
+             if (r.Domain.Lats2 && r.Domain.Lons2) {
+                 var lats2 = r.Domain.Lats2;
+                 var lons2 = r.Domain.Lons2;
+                 for (var i = 0; i < lats2.length; i++) {
+                     lats2[i] = shiftLat(lats2[i]);
+                     if (lats[i] >= lats2[i])
+                         if (lats2[i] > 0)
+                             lats[i] -= 3 * eps;
+                         else
+                             lats2[i] += 3 * eps;
+                     lons2[i] = shiftLon(lons2[i]);
+                     if (lons[i] >= lons2[i])
+                         if (lons2[i] > 0)
+                             lons[i] -= 3 * eps;
+                         else
+                             lons2[i] += 3 * eps;
+                 }
+             }   
+             return r;
+         }
+
+         function runBenchmark(bm, bmIdx, tryIdx, stimes, ctimes) {
+             var b = bm[bmIdx];
+             if (tryIdx == 0) {
+                 println("Running " + b.Name + " benchmark...");
+                 println("Iteration,Service,Service+Client,Url");
+             }
+             print(tryIdx + 1);
+             var req = new FetchClimate.Request({ rawJSON: shiftRequest(parseRequest(b.Request)) });
+             var start = new Date().getTime();
+             req.perform().then(
+                 function (rsp) {
+                     var st = new Date().getTime() - start;
+                     rsp.getData(["values", "sd"]).then(
+                         function () {
+                             var ct = new Date().getTime() - start;
+                             println("," + ct + "," + rsp.resultUri);
+                             ctimes.push(ct);
+                             if(++tryIdx>=b.RepeatCount) {
+                                 ctimes.sort(function (a, b) { return a - b });
+                                 stimes.sort(function (a, b) { return a - b });
+                                 var ssum = 0, csum = 0;
+                                 for(var i =0;i<ctimes.length;i++) {
+                                     ssum += stimes[i];
+                                     csum += ctimes[i];
+                                 }
+                                 println("Mean service time: " + ssum / stimes.length);
+                                 println("Median service time: " + stimes[Math.ceil(stimes.length / 2)]);
+                                 println("Mean service+client time: " + csum / ctimes.length);
+                                 println("Median service+client time: " + ctimes[Math.ceil(ctimes.length / 2)]);
+                                 println("");
+                                 tryIdx = 0;
+                                 bmIdx++;
+                                 stimes = [];
+                                 ctimes = [];
+                             }
+                             if(bmIdx < bm.length)
+                                 runBenchmark(bm, bmIdx, tryIdx, stimes, ctimes);
+                         },
+                         function(err) {
+                             println("\n\r*** Benchmarker stopped due to error: " + err);
+                         });
+                     print("," + st);
+                     stimes.push(st);
+                 },
+                 function(err) {
+                     println("\n\r*** Benchmarker stopped due to error: " + err);
+                 });
+         }
+
+         function run() {
+             runBenchmark(JSON.parse(inputElement.val()),0,0,[],[]);
+         }
+
+         $(function () {
+             logElement = $("#log");
+             inputElement = $("#area");
+         });
+     </script>
+</head>
+<body>
+    <p>
+<textarea id="area" style="width: 640px; height: 300px">
+[{
+  "RepeatCount": 10,
+  "Name": "Two points",   
+  "Request": {
+    "EnvironmentVariableName":"airt",
+    "Domain": {
+      "SpatialRegionType":"Points",
+      "Lats":[51.56712952213243, 20],
+      "Lons":[-0.19824218749999278, 10],
+      "Lats2":null,
+      "Lons2":null,
+      "TimeRegion": {
+        "Years":[1990,2000],
+        "Days":[1,366],
+        "Hours":[0,24],
+        "IsIntervalsGridYears":true,
+        "IsIntervalsGridDays":true,
+        "IsIntervalsGridHours":true,
+         "ParticularDataSource":[]
+       }
+    }
+  }
+}]
+
+</textarea>
+    </p>
+    <button onclick="run()">Run!</button>
+    <p>
+        <pre id="log"></pre>
+    </p>
+</body>
+</html>

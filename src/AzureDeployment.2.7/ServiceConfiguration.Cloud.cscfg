@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="AzureDeployment.2.7" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Frontend">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="FetchClimate.JobsDatabaseConnectionString" value="" />
+      <Setting name="Frontend.AllowedJobRegistrationSpan" value="60" />
+      <Setting name="Frontend.WaitingFastResultPeriodSec" value="50" />
+      <Setting name="Frontend.MinPtsPerPartition" value="10240" />
+      <Setting name="Frontend.MaxPtsPerPartition" value="1024000" />
+      <Setting name="Frontend.JobTouchTimeTreshold" value="120" />
+      <Setting name="Frontend.JobStatusCheckIntervalMilisec" value="100" />
+      <Setting name="Frontend.MinYearBoundary" value="1991" />
+      <Setting name="Frontend.MaxYearBoundary" value="2100" />
+      <Setting name="Frontend.EnableAspnetDiagnosticTrace" value="false" />
+      <Setting name="Frontend.ConfigurationDatabaseConnectionString" value="" />
+      <Setting name="FetchClimate.JobsStorageConnectionString" value="----- PLACE YOUR VALUE HERE -----" />
+    </ConfigurationSettings>    
+  </Role>
+  <Role name="FetchWorker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="FetchClimate.JobsDatabaseConnectionString" value="" />
+      <Setting name="JobTouchPeriod" value="10" />
+      <Setting name="JobQueuePollingMilisec" value="400" />
+      <Setting name="FetchWorkerTraceLevel" value="Error" />
+      <Setting name="JobManagerTraceLevel" value="Error" />
+      <Setting name="DataHandlerTraceLevel" value="Error" />
+      <Setting name="FetchEngineTraceLevel" value="Error" />
+      <Setting name="HeavyJobsPermitedCount" value="7" />
+      <Setting name="LightJobExecutionTimeLimitSec" value="180" />
+      <Setting name="DaysBeforeJobDeletion" value="60" />
+      <Setting name="HoursBetweenCleanup" value="23" />            
+      <Setting name="FetchClimate.JobsStorageConnectionString" value="----- PLACE YOUR VALUE HERE -----" />
+      <Setting name="ConfigurationDatabaseConnectionString" value="" />
+      <Setting name="FetchWorker.AssemblyStoreConnectionString" value="----- PLACE YOUR VALUE HERE -----" />
+    </ConfigurationSettings>    
+  </Role>
+</ServiceConfiguration>

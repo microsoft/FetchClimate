@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="JobDB" Class="JobsDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localDB)\v11.0;Initial Catalog=JobDB;Integrated Security=True" SettingsObjectName="Microsoft.Research.Science.FetchClimate2.Properties.Settings" SettingsPropertyName="JobDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Job" Member="Jobs">
+    <Type Name="Job">
+      <Column Name="Hash" Type="System.String" DbType="Char(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PartNo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PartsCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Touchtime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SubmitTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsHeavyJob" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

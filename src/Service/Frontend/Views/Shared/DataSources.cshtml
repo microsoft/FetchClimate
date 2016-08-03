@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+@inherits System.Web.Mvc.WebViewPage<Microsoft.Research.Science.FetchClimate2.ExtendedConfiguration>
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/Form.css" />    
+    <meta charset="utf-8" />
+    <title>FetchClimate2 Data Sources</title>
+</head>
+<body>
+    <h1>FetchClimate2 Data Sources</h1>
+    @foreach (var ds in Model.DataSources) {
+        <h2>@ds.Name</h2>
+        <p>Description: @ds.Description</p>
+        <p>Copyright: @ds.Copyright</p>
+    }
+</body>
+</html>

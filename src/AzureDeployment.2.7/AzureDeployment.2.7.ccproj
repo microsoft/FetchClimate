@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>2.7</ProductVersion>
+    <ProjectGuid>6019c03d-926a-406d-911b-41fa0d894a35</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AzureDeployment.2.7</RootNamespace>
+    <AssemblyName>AzureDeployment.2.7</AssemblyName>
+    <StartDevelopmentStorage>True</StartDevelopmentStorage>
+    <Name>AzureDeployment.2.7</Name>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <PackageEnableRemoteDebugger>False</PackageEnableRemoteDebugger>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- Items for the project -->
+  <ItemGroup>
+    <ServiceDefinition Include="ServiceDefinition.csdef" />
+    <ServiceConfiguration Include="ServiceConfiguration.fcprojection.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.fcprojection-staging.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.Local.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.Cloud.cscfg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Service\FetchWorker\FetchWorker.csproj">
+      <Name>FetchWorker</Name>
+      <Project>{a0a7dc23-2aa4-44d7-b9db-1211c16e7379}</Project>
+      <Private>True</Private>
+      <RoleType>Worker</RoleType>
+      <RoleName>FetchWorker</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\Frontend\Frontend.csproj">
+      <Name>Frontend</Name>
+      <Project>{23261d05-5d07-4453-93a3-efc20d009558}</Project>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <RoleName>Frontend</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FetchWorkerContent\" />
+    <Folder Include="FrontendContent\" />
+    <Folder Include="FrontendContent\bin" />
+    <Folder Include="Profiles" />
+  </ItemGroup>
+  <ItemGroup>
+    <DiagnosticsConfiguration Include="FetchWorkerContent\diagnostics.wadcfgx" />
+    <DiagnosticsConfiguration Include="FrontendContent\diagnostics.wadcfgx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FrontendContent\bin\NDP452-KB2901954-Web.exe">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="FrontendContent\bin\startup.cmd">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <!-- Import the target files for this project template -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\2.7\</CloudExtensionsDir>
+  </PropertyGroup>
+  <Import Project="$(CloudExtensionsDir)Microsoft.WindowsAzure.targets" />
+</Project>

@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="ee510823-cccb-47fb-9a57-cc1df0e1a814" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="8f8c6bbc-9987-45f6-a45e-38f28ce2824f" name="Core assemblies">
+      <childLayers>
+        <layer Id="c355cd70-de1c-4aa9-9ed4-eb942c9e79e8" name="DataSource">
+          <references>
+            <reference Id="af7e2027-fada-42cf-a315-deb7578613be" name="DataSource">
+              <ArtifactNode Label="DataSource" Category="CodeSchema_Project" Id="(Assembly=../DataSource/DataSource.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=DataSource)" Label="DataSource.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="e2c01acc-89f2-42cc-bfe0-3e96e36820c0" name="FetchCommon">
+          <references>
+            <reference Id="1e17f413-2354-49ea-9b51-7eac55b34977" name="FetchCommon">
+              <ArtifactNode Label="FetchCommon" Category="CodeSchema_Project" Id="(Assembly=../FetchCommon/FetchCommon.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=FetchCommon)" Label="FetchCommon.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="ed162cea-eca0-463e-8ef9-17c3d874cc60" name="FetchDiagnostics">
+          <references>
+            <reference Id="5845d7ea-6c6d-4174-b542-bdb2f5726e33" name="FetchDiagnostics">
+              <ArtifactNode Label="FetchDiagnostics" Category="CodeSchema_Project" Id="(Assembly=../../FetchDiagnostics/FetchDiagnostics.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=FetchDiagnostics)" Label="FetchDiagnostics.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="33a35120-b408-4e61-bc5d-37d28eebe75f" name="Math assemblies">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="8b4d239f-9e9d-409a-ba5c-e7f3fb0dfa0b" direction="Forward">
+          <layerMoniker Id="8f8c6bbc-9987-45f6-a45e-38f28ce2824f" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="947c3532-1bd3-47d8-b894-80e26e3809fd" direction="Forward">
+          <layerMoniker Id="e6871aec-27ef-41f3-b388-1d498beff331" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="232d1eb6-b7fb-4fa0-b46b-fa7dfb7fcdfd" direction="Forward">
+          <layerMoniker Id="f57e8e8b-aa91-44e9-a585-dbd75eb19eab" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="1594f9b5-6879-491d-bbb6-218840e9780b" name="MalmstromPET">
+          <references>
+            <reference Id="5634f7ab-80f8-4922-8940-be1ad9caabd3" name="MalmstromPET">
+              <ArtifactNode Label="MalmstromPET" Category="CodeSchema_Project" Id="(Assembly=../MalmstromPET/MalmstromPET.fsproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="d9794288-a1eb-4853-b675-b7be34e0196b" name="NCEPDataSource">
+          <references>
+            <reference Id="74fa9e89-5c64-4217-8b3b-0126bc481c51" name="NCEPDataSource">
+              <ArtifactNode Label="NCEPDataSource" Category="CodeSchema_Project" Id="(Assembly=../NCEPDataSource/NCEPDataSource.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=NCEPReanalysisDataSource)" Label="NCEPReanalysisDataSource.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="298fe348-29e6-4e90-9066-c6a61bfe4fcf" name="WagnerWVSP">
+          <references>
+            <reference Id="f585a5ba-0df4-437d-ad71-dafcd26df5dc" name="WagnerWVSP">
+              <ArtifactNode Label="WagnerWVSP" Category="CodeSchema_Project" Id="(Assembly=../WagnerWVSP/WagnerWVSP.fsproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="f7f5e5e4-878e-45af-8073-d66f5e9b18ef" name="HADCM3DataSource">
+          <references>
+            <reference Id="d867af2f-89ed-4b9f-b48f-c30bcf46df0a" name="HADCM3DataSource">
+              <ArtifactNode Label="HADCM3DataSource" Category="CodeSchema_Project" Id="(Assembly=../HADCM3DataSource/HADCM3DataSource.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=HADCM3DataSource)" Label="HADCM3DataSource.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="2ed6e0d8-71cc-4eda-a901-868fd9e4578e" name="GFDLDataSource">
+          <references>
+            <reference Id="ed70c421-e0ef-4786-ad76-2538c1405718" name="GFDLDataSource">
+              <ArtifactNode Label="GFDLDataSource" Category="CodeSchema_Project" Id="(Assembly=../GFDLDataSource/GFDLDataSource.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=GFDLDataSource)" Label="GFDLDataSource.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="925950c1-2e7e-4d79-9890-015e9a345092" name="WorldClim14DataSource">
+          <references>
+            <reference Id="67e0751d-973c-4169-8115-c677abccdbee" name="WorldClim14DataSource">
+              <ArtifactNode Label="WorldClim14DataSource" Category="CodeSchema_Project" Id="(Assembly=../WorldClim14DataSource/WorldClim14DataSource.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=WorldClim14DataSource)" Label="WorldClim14DataSource.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="3063200b-92a1-4f2a-b1a3-fa007bbe9a8b" name="ETOPO1DataSource">
+          <references>
+            <reference Id="f1f82fb8-af05-4871-a3a2-ad644321eace" name="ETOPO1DataSource">
+              <ArtifactNode Label="ETOPO1DataSource" Category="CodeSchema_Project" Id="(Assembly=../ETOPO1DataSource/ETOPO1DataSource.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=ETOPO1DataSource)" Label="ETOPO1DataSource.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="382a2ee6-7428-4699-93f8-e91b4326f03c" name="LandFilterDataSource">
+          <references>
+            <reference Id="4df03499-b0f2-4b6c-939d-a28bdd04a70a" name="LandFilterDataSource">
+              <ArtifactNode Label="LandFilterDataSource" Category="CodeSchema_Project" Id="(Assembly=../LandFilterDataSource/LandFilterDataSource.fsproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="50a108a2-0b9b-4deb-afb8-3de77e1e3821" name="CPCDataSource">
+          <references>
+            <reference Id="96cd0ac8-fbd9-420e-8ca4-47e13ac25f00" name="CPCDataSource">
+              <ArtifactNode Label="CPCDataSource" Category="CodeSchema_Project" Id="(Assembly=../CPCDataSource/CPCDataSource.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=CPCDataSource)" Label="CPCDataSource.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="ce3bde52-af6e-49df-a303-79b84001e228" name="MalmstromPET1">
+          <references>
+            <reference Id="a2855d8f-1de5-4dea-a62f-7ee0d062081e" name="MalmstromPET">
+              <ArtifactNode Label="MalmstromPET" Category="CodeSchema_Project" Id="(Assembly=../MalmstromPET/MalmstromPET.fsproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="1ac636e8-3302-4ee0-a70f-6db320442a1a" name="CRUCL2DataSource">
+          <references>
+            <reference Id="c366997e-3fe0-43e0-8bdf-b5aa5b8cb2ea" name="CRUCL2DataSource">
+              <ArtifactNode Label="CRUCL2DataSource" Category="CodeSchema_Project" Id="(Assembly=../CRUCL2DataSource/CRUCL2DataSource.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=CRUCL2DataSource)" Label="CRUCL2DataSource.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="d37315b4-1a67-4ad3-ab1e-bf88fa67ef9b" name="MLDDataSource">
+          <references>
+            <reference Id="5f4efe72-510e-4596-ade2-531c33fe84cf" name="MLDDataSource">
+              <ArtifactNode Label="MLDDataSource" Category="CodeSchema_Project" Id="(Assembly=../MDLDataSource/MLDDataSource.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=MLDDataSource)" Label="MLDDataSource.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="a35cb05f-0558-4180-a0db-84ca28c076ae" name="GTOPO30DataSource">
+          <references>
+            <reference Id="69cd6623-7a95-41e4-865e-b0cbd4d36aa6" name="GTOPO30DataSource">
+              <ArtifactNode Label="GTOPO30DataSource" Category="CodeSchema_Project" Id="(Assembly=../GTOPO30DataSource/GTOPO30DataSource.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=GTOPO30DataSource)" Label="GTOPO30DataSource.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="4ef9808f-5866-4e18-8595-a831e201ecb6" name="FC1LegacySupport">
+          <references>
+            <reference Id="590d4e64-9125-4b5a-9c6f-ba210c50b245" name="FC1LegacySupport">
+              <ArtifactNode Label="FC1LegacySupport" Category="CodeSchema_Project" Id="(Assembly=../FC1LegacySupport/FC1LegacySupport.fsproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="f57e8e8b-aa91-44e9-a585-dbd75eb19eab" name="Libraries">
+      <childLayers>
+        <layer Id="c9fc0020-8266-4b3a-a087-d52052968862" name="DataMask">
+          <references>
+            <reference Id="0f794a2e-3f8c-4b9d-b839-97d6cbf371dd" name="DataMask">
+              <ArtifactNode Label="DataMask" Category="CodeSchema_Project" Id="(Assembly=../LandOceanMask/DataMask.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=DataMask)" Label="DataMask.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="32288c91-d4c8-477b-af67-807b830373da" name="StatUtilities">
+          <references>
+            <reference Id="894c7aeb-7a6f-43e6-8684-7b4b19077725" name="StatUtilities">
+              <ArtifactNode Label="StatUtilities" Category="CodeSchema_Project" Id="(Assembly=../../StatUtilities/StatUtilities.fsproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="989442fd-9dcf-4d7f-b614-e372bb1bf959" name="DataStorageMetadataVariogramStorage">
+          <references>
+            <reference Id="5f2a806a-e8ba-4f26-abcf-9d2d82d9b452" name="DataStorageMetadataVariogramStorage">
+              <ArtifactNode Label="DataStorageMetadataVariogramStorage" Category="CodeSchema_Project" Id="(Assembly=../../DataStorageMetadataVariogramStorage/DataStorageMetadataVariogramStorage.fsproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="4c4d9a28-361e-4839-82bf-3e32873c62dd" name="EmbeddedResourceBitMaskProvider">
+          <references>
+            <reference Id="603ba79c-b73e-4ccc-b218-f769d05e1b01" name="EmbeddedResourceBitMaskProvider">
+              <ArtifactNode Label="EmbeddedResourceBitMaskProvider" Category="CodeSchema_Project" Id="(Assembly=../../EmbeddedResourceBitMaskProvider/EmbeddedResourceBitMaskProvider.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=EmbeddedResourceBitMaskProvider)" Label="EmbeddedResourceBitMaskProvider.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="e6871aec-27ef-41f3-b388-1d498beff331" name="FetchMath">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="bd157543-d085-4b75-8a64-28ded9a651d3" direction="Forward">
+          <layerMoniker Id="f57e8e8b-aa91-44e9-a585-dbd75eb19eab" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="c971c6f6-1686-4cf3-bee8-a9b0c81453b2" direction="Forward">
+          <layerMoniker Id="8f8c6bbc-9987-45f6-a45e-38f28ce2824f" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="99073ec2-2cd6-4f43-8461-2f66fed4f1ed" name="FetchMath">
+          <ArtifactNode Label="FetchMath" Category="CodeSchema_Project" Id="(Assembly=../FetchMath/FetchMath.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=FetchMath)" Label="FetchMath.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

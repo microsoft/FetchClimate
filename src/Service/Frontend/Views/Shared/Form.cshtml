@@ -1,0 +1,110 @@
+﻿@{
+    Layout = null;
+}
+
+@inherits System.Web.Mvc.WebViewPage<Frontend.Models.RequestFormModel>
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/Form.css" />    
+    <meta charset="utf-8" />
+    <title>FetchClimate2 Request Form</title>
+</head>
+<body>
+    <h1>FetchClimate2 Request Form</h1>
+    @if (Object.Equals("1", Request.QueryString["incompatible"]))
+    {
+        <p class="warning">You were redirected to this simple request page because your browser is not supported by FetchClimate Web Client.
+            Supported browsers are Internet Explorer 10, latest versions of Chrome and Firefox.</p>
+    }
+    <form method="post" enctype="multipart/form-data">
+        <h2>1. Environmental variables</h2>
+            @if (!String.IsNullOrEmpty(Model.VariableErrors))
+            {
+                <p class="error">@Model.VariableErrors</p>
+            }
+        <p>Select one or more environmental variables to fetch by checking <a href="datasources">data sources</a> below variable name</p>
+        <ul>
+            @foreach (var v in Model.Configuration.EnvironmentalVariables.OrderBy(v => v.Name)) { 
+            <li>
+                @v.Description (@v.Units)<br />
+                @foreach (var ds in Model.Configuration.DataSources) 
+                {
+                    if (ds.ProvidedVariables.Contains(v.Name))
+                    { 
+                        @Html.Raw("&nbsp;&nbsp;&nbsp;&nbsp;")<input type="checkbox" name="@Model.GetFormCheckBoxName(v,ds)" checked="@Model.IsDataSourceSelected(v.Name, ds.Name)"/>@ds.Name<br />
+                    }
+                }
+            </li>
+            }
+        </ul>
+        <h2>2. Time intervals</h2>
+            @if (!String.IsNullOrEmpty(Model.IntervalErrors))
+            {
+                <p class="error">@Model.IntervalErrors</p>
+            }
+            <h3>Years</h3>
+                <p>
+                    <input type="radio" checked="@(Model.YearsMode==Frontend.Models.YearsMode.Cells)" name="yearsMode" value="cells"/>Intervals of <input type="text" value="@Model.YearCellSize" style="width: 26px" name="yearCellSize"/> years each starting from <input type="text" value="@Model.YearCellStart" style="width: 42px" name="yearCellStart"/> ending at <input type="text" value="@Model.YearCellEnd" style="width: 42px" name="yearCellEnd"/> 
+                </p> 
+                <p>
+                    <input type="radio" checked="@(Model.YearsMode==Frontend.Models.YearsMode.Points)" name="yearsMode" value="years"/>Individual years starting from <input type="text" value="@Model.IndividualYearStart" style="width: 42px" name="indYearStart"/> ending at <input type="text" value="@Model.IndividualYearEnd" style="width: 42px" name="indYearEnd"/> with step <input type="text" value="@Model.IndividualYearStep" style="width: 26px" name="indYearStep"/> 
+                </p>
+            <h3>Days within each year</h3>
+                <p>
+                    <input type="radio" name="daysMode" checked="@(Model.DaysMode== Frontend.Models.DaysMode.EntireYear)" value="year"/>Entire year
+                </p>
+                <p>
+                    <input type="radio" name="daysMode" checked="@(Model.DaysMode==Frontend.Models.DaysMode.MonthlyCells)" value="monthly"/>Monthly intervals
+                </p>
+                <p>
+                    <input type="radio" name="daysMode" checked="@(Model.DaysMode==Frontend.Models.DaysMode.Cells)" value="cells"/>Intervals of <input type="text" value="@Model.DayCellSize" name="dayCellSize" style="width: 26px"/> days each starting from day <input type="text" value="@Model.DayCellStart" name="dayCellStart" style="width: 36px"/> ending at day <input type="text" value="@Model.DayCellEnd" name="dayCellEnd" style="width: 36px"/> 
+                </p> 
+                <p>
+                    <input type="radio" name="daysMode" checked="@(Model.DaysMode==Frontend.Models.DaysMode.Points)" value="days"/>Individual days starting from <input type="text" value="@Model.IndividualDayStart" name="inDayStart" style="width: 36px"/> ending at <input type="text" value="@Model.IndividualDayEnd" name="inDayEnd" style="width: 36px"/> with step <input type="text" value="@Model.IndividualDayStep" name="inDayStep" style="width: 26px"/> 
+                </p>
+            <h3>Hours within each day</h3>
+                <p>
+                    <input type="radio" name="hoursMode" checked="@(Model.HoursMode==Frontend.Models.HoursMode.EntireDay)" value="day"/>Entire day
+                </p>
+                <p>
+                    <input type="radio" name="hoursMode" checked="@(Model.HoursMode==Frontend.Models.HoursMode.Cells)" value="cells"/>Intervals of <input type="text" value="@Model.HourCellSize" style="width: 26px" name="hourCellSize"/> hours each starting from hour <input type="text" value="@Model.HourCellStart" style="width: 26px" name="hourCellStart"/> ending at hour <input type="text" value="@Model.HourCellEnd" style="width: 26px" name="hourCellEnd"/> 
+                </p> 
+                <p>
+                    <input type="radio" name="hoursMode" checked="@(Model.HoursMode==Frontend.Models.HoursMode.Points)" value="hours"/>Time moments from hour <input type="text" value="@Model.IndividualHourStart" style="width: 42px" name="indHourStart"/> to hour <input type="text" value="@Model.IndividualHourEnd" style="width: 42px" name="indHourEnd"/> with step <input type="text" value="@Model.IndividualHourStep" style="width: 26px" name="indHourStep"/> 
+                </p>
+        <h2>3. Regions</h2>
+            @if (!String.IsNullOrEmpty(Model.RegionErrors))
+            {
+                <p class="error">@Model.RegionErrors</p>
+            }
+            <p>Input points and cell grids in text area below to fetch data.</p>
+            <p>For point type latitude and longitude on each line separated by comma.<br />
+            Example: three points at London, Moscow and Rio de Janeiro<br />
+            &nbsp;&nbsp;51.53,-0.18<br />
+            &nbsp;&nbsp;55.77,37.64<br />
+            &nbsp;&nbsp;-23.10,-43.22<br />
+            </p>
+            <p>For grids type latitude and longitude ranges in Matlab notation on each line separated by comma<br />
+            Example: grid with 20 cells on latitude (step 0.5) by 48 cells on longitude (step 0.25) covering Great Britain and Ireland<br />
+            &nbsp;&nbsp;50:0.5:60,-10:0.25:2
+            </p>
+        <textarea style="width:320px; height: 200px" name="regionText">@Model.RegionsText</textarea>
+        <p>
+            <button type="submit" name="download">Download results</button>
+            <button type="submit" name="view">View results in browser</button>
+        </p>
+        <p>
+            <button type="submit" name="downloadRequest" formtarget="_blank">Download request</button>
+            <button type="submit" name="uploadRequest">Upload request</button>
+            <input type="file" name="requestFile"/>
+        </p>
+        @if(!String.IsNullOrEmpty(Model.RequestUploadErrors))
+        {
+            <p class="error">@Model.RequestUploadErrors</p>
+        }
+    </form>
+</body>
+</html>

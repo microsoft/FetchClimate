@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A577AFEC-3F76-446C-8FC0-1B8F55FE5E5E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Research.Science.FetchClimate2</RootNamespace>
+    <AssemblyName>FetchEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Research.Science.Data, Version=1.3.14517.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\ext\sds_1_3\Microsoft.Research.Science.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Threading, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>..\..\..\ext\nuget\VSSDK.Threading.12.12.0.2\lib\net45\Microsoft.VisualStudio.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ext\FetchClimateCore 2.0.20300\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ext\FetchClimateCore 2.0.20300\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\FetchClimate2.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ArrayHelper.cs" />
+    <Compile Include="ComputeVersion.cs" />
+    <Compile Include="DataSourceHandlerCache.cs" />
+    <Compile Include="FetchEngine.cs" />
+    <Compile Include="NetCDFlocalReplicator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestContext.cs" />
+    <Compile Include="RequestResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\DataSource\DataSource.csproj">
+      <Project>{3773d82b-f9f4-4d9a-907e-3bd2e5cbdf55}</Project>
+      <Name>DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\FetchCommon\FetchCore.csproj">
+      <Project>{bb21ad9b-37c3-4120-8ac5-236153a85e89}</Project>
+      <Name>FetchCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\FetchDiagnostics\FetchDiagnostics.csproj">
+      <Project>{f99548e8-95a5-4e41-a303-781651432f43}</Project>
+      <Name>FetchDiagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\RemoteFetch\RemoteFetch.csproj">
+      <Project>{8ae6b2f9-e06a-47da-896d-99e80a3915f9}</Project>
+      <Name>RemoteFetch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cryptography\Cryptography.csproj">
+      <Project>{84cecbaa-c2da-4faf-ab77-e54688bb2a11}</Project>
+      <Name>Cryptography</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DmitrovStorageContext\DmitrovStorageContext.csproj">
+      <Project>{45384fb5-e5d6-4d84-ac6b-8cb1ea461458}</Project>
+      <Name>DmitrovStorageContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FetchConfigProvider\FetchConfigProvider.csproj">
+      <Project>{20f6738f-0655-4c08-bd2d-53a6f621206a}</Project>
+      <Name>FetchConfigProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FetchRequestDmitrovDataSet\FetchRequestDmitrovDataSet.csproj">
+      <Project>{207c0cfe-6307-4cfc-b890-ea2dfed55b88}</Project>
+      <Name>FetchRequestDmitrovDataSet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FetchRequest\FetchStructures.csproj">
+      <Project>{c5bb5e4f-a9e8-41e0-bc8b-fbecc24f8e27}</Project>
+      <Name>FetchStructures</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

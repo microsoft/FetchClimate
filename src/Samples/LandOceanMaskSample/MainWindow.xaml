@@ -1,0 +1,45 @@
+﻿<Window x:Class="LandOceanMaskSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded_1">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <Button Content="Load!" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Click="Button_Click_1" />
+        <TextBlock Text ="Time elapsed:" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5,5,5,5" />
+        <TextBlock Name="TimeElapsedBlock" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,5" Text="n/a" />
+
+        <TextBlock Text="Minimum latitude" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5,5,5,5" />
+        <TextBlock Text="Maximum latitude" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5,5,5,5" />
+        <TextBlock Text="Minimum longitude" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5,5,5,5" />
+        <TextBlock Text="Maximum longitude" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5,5,5,5" />
+
+        <TextBox Name="Latmin" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5,5,5,5" />
+        <TextBox Name="Latmax" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5,5,5,5" />
+        <TextBox Name="Lonmin" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5,5,5,5" />
+        <TextBox Name="Lonmax" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5,5,5,5" />
+
+
+        <TextBlock Text="Result" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5,5,5,5" />
+        <TextBlock Text="Elapsed time" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5,5,5,5" />
+
+        <TextBlock Name="Result" Text="n/a" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5,5,5,5" />
+        <TextBlock Name="WorkTime" Text="n/a" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5,5,5,5" />
+
+        <Button Content="Is land?" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Click="Button_Click_2" IsEnabled="False" Name="IsLandButton" />
+        <Button Content="Land percentage" Grid.Row="4" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Click="Button_Click_3" IsEnabled="False" Name="PercButton" />
+
+    </Grid>
+</Window>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="WebService.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Frontend">
+    <Instances count="2" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="----- PLACE YOUR VALUE HERE -----" />
+      <Setting name="DatabaseConnectionString" value="----- PLACE YOUR VALUE HERE -----" />
+      <Setting name="BlobConnectionAccountName" value="----- PLACE YOUR VALUE HERE -----" />
+      <Setting name="BlobConnectionAccountKey" value="----- PLACE YOUR VALUE HERE -----" />
+      <Setting name="AllowedJobRegistrationSpan" value="60" />
+      <Setting name="WaitingFastResultPeriodSec" value="50" />
+      <Setting name="MinPtsPerPartition" value="2500" />
+      <Setting name="MaxPtsPerPartition" value="1024000" />
+      <Setting name="JobTouchTimeTreshold" value="120" />
+      <Setting name="FrontendTraceLevel" value="Info" />
+      <Setting name="JobManagerTraceLevel" value="Info" />
+      <Setting name="JobStatusCheckIntervalMilisec" value="100" />      
+      <Setting name="MinYearBoundary" value="1991" />
+      <Setting name="MaxYearBoundary" value="2010" />
+    </ConfigurationSettings>    
+  </Role>
+  <Role name="FetchWorker">
+    <Instances count="4" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="----- PLACE YOUR VALUE HERE -----" />
+      <Setting name="DatabaseConnectionString" value="----- PLACE YOUR VALUE HERE -----" />
+      <Setting name="BlobConnectionAccountName" value="----- PLACE YOUR VALUE HERE -----" />
+      <Setting name="BlobConnectionAccountKey" value="----- PLACE YOUR VALUE HERE -----" />
+      <Setting name="JobTouchPeriod" value="10" />
+      <Setting name="JobQueuePollingMilisec" value="100" />
+      <Setting name="FetchWorkerTraceLevel" value="Info" />
+      <Setting name="JobManagerTraceLevel" value="Info" />
+      <Setting name="DataHandlerTraceLevel" value="Info" />
+      <Setting name="FetchEngineTraceLevel" value="Info" />
+      <Setting name="HeavyJobsPermitedCount" value="7" />
+      <Setting name="LightJobExecutionTimeLimitSec" value="180" />
+      <Setting name="DaysBeforeJobDeletion" value="60" />
+      <Setting name="HoursBetweenCleanup" value="23" />      
+    </ConfigurationSettings>    
+  </Role>
+</ServiceConfiguration>

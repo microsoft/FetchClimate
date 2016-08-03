@@ -1,0 +1,2129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="51cf602b-e102-4fd7-acf3-68ffe9c11571"
+  name="LinearCombination"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="315c77a2-e6bf-45da-ad49-20755a5df00c"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="7088adb5-b916-4da0-98a0-8ada164369d2"
+        name="LinearWeight"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="db90469a-6311-4f24-88fa-325fe4279c61"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DLinearWeight ArrayRank%3D1 ParentType%3DLinearWeight)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="58be969b-42e1-41ee-99c0-cd84fd8be43f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8e09dd91-f36b-479b-8c91-c7525b749b87">
+                <propertyInstance
+                  Id="06706706-1314-47fb-99d1-af40b5f75155"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a1e02b91-2d84-4d49-9c17-6eaa9ae3b0fc">
+                <propertyInstance
+                  Id="177c90c3-eaa7-4547-899e-1dd2ab015c83"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="12dad65c-c831-48bc-94f4-c3b7154e074f">
+                <propertyInstance
+                  Id="fcd21973-08e8-407b-9616-f5f587364f1e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a6938376-f4bd-4c67-aa2c-4fa4be2ff2eb">
+                <propertyInstance
+                  Id="91fdaa64-8c5d-4629-9943-f6eb4aac7e7c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="50ffff7b-9db2-4f75-8ca4-794789518292">
+                <propertyInstance
+                  Id="58a554e1-3fab-49b5-923f-f7ce49027016"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="059ea56d-c837-405c-b7e5-a01477ca5f6b"
+        name="Nodes"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="676b0a28-a18a-499a-96ac-25624d2f0c09"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DNodes"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a0f37245-9752-4c54-a61d-254c9abc8523"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4e016434-713f-40d9-a421-054a0bbb824d">
+                <propertyInstance
+                  Id="95a6a94c-6ec3-427a-84b2-bc38aad95dc7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6a30a1bc-25d0-44ef-94e6-db0e7ff65532">
+                <propertyInstance
+                  Id="8228d780-93c0-40b0-a245-759caa31f1d0"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b9fd5f24-1310-49db-b113-1b517c72f8c2">
+                <propertyInstance
+                  Id="e6d0151f-2a40-4099-b850-76baabe40a3a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e439a457-c890-4dd6-9af6-e2dc816de812">
+                <propertyInstance
+                  Id="7d8d36b5-1dc1-42ec-8b19-aa5199bd7177"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cae4fba0-373a-4e61-a53b-2d459765dd61">
+                <propertyInstance
+                  Id="c172b9f7-ae34-415c-aec6-c39d82499e44"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="39348c34-8941-4cb7-8104-ccafff32e976"
+        name="I2PhaseGeoCellScatteredPointsLinearInterpolatorOnSphere"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="ac454dfa-3d45-43b8-a7b3-f92edf547f4b"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DI2PhaseGeoCellScatteredPointsLinearInterpolatorOnSphere"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="df2b2c43-0016-4349-b2e3-3cc585171224"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ea860df5-5469-49d8-9a6e-30ca42295f02">
+                <propertyInstance
+                  Id="e7214523-a0e8-4e8e-85ce-2b505cf28c33"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="484f9e67-ce96-4060-ad01-57d23dee6590">
+                <propertyInstance
+                  Id="b874f752-1d1e-436d-b92d-f03745f5b5c9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="09ccfe07-8901-4805-b8ca-a5574c10eec1">
+                <propertyInstance
+                  Id="c74e1bc8-07b4-4bee-8505-bdfa7524b703"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ce80a326-3d4b-4899-8e5f-b3e65b7a30e0">
+                <propertyInstance
+                  Id="0040965d-0d7b-4133-ad75-a3dd0e136431"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4c8da015-8beb-4462-ad93-68a45993e347"
+        name="IEquatibleNodesConverter"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="5f0d70bf-1c8c-461d-b8f2-2e20ce3f10dc"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DIEquatibleNodesConverter"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="cd16a62f-495e-4cd0-a383-0784fd8473f9"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1e718dc9-48c5-4805-b67e-895c753ee215">
+                <propertyInstance
+                  Id="98155af7-76a4-4a34-9de4-d2d9fa2253ce"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c772ce3e-d2de-478c-907d-e1973587e09f">
+                <propertyInstance
+                  Id="4be619cc-451c-4b7a-97b8-2d8f5f45d46e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="02d1ad3c-078e-40c1-8e2a-5091c3e50644">
+                <propertyInstance
+                  Id="8ac88078-9dc2-4ebc-81d1-1313dd4fd714"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6a4d5251-839b-4794-84b8-362e4c39c8c7">
+                <propertyInstance
+                  Id="5a3c59ff-2d37-44dc-9a2a-7fd8969154b4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="03acec02-968a-449d-8c68-dfcf290ce646"
+        name="I2PhaseScatteredPointsLinearInterpolatorOnSphere"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="e206ca8c-461b-4d82-bdc6-06e1e6dc69c2"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DI2PhaseScatteredPointsLinearInterpolatorOnSphere"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="33575a87-cdc3-4591-9135-b96490ccd803"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a5af1cfa-b29b-49e8-8f6f-3ec9d46c2d2b">
+                <propertyInstance
+                  Id="7753d167-b33c-463b-b31c-657b43e3d607"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e1a82ea6-867f-4c75-9372-feb393f50655">
+                <propertyInstance
+                  Id="15058176-2c10-4a5b-8648-c1abd061b6cb"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5134183e-0448-4db6-a4f6-50c2bf57ee6e">
+                <propertyInstance
+                  Id="caa9bb0d-f770-4a60-ad6f-e83b2df3ca61"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9fe90a91-7b88-4a8c-9922-cb96abc0a5e1">
+                <propertyInstance
+                  Id="71729c49-5fde-4527-8c8b-d6771c034333"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8f2c91ed-b2e4-4f62-991f-93930b397667"
+        name="RealValueNodes"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="41468b48-1269-44e8-8072-a2a447db0c6a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DRealValueNodes"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="29d31605-c69b-4f1d-a4f0-68c0415b786c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9dd7dfdf-529e-44b9-8025-ad2976433366">
+                <propertyInstance
+                  Id="c5b258fb-450e-4445-8433-8661e5c320e8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3f822b37-3a24-4b1f-ad68-04489897c66b">
+                <propertyInstance
+                  Id="64c9229c-fc75-4b50-aa09-76cc90e9edfc"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8c837820-8bfe-419b-b6a1-bf7ce21b4dde">
+                <propertyInstance
+                  Id="3a74a620-c9ca-4d0c-8945-830016943d33"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dc60953d-997d-4c2c-9193-907ec08c436a">
+                <propertyInstance
+                  Id="38a26d29-c319-413f-8e02-99314537ea0e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="092255b0-f06e-487a-a986-b8dfa8416e6f">
+                <propertyInstance
+                  Id="408b2aec-0eb7-4c52-93c7-33a58de9a009"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="f61244bf-8060-4166-9088-77b032bde375"
+            isSubstitutable="false">
+            <classMoniker
+              Id="059ea56d-c837-405c-b7e5-a01477ca5f6b"
+              LastKnownName="Nodes"
+              LastKnownLocation="Package_1033.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="cd326050-9658-4d21-ab27-0fcffd2892e6"
+        name="INodes"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="fa9566c0-f070-42c7-852b-cd6bb05f5193"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DINodes"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="67d93279-48d1-4ba1-9b85-ccfddfdcb8d5"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f5cf5cfc-5f04-4f43-83b3-902434b749e3">
+                <propertyInstance
+                  Id="9ae9b394-8faa-47be-ba7d-b9fd45e1bbdb"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0903f80d-8f1c-436c-be80-2c559415e80d">
+                <propertyInstance
+                  Id="c686828c-4289-4d3c-aab6-0274d8fd7da6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f476fb11-4539-4f6e-80c3-e3349684f7b6">
+                <propertyInstance
+                  Id="f3a581bb-6e2d-4b11-9afd-3d26c1e8d944"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a2c2b0a6-e368-4875-ac8c-0dbeb05c6ad9">
+                <propertyInstance
+                  Id="da6e3d92-e237-46f4-970f-01a82f38526b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="913bc3ad-8e91-48f8-884c-a0077b88024c"
+        name="ILinearWeightsFromContextProvider&lt;TContext‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7628ba66-c094-413f-a576-7b613f378372"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="74f47cb0-7495-48aa-bec7-bf60484b56b5">
+                <propertyInstance
+                  Id="fabf958a-ba91-4669-bca2-85423d5059a7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="300e2339-0899-429b-8147-50d5b042964f">
+                <propertyInstance
+                  Id="c0052fa5-86ad-42f8-bcee-cb0b6bc88bfd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3b2042d7-7f89-4002-999e-80d5a5adf6a5">
+                <propertyInstance
+                  Id="1829fa7b-7d0d-4821-9f11-45f5488627c9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="44a54321-ea17-42e2-835f-dd618e486528">
+                <propertyInstance
+                  Id="0c8c9632-5449-4ccf-99e8-6b34a82821ab"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="a9d4773b-a568-4493-aa74-9959af7c21db">
+            <redefinableTemplateSignatureMoniker
+              Id="5e85ed83-83d3-4170-a8e1-ed932520ec9c"
+              LastKnownLocation="Package_1033.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="789e896c-70ab-4681-b63a-35d8162a1187">
+                  <actuals>
+                    <classMoniker
+                      Id="b10787e1-0fde-4666-9488-784b82a5b651"
+                      LastKnownName="TContext"
+                      LastKnownLocation="Package_1033.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="bbfdbe76-4312-4f42-b317-30e97a7820cf"
+                      LastKnownLocation="Package_1033.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ca092710-2e96-48b3-8da4-8ccdaf2673f2"
+        name="IScatteredPointsLinearInterpolatorOnSphere"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="22b370fb-1585-4d90-8dda-f321195860fc"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DIScatteredPointsLinearInterpolatorOnSphere"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="fade65ee-9603-475c-b87d-c83d451579e6"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9875d9ae-db76-49d5-8e11-2db60c6939b6">
+                <propertyInstance
+                  Id="1e7df197-23ba-4022-aecf-c9b318667024"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8df89b3a-edd1-4528-8188-3a72ad0dc7b6">
+                <propertyInstance
+                  Id="8edac93f-736a-41e1-9d0a-63d93292be6b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b9dbe037-ca42-4596-9f88-160b8686eb88">
+                <propertyInstance
+                  Id="e1703ffb-2420-45db-a12a-a42afc712cf1"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="171bde3d-8121-4885-9334-02aac82ecf6b">
+                <propertyInstance
+                  Id="80483714-0973-4b76-bff1-9e471c5ec965"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7d2e2c01-67b1-464f-89f4-acaa5ddab47d"
+        name="TwoPhaseScatteredPointsLenearInterpolatorFacade"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="adddf00a-765f-4258-b38b-9edc0f99d952"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="41cea47c-822a-4f67-a214-d6593f486c01"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="043e946e-d8aa-42d7-b734-e1965e1b597c">
+                <propertyInstance
+                  Id="f574c161-9e9a-4485-bc6b-e299cbbcdcc9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f4fe2bcc-4d1d-481b-bd5d-8221d2faf258">
+                <propertyInstance
+                  Id="d8c886ef-a2ec-416d-893e-7af31dbb458e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="17f8f69a-724d-4836-a6f8-49736e5e6b47">
+                <propertyInstance
+                  Id="9fd9d4b6-e00f-4de4-b4c0-e1582c0e7bcc"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c45a9c7f-da8d-4679-bcef-d0282edc4f04">
+                <propertyInstance
+                  Id="e25fd8ee-bc51-4538-b14b-4830b11d2e60"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="df7834f2-8fee-4658-82c6-9b72e8181f9f">
+                <propertyInstance
+                  Id="20331ab6-7211-4891-94dd-d8a475c10f92"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="8a79b266-2ac2-437f-a1ef-76caeb619de5">
+            <interfaceMoniker
+              Id="ca092710-2e96-48b3-8da4-8ccdaf2673f2"
+              LastKnownName="IScatteredPointsLinearInterpolatorOnSphere"
+              LastKnownLocation="Package_1033.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="893e4afb-0c7a-4f5e-b991-50f7fbea24f3">
+            <interfaceMoniker
+              Id="c5468e74-9601-451b-9898-8d2f2ebc5b47"
+              LastKnownName="IScatteredPointsLinearInterpolatorOnSphere"
+              LastKnownLocation="Package_0026.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="c96eb108-c2e5-4de2-8954-e0bc01a95b79"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="304249e5-d23f-4a7c-ae5e-8eaec960da6c"
+              LastKnownName="ILinearWeightsFromContextProvider"
+              LastKnownLocation="Package_1033.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9316f4fd-c6c2-4eed-bc25-ace5d87134eb"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e1c9634d-4068-41a0-b4b8-8d5156244318"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9a07e048-3e71-4987-89a8-24ca961298e5"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="INodesMap"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="617403e3-5956-4825-895f-367e90ea9666"
+              LastKnownName="INodesMap"
+              LastKnownLocation="Package_1548.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f7ffea74-8119-4fa1-9093-2122a26d5873"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fa166eba-f606-4286-9325-acbed11cf958"
+                  name="INodesMap"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="be9571e2-e74d-4bbd-b7ef-24f111f0e3e9"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="0852b667-0e8d-4247-b89b-c20273710a52">
+                <referencesInternal>
+                  <reference
+                    Id="7d0b50ef-f32e-4271-8171-4a2307aaf684"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="48403a30-895a-43bd-9516-ddb17ba1424c"
+                    name="TContext"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="4dd4cacf-aa52-4234-88df-3c585dc88b4a"
+            name="contextProvider"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="890415e1-9902-4560-a3f1-0a0ebd2cd893"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) Member%3DcontextProvider"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7f285277-ca25-4bc3-92f5-16cd388be28e"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e43fd50-2257-426a-ae4c-101ced4609b4">
+                    <propertyInstance
+                      Id="2f630883-dc34-4fdd-bb2d-5ce668043ab5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c0fa506-6c0e-4274-951e-43cfc57b9d40">
+                    <propertyInstance
+                      Id="6281c916-526b-4690-a1e5-b5a6f1e38d2e"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e79c7a5-706a-4e2e-ae9f-75db7c440e94">
+                    <propertyInstance
+                      Id="3d937a0d-8692-49ef-ada8-bcd6093d0c31"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2265737c-4e8d-43bb-8e82-5b8cd9560bbb">
+                    <propertyInstance
+                      Id="7fad7c09-c452-4bd8-b29a-cc116f1ea22b"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a3dbff2-a47f-4e01-a5c6-a6e507b592e9">
+                    <propertyInstance
+                      Id="565d0b41-2af9-4ab7-bca1-bcfbf74b8653"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="02892720-da9c-40de-b63b-561ea603dafc"
+                LastKnownName="INodesMap&lt;TContext‎&gt;"
+                LastKnownLocation="Package_1549.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="79405e9a-f469-4472-bce5-ceb5f7f13c6a"
+            name="weightsProvider"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="cacaf50c-b0f2-47f8-8873-aa3799a0d737"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) Member%3DweightsProvider"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7a8b5e3b-80e7-4144-8300-3ca5d25d278a"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="420ae510-77f9-4ced-8ef6-faefb5fc847c">
+                    <propertyInstance
+                      Id="10e8b02b-c4fb-4c92-b6a1-515e8f7c4e28"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bccb52da-6d3c-461b-9e4b-57a1cf3e02eb">
+                    <propertyInstance
+                      Id="f72c25a3-695a-40c9-aa6f-25faef2f06e7"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9787b876-4a1f-46da-a75b-eb842c89b3e0">
+                    <propertyInstance
+                      Id="4b236f19-4e02-4f9a-88df-67260c59107a"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6b1dff8-c7b6-40ea-8540-98d30a261c1f">
+                    <propertyInstance
+                      Id="3ca8418b-25d8-4950-94f9-9d20615d8c10"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0cb9f93c-8ee6-4ac6-be32-e5349200284b">
+                    <propertyInstance
+                      Id="624d635c-ef08-40f5-bc8d-8d8e03cc615d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="913bc3ad-8e91-48f8-884c-a0077b88024c"
+                LastKnownName="ILinearWeightsFromContextProvider&lt;TContext‎&gt;"
+                LastKnownLocation="Package_1033.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="534cfa48-3ab8-430d-95a7-3d0957fb3167"
+            name="TwoPhaseScatteredPointsLenearInterpolatorFacade"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c8c2ac83-8d5c-43da-92c3-9039834bd49b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.Utils Type%3D(Name%3DINodesMap GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) ParameterIdentifier%3D0)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DILinearWeightsFromContextProvider GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) ParameterIdentifier%3D0)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a1047786-f6a2-4411-afe7-320bc094626e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f00a02a-d92c-4a29-b87a-5ccd6b3b004c">
+                    <propertyInstance
+                      Id="2bd86182-e802-4dff-b496-d15220fab69d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3c30dd9-2b70-4edf-81cd-6f9c5875f686">
+                    <propertyInstance
+                      Id="25b792c3-5323-479e-bdd2-91068f147cf4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7b9f998-c739-4730-afbf-5098b025d208">
+                    <propertyInstance
+                      Id="06ad529c-8df3-404d-b2a2-01d73e1a6cfd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34842c2e-b28b-44f6-82ac-2d561d9929b1">
+                    <propertyInstance
+                      Id="fba66ad0-5059-4427-849c-a68c8306bc58"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="209c0e5f-ec5f-4bb2-916a-0c2308944324">
+                    <propertyInstance
+                      Id="2ac46e7f-b57b-47ed-9cb3-1ed62b6df137"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e15bcaf4-6e66-459c-995a-33766293f0fa">
+                    <propertyInstance
+                      Id="088a3e3c-0965-4c8f-9f69-36cb81e492b3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f87fc81e-9a95-458c-a95c-4f3e3087e476"
+                  name="contextProvider"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="96a3c73b-1e93-4d5b-8419-3eaa319f4025"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.Utils Type%3D(Name%3DINodesMap GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) ParameterIdentifier%3D0)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DILinearWeightsFromContextProvider GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) ParameterIdentifier%3D0)]))]) ParameterIdentifier%3DcontextProvider"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="02892720-da9c-40de-b63b-561ea603dafc"
+                      LastKnownName="INodesMap&lt;TContext‎&gt;"
+                      LastKnownLocation="Package_1549.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f5fc4229-9ca3-4785-8969-e8613b62df36"
+                  name="weightsProvider"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d807c6b2-1a5f-41cd-8dd1-8329ebb5f239"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.Utils Type%3D(Name%3DINodesMap GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) ParameterIdentifier%3D0)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DILinearWeightsFromContextProvider GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) ParameterIdentifier%3D0)]))]) ParameterIdentifier%3DweightsProvider"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="913bc3ad-8e91-48f8-884c-a0077b88024c"
+                      LastKnownName="ILinearWeightsFromContextProvider&lt;TContext‎&gt;"
+                      LastKnownLocation="Package_1033.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1af5b1ef-6a2c-438f-830d-1d6df4c0c450"
+            name="GetLinearWeigths"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8d6c50ca-a941-4895-b7e5-059de4aaf127"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DINodes)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DICellRequest)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e96bb29d-1163-4758-af23-a37e6bcd7cd4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1a9146a-cffe-4188-a886-eff4aad7fc0b">
+                    <propertyInstance
+                      Id="d77fd06f-d32c-4c88-9d07-4708110a059a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1534ff6e-4ad6-4717-a1c5-ea1b11a67eee">
+                    <propertyInstance
+                      Id="3e34dfff-b90b-4806-a4e7-11014ee944e7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9fcda9ce-9b9c-42e8-b896-aa2facc38075">
+                    <propertyInstance
+                      Id="f30952e2-4c58-4ce0-ae4a-cc9e177b938f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22625b79-2dbc-4b98-b9d0-5c412139ed21">
+                    <propertyInstance
+                      Id="079302ac-f4e5-4bc3-b8f2-9f1f5f7f93ff"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a45b8821-787e-4b8d-8c6d-ec39fc501846">
+                    <propertyInstance
+                      Id="331ea67f-15ad-471d-94e0-40d6a58f38dd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="421ca909-a84d-4b0b-94ab-3aff82b26c65">
+                    <propertyInstance
+                      Id="f1eb1708-25eb-4921-99a4-8a36b02cbab9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="594b31f0-f6a2-4206-a9fd-ab435a2d33de"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="8d1f9e41-81c3-4d86-a549-3d63ce4fe59e"
+                      LastKnownName="Task&lt;LinearWeight‎[]‎&gt;"
+                      LastKnownLocation="Package6_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="99503f9e-489e-4bad-91c2-f175c9bba539"
+                  name="nodes"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6a2f351b-8be6-4e26-b255-2709c943e254"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DINodes)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DICellRequest)]) ParameterIdentifier%3Dnodes"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="cd326050-9658-4d21-ab27-0fcffd2892e6"
+                      LastKnownName="INodes"
+                      LastKnownLocation="Package_1033.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6f9bc36b-6792-43a7-8f32-59e6cf0bad4b"
+                  name="cell"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="483634ab-1555-45aa-8058-71d51ef40b9d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DTwoPhaseScatteredPointsLenearInterpolatorFacade GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DINodes)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DICellRequest)]) ParameterIdentifier%3Dcell"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="7ba13b6f-fe84-42df-a1df-3aecd7fb5ce6"
+                      LastKnownName="ICellRequest"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b5e3389e-6dc1-4601-ad5f-a74f225c6560"
+            name="GetLinearWeigths"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dc6dd6f3-57b7-4456-b041-09116b97a364"
+                  name="cell"
+                  direction="In">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="84233070-693b-4780-a6f8-17f5a088c498"
+                      LastKnownName="GeoCellTuple"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fdcf24f7-259b-48a6-a3b5-1c80f3836c8b"
+                  name="nodes"
+                  direction="In">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="059ea56d-c837-405c-b7e5-a01477ca5f6b"
+                      LastKnownName="Nodes"
+                      LastKnownLocation="Package_1033.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="59168502-e20c-47a6-8cfb-d1f6961debce"
+                  direction="Return"
+                  isOrdered="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="de338f44-fb66-4648-a1cb-b08eb656601e"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="344d1a22-3946-4bbd-a23c-b321291352cf"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7088adb5-b916-4da0-98a0-8ada164369d2"
+                      LastKnownName="LinearWeight"
+                      LastKnownLocation="Package_1033.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="304249e5-d23f-4a7c-ae5e-8eaec960da6c"
+        name="ILinearWeightsFromContextProvider"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="6e329c73-392d-4444-8977-d79c18ef397b"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DILinearWeightsFromContextProvider GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="47f28381-8700-4c10-8f8c-946c9469e761"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="54eb8cd5-0d7f-4bfa-aadd-47eb39ae0210">
+                <propertyInstance
+                  Id="19e65b47-7691-4f80-afdd-e2d3a437d4d1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f07b6e0-305a-415e-9dd1-9a58d75ad753">
+                <propertyInstance
+                  Id="5173b4cf-0e7e-4fc3-ae17-a9af367c6aa3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6710a5ea-bcd0-4195-92df-7dd988d1d3da">
+                <propertyInstance
+                  Id="522131ab-d0f4-4aaf-829e-c6579f7bfb3e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bda27c23-e468-4f2d-8971-7708164d086a">
+                <propertyInstance
+                  Id="7a225363-7c1d-4d0d-bc77-fc4b56dc1220"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="5e85ed83-83d3-4170-a8e1-ed932520ec9c"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="bbfdbe76-4312-4f42-b317-30e97a7820cf">
+                <referencesInternal>
+                  <reference
+                    Id="8ca87ab1-15e5-4a04-a09a-3417e281aa2e"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DILinearWeightsFromContextProvider GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="a0583e5b-742e-4ac2-a000-15473869d456"
+                    name="TContext"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedOperations>
+          <operation
+            Id="9e13291f-b078-47d7-92eb-b377534fa6f6"
+            name="GetLinearWeigths"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="da91dd3c-2439-47eb-9f85-561dc5eff934"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DILinearWeightsFromContextProvider GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DICellRequest)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DILinearWeightsFromContextProvider GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9e490693-81b4-41a1-8396-59cc8b314b5b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aca11c93-f778-45b2-ac36-ccfc8bc7d345">
+                    <propertyInstance
+                      Id="8baf3115-9ba5-41ac-9b91-f702b5a9ac3d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a14139f0-7d83-485e-97b1-2e9a7c395d44">
+                    <propertyInstance
+                      Id="4e695a0d-e717-4f6a-b5d4-f6d39ef03be3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc95a43a-f743-470d-a3b0-cde530c59cb9">
+                    <propertyInstance
+                      Id="fdd732c8-1e9a-4052-a437-64c1500dcbb6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33f2ac47-2c5d-41de-a330-77589f496818">
+                    <propertyInstance
+                      Id="dba5f1ff-da50-4f3b-ab27-c5b1e23e8b0c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e393c584-da76-4d95-9dd2-74c1fcaaa86e">
+                    <propertyInstance
+                      Id="a006c669-3bdb-483e-a541-02dbcba35432"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c71fdaa-dece-4d81-a796-ee1f2a9c8c39">
+                    <propertyInstance
+                      Id="0d92f178-9360-4195-aa64-9b61281b53e4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f0928281-07ec-4922-83b8-810c7d430d88"
+                  direction="Return"
+                  isOrdered="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a01964ec-4b84-4f77-8181-45748b2896a1"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fe211ddf-be55-41ae-9773-c24294a75536"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7088adb5-b916-4da0-98a0-8ada164369d2"
+                      LastKnownName="LinearWeight"
+                      LastKnownLocation="Package_1033.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c69609b4-51da-4245-aa10-48a21c417d5e"
+                  name="cell"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6da72759-474c-4918-a067-f262c0ca123e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DILinearWeightsFromContextProvider GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DICellRequest)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DILinearWeightsFromContextProvider GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dcell"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="7ba13b6f-fe84-42df-a1df-3aecd7fb5ce6"
+                      LastKnownName="ICellRequest"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e3048032-1133-418f-880b-d5c22cfc82b1"
+                  name="interpolationContext"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="60357023-5bee-4000-835c-7b802ba6a5af"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DILinearWeightsFromContextProvider GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DICellRequest)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DILinearWeightsFromContextProvider GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3DinterpolationContext"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a0583e5b-742e-4ac2-a000-15473869d456"
+                      LastKnownName="TContext"
+                      LastKnownLocation="Package_1033.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="076229a6-9531-4b58-82a7-64c97bb1b7fd"
+        name="CellRequestToPointsAdapter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="84ffc597-0320-40b9-b60f-c6fd06335321"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d6f90016-ad66-40bd-b68e-0766a2ff8239"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9ed6f55e-cb4a-40f5-a687-cf347d0f5a89">
+                <propertyInstance
+                  Id="4fc523dc-763a-4ddd-b22e-ef43191cd91b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e6bac1ca-4c8d-4154-a89f-d09e05daf351">
+                <propertyInstance
+                  Id="bdfaa79b-5f2b-483e-af3d-01f748751449"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1793cd82-90a3-41a3-b90e-f37909a51862">
+                <propertyInstance
+                  Id="e05523c5-57bf-40f8-b7f9-62aa841dda29"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9401ce33-9b2f-45b8-ac31-d3080b077b30">
+                <propertyInstance
+                  Id="41eced9b-37db-4b8c-86d6-a1e74a9e1825"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="595bd17b-d778-47a3-bec1-3bc5380d5186">
+                <propertyInstance
+                  Id="2b1cfc1f-0906-4a30-a8eb-decadf273746"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="bd735060-55f7-42f8-8024-e4e279410a45">
+            <interfaceMoniker
+              Id="913bc3ad-8e91-48f8-884c-a0077b88024c"
+              LastKnownName="ILinearWeightsFromContextProvider&lt;TContext‎&gt;"
+              LastKnownLocation="Package_1033.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="d5106822-5cf9-40cd-b34b-0d6f41a10fb5">
+            <interfaceMoniker
+              Id="304249e5-d23f-4a7c-ae5e-8eaec960da6c"
+              LastKnownName="ILinearWeightsFromContextProvider"
+              LastKnownLocation="Package_1033.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="ce93b68e-beb4-41ee-90ca-9746404a667e"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="959fdfd7-20f6-404c-b2f2-18354b076829"
+              LastKnownName="IScatteredPointContextBasedLinearWeightProviderOnSphere"
+              LastKnownLocation="Package_1033.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c7008c77-a6ce-41de-a013-87ef1302eee5"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="37160126-6425-4850-9a3e-6d439ed3f49b"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="25ce3606-cb12-4312-8450-7c37737cfdd0"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="f9db0fd9-5fee-440b-a505-3f3b6cf1d6b2">
+                <referencesInternal>
+                  <reference
+                    Id="de3f6ad1-a6e3-43d4-b8ca-24a67d5e482f"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="b10787e1-0fde-4666-9488-784b82a5b651"
+                    name="TContext"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="5c3231c9-fcf9-4a42-bf8f-58fd63035c18"
+            name="cellDivisionNum"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3774cd91-f3d1-4d1f-aa43-8757bb27e9bc"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1) Member%3DcellDivisionNum"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ac005ef1-3079-4b08-b51c-ff4e1ff812ac"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b988d704-b314-4ec8-b84a-76b9e29f66bf">
+                    <propertyInstance
+                      Id="d94dd583-a275-4d2f-a04c-5f39b049b49c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b39a90e7-143f-40b8-b92a-56208dc6e7f3">
+                    <propertyInstance
+                      Id="e89b59a6-ec33-4872-89d8-7f1134779dbe"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1a70fd0-ccc9-4b45-a134-983293909c12">
+                    <propertyInstance
+                      Id="0c80c513-2540-4723-a0a2-b0acccc1a691"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba421294-21fe-4a0c-ae44-ca100b162fec">
+                    <propertyInstance
+                      Id="6b561218-67f5-4a8c-8ceb-b6742bc2c129"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e73401d1-43bb-4b5f-ba21-cce7a71b3929">
+                    <propertyInstance
+                      Id="f6c0ce2e-48b3-4fe3-af11-c8c3d07c4940"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Model.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9745fffe-b27c-4020-9f85-13a32cd73eb9"
+            name="component"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f9169795-d146-44af-bb41-9b72abba51d1"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1) Member%3Dcomponent"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ccb39437-7624-4ed3-99ec-189ddc75c7db"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1be34ff-aea8-453e-9a49-d22c5f5578c0">
+                    <propertyInstance
+                      Id="08ce3ade-079c-4183-bc73-b28810b23c39"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5fa0597-d10c-4224-8bf0-e7f42d88afd5">
+                    <propertyInstance
+                      Id="eeabba4e-3af7-4db4-978d-4e10fb09460f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ae4acef-eb55-4022-8825-38a14b3398d8">
+                    <propertyInstance
+                      Id="279d5d5d-afdf-4ad0-9c2f-fc923a8c4ebc"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d174bc60-b162-43cd-ba3a-7fcb82db32b0">
+                    <propertyInstance
+                      Id="a8a0be70-ee4f-4b62-acac-cd09cc6a6fc4"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="49d716f4-020d-46c8-9080-e208a42c4524">
+                    <propertyInstance
+                      Id="074c435e-d607-41fd-b1ce-b5b605fdb20a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="678e4ef4-634e-43e9-adc2-39b39c41e802"
+            name="CellRequestToPointsAdapter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5f923594-5c0a-4ebb-9b7a-98bd12344c12"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DIScatteredPointLinearInterpolatorOnSphere)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f1526892-b926-4032-bc57-6a3f1d678b6f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06db12b1-cace-48ef-8045-87ceab373934">
+                    <propertyInstance
+                      Id="a5f4f232-f4c8-4bdb-bba0-278949ea4e01"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cd1e4a3-6751-4f83-864a-ea340c898861">
+                    <propertyInstance
+                      Id="752d671b-7bba-40b6-b264-fe32bf7d8f11"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2f88cd0-67e8-4acf-9e25-8bc798305c81">
+                    <propertyInstance
+                      Id="31a9a4a0-adde-4355-bb30-9de4cb66820a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de4a1728-f8db-4c5b-b286-9c9c9dc35d32">
+                    <propertyInstance
+                      Id="59ea084e-6558-4a3b-ae54-dcdcad96afe4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c2a37c1-958b-4735-9944-b9738f35b051">
+                    <propertyInstance
+                      Id="33e94e2b-9b41-4396-9fc8-2cda24d7d6af"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a5046c6-432c-4753-bf62-cb3ea9d4a820">
+                    <propertyInstance
+                      Id="fe50a87d-b515-49c0-8043-3f23c1ab61f0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="edeb08f4-5449-4fb9-bd4a-00bcad5c228d"
+                  name="component"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3f51ae82-6925-4d2a-8c68-65dbaa9c15b2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DIScatteredPointLinearInterpolatorOnSphere)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dcomponent"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f31e67fa-1233-4a22-96d0-f65ea1f5c56c"
+                  name="cellDivisionNum"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="84b52bff-00e3-4c47-8f57-0549db4801bf"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3DIScatteredPointLinearInterpolatorOnSphere)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DcellDivisionNum"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="aaf8e752-5dbf-441d-819b-bf2bb3edfb6f"
+            name="GetLinearWeigths"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c3d2a8f2-648a-4ad0-879f-7b204dcd3181"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DICellRequest)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="93c259f4-a31e-48a0-a09e-0f253059298b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8e6afd6-239c-499f-9410-4aeb3e9b2c0d">
+                    <propertyInstance
+                      Id="13ee3618-752e-4e91-ad6d-b1406a450438"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81df29ed-6074-4c91-9115-55b1c13af863">
+                    <propertyInstance
+                      Id="53d3c9a3-763d-44d6-b968-9c19013155e1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cbadc543-a574-44b6-ac68-c4f704e8a97d">
+                    <propertyInstance
+                      Id="9663be90-d838-4290-a1eb-e5730362a004"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0a40114-4fc7-421a-ac67-33cb2da8d18c">
+                    <propertyInstance
+                      Id="87eced50-1589-400a-9d71-927c6c0e37ca"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3e60d56-34aa-42e4-b1f1-29c5be4c1b62">
+                    <propertyInstance
+                      Id="9b6aaeb8-9024-44bf-9208-1593816c32d8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0df37205-b5b8-44c7-a45d-940c04a23c7c">
+                    <propertyInstance
+                      Id="a38670c9-c733-471a-b7cf-b1dfdfb04081"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8ed7e22c-b29a-403d-b584-81f7b47f0b02"
+                  direction="Return"
+                  isOrdered="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c1cb3593-91f3-48ff-acc8-efc53c89cb1c"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="10acdc71-26ec-4a8c-b173-443801acd217"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7088adb5-b916-4da0-98a0-8ada164369d2"
+                      LastKnownName="LinearWeight"
+                      LastKnownLocation="Package_1033.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b6b66ac4-b791-437a-be4d-b9e73144dc18"
+                  name="cell"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3d42d3af-861c-4e92-b765-9e9d051640e5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DICellRequest)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dcell"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="7ba13b6f-fe84-42df-a1df-3aecd7fb5ce6"
+                      LastKnownName="ICellRequest"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fa113c66-0244-4392-8947-99814f80ae21"
+                  name="interpolationContext"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ccd00ef1-c595-4a04-8bc6-3f31ef6ebf64"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DICellRequest)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DCellRequestToPointsAdapter GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3DinterpolationContext"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b10787e1-0fde-4666-9488-784b82a5b651"
+                      LastKnownName="TContext"
+                      LastKnownLocation="Package_1033.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="959fdfd7-20f6-404c-b2f2-18354b076829"
+        name="IScatteredPointContextBasedLinearWeightProviderOnSphere"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="61f39f35-ff99-4562-b3ae-4b44cb2eb226"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DIScatteredPointContextBasedLinearWeightProviderOnSphere GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8a96df76-7e26-474e-b365-8be1aaf7529e"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5b4568d5-df42-4e4b-a14c-ee54dde1dd6c">
+                <propertyInstance
+                  Id="a6e4b5a4-bd21-4231-b2c3-fa4d29de5940"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ea7d81f3-f0ea-4f34-8331-f438814f8a70">
+                <propertyInstance
+                  Id="5754cfcb-f198-4826-87d6-54f553b7884f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b85b78b1-7ed1-4305-b28b-86cacc936540">
+                <propertyInstance
+                  Id="e34ff03a-d381-41bb-848d-c70b0204c029"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="911ded57-16ab-4a96-86e4-b5c59f425f27">
+                <propertyInstance
+                  Id="e0e370f9-09fb-4d3d-bcfa-c9233560384a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="81e022e7-6aef-4f10-9024-55eac97117b6"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="178a9575-9247-4271-9ec0-62f1b5f7e9c6">
+                <referencesInternal>
+                  <reference
+                    Id="ec569a1c-443b-42d9-adb0-bb759f6dfcf6"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DIScatteredPointContextBasedLinearWeightProviderOnSphere GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="f57d6604-62c7-43f3-b7c3-62e738538f4b"
+                    name="TContext"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedOperations>
+          <operation
+            Id="2db9ad19-004c-4503-a667-9b50d0466306"
+            name="GetLinearWeigths"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6007986e-7711-4a7d-9a97-620eca04bc29"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DIScatteredPointContextBasedLinearWeightProviderOnSphere GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DIScatteredPointContextBasedLinearWeightProviderOnSphere GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fc6d2eb0-8fea-4dc4-bbac-a7eead3b4d58"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e780d879-58c0-4041-a344-34a1d13dd3c0">
+                    <propertyInstance
+                      Id="6ec780da-bf7e-4aac-aafb-15be957374a0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8ba746c-c5d1-4aad-a976-c15773677974">
+                    <propertyInstance
+                      Id="cb9b9e11-02b9-4a06-bde5-b082b287f038"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ca6c4c2-7945-4e9c-b8bb-b0ad8203e121">
+                    <propertyInstance
+                      Id="b84320aa-0d43-464e-a2da-01a32934d774"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75c821c1-7ecf-4b89-a8d4-c34c0271eda3">
+                    <propertyInstance
+                      Id="13d338c8-f395-4437-8279-706d3e55a8c4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2476313-e36b-4914-b573-240e935ca526">
+                    <propertyInstance
+                      Id="7da10e12-1238-4b0d-939a-a795d8a2efa2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a5f819b-acf3-4e37-802b-597e8b797ea0">
+                    <propertyInstance
+                      Id="b5f8e272-af68-4f60-8b82-29fe89dbfa59"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="16a6e117-1f33-4dff-8b01-5b86a1ee8aa0"
+                  direction="Return"
+                  isOrdered="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ee02edb8-d7d6-44c0-8141-8658d45a3a48"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="840d3a55-4340-42fa-93b0-bd8d17de0874"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7088adb5-b916-4da0-98a0-8ada164369d2"
+                      LastKnownName="LinearWeight"
+                      LastKnownLocation="Package_1033.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bd016e21-e029-47be-97c0-f3280693f7e5"
+                  name="lat"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e8baf0d7-8468-418d-8296-3bd30efb2589"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DIScatteredPointContextBasedLinearWeightProviderOnSphere GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DIScatteredPointContextBasedLinearWeightProviderOnSphere GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dlat"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="29ca5287-e950-467d-ab6c-76dfcf5d5f55"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package4_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3877a935-69b9-4797-8fc3-f08987eaea63"
+                  name="lon"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1688724c-f159-4a08-a996-0a9b22fb69be"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DIScatteredPointContextBasedLinearWeightProviderOnSphere GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DIScatteredPointContextBasedLinearWeightProviderOnSphere GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dlon"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="29ca5287-e950-467d-ab6c-76dfcf5d5f55"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package4_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="72bbb649-3b27-4181-b95f-ac3b32bd3bbb"
+                  name="interpolationContext"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="baf2f7ef-3aed-4d90-8db2-7ae405697d80"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DIScatteredPointContextBasedLinearWeightProviderOnSphere GenericParameterCount%3D1) Member%3D(Name%3DGetLinearWeigths OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.LinearCombination Type%3D(Name%3DIScatteredPointContextBasedLinearWeightProviderOnSphere GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3DinterpolationContext"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f57d6604-62c7-43f3-b7c3-62e738538f4b"
+                      LastKnownName="TContext"
+                      LastKnownLocation="Package_1033.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4cd1e2fc-e850-4360-8bc1-9d06bd263e02"
+        name="IScatteredPointContextBasedLinearWeightProviderOnSphere&lt;TContext‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f79ac8f1-3dd5-4b39-9478-67dbca229ba8"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5a2fb7d9-563d-4f0c-ab9d-add52de6f9ba">
+                <propertyInstance
+                  Id="77b0d6aa-7495-49cd-b02e-b57cadf2a051"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="22d47bac-ad9c-4101-ba04-75b1f097f9ef">
+                <propertyInstance
+                  Id="f7148bd9-dd08-42cf-aecb-e2830afeb4e4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="67ebbb7b-abe7-46eb-b54f-18350751421b">
+                <propertyInstance
+                  Id="4f5804f8-c3e5-45f2-b2b9-d2c5811343d3"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9570094d-c3fd-4ebe-8c0f-c55365b15d5b">
+                <propertyInstance
+                  Id="2740fd19-270b-43d5-a153-4bdff226702c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="b1462999-881f-4f1d-b9c9-592a95327c39">
+            <redefinableTemplateSignatureMoniker
+              Id="81e022e7-6aef-4f10-9024-55eac97117b6"
+              LastKnownLocation="Package_1033.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="fc93b37d-aec9-4ae5-b123-905580777a4c">
+                  <actuals>
+                    <classMoniker
+                      Id="95ab4df3-43ec-4cdb-ac79-605265536149"
+                      LastKnownName="TContext"
+                      LastKnownLocation="Package_0026.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="178a9575-9247-4271-9ec0-62f1b5f7e9c6"
+                      LastKnownLocation="Package_1033.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

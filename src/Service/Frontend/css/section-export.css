@@ -1,0 +1,385 @@
+﻿/* DONE */.sprite-close-icon {
+  background: url('../images/sprites.png') no-repeat 0 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-close-icon-hover {
+  background: url('../images/sprites.png') no-repeat -30px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-close-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -60px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-edit-icon {
+  background: url('../images/sprites.png') no-repeat -90px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-edit-icon-hover {
+  background: url('../images/sprites.png') no-repeat -120px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-edit-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -150px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-save-icon {
+  background: url('../images/sprites.png') no-repeat -1373px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-save-icon-hover {
+  background: url('../images/sprites.png') no-repeat -1408px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-add-grid-icon {
+  background: url('../images/sprites.png') no-repeat -180px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-add-grid-icon-hover {
+  background: url('../images/sprites.png') no-repeat -210px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-add-grid-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -240px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-nav-back-icon {
+  background: url('../images/sprites.png') no-repeat -270px 0;
+  width: 42px;
+  height: 42px;
+}
+/* DONE */.sprite-nav-back-icon-hover {
+  background: url('../images/sprites.png') no-repeat -312px 0;
+  width: 42px;
+  height: 42px;
+}
+/* DONE */.sprite-nav-back-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -354px 0;
+  width: 42px;
+  height: 42px;
+}
+/* DONE */.sprite-next-page-icon {
+  background: url('../images/sprites.png') no-repeat -396px 0;
+  width: 20px;
+  height: 20px;
+}
+/* DONE */.sprite-next-page-icon-hover {
+  background: url('../images/sprites.png') no-repeat -416px 0;
+  width: 20px;
+  height: 20px;
+}
+/* DONE */.sprite-next-page-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -436px 0;
+  width: 20px;
+  height: 20px;
+}
+/* DONE */.sprite-add-point-icon {
+  background: url('../images/sprites.png') no-repeat -456px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-add-point-icon-hover {
+  background: url('../images/sprites.png') no-repeat -486px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-add-point-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -516px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-prev-page-icon {
+  background: url('../images/sprites.png') no-repeat -546px 0;
+  width: 20px;
+  height: 20px;
+}
+/* DONE */.sprite-prev-page-icon-hover {
+  background: url('../images/sprites.png') no-repeat -566px 0;
+  width: 20px;
+  height: 20px;
+}
+/* DONE */.sprite-prev-page-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -586px 0;
+  width: 20px;
+  height: 20px;
+}
+/* DONE */.sprite-sort-icon {
+  background: url('../images/sprites.png') no-repeat -606px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-sort-icon-hover {
+  background: url('../images/sprites.png') no-repeat -636px 0;
+  width: 30px;
+  height: 30px;
+}
+/* DONE */.sprite-sort-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -666px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-probe-icon {
+  background: url('../images/sprites.png') no-repeat -716px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-probe-icon-hover {
+  background: url('../images/sprites.png') no-repeat -746px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-probe-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -776px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-toggle-btn-icon-off {
+  background: url('../images/sprites.png') no-repeat -811px 0;
+  width: 66px;
+  height: 31px;
+}
+.sprite-toggle-btn-icon-on {
+  background: url('../images/sprites.png') no-repeat -882px 0;
+  width: 66px;
+  height: 31px;
+}
+.sprite-send-by-email-icon {
+  background: url('../images/sprites.png') no-repeat -953px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-send-by-email-icon-hover {
+  background: url('../images/sprites.png') no-repeat -988px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-send-by-email-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -1023px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-data-to-file-icon {
+  background: url('../images/sprites.png') no-repeat -1058px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-data-to-file-icon-hover {
+  background: url('../images/sprites.png') no-repeat -1093px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-data-to-file-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -1128px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-data-to-image-icon {
+  background: url('../images/sprites.png') no-repeat -1163px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-data-to-image-icon-hover {
+  background: url('../images/sprites.png') no-repeat -1198px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-data-to-image-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -1233px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-copy-url-icon {
+  background: url('../images/sprites.png') no-repeat -1268px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-copy-url-icon-hover {
+  background: url('../images/sprites.png') no-repeat -1303px 0;
+  width: 30px;
+  height: 30px;
+}
+.sprite-copy-url-icon-disabled {
+  background: url('../images/sprites.png') no-repeat -1338px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+section.export .export-panel {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  padding: 20px 0;
+  width: 300px;
+  vertical-align: top;
+  overflow: hidden;
+}
+section.export .export-panel .fc-panel-content {
+  padding: 20px;
+}
+section.export .export-panel .fc-panel-content .action-type:nth-child(odd) {
+  margin-bottom: 40px;
+}
+section.export .export-panel .fc-panel-content strong {
+  display: block;
+  margin-bottom: 25px;
+}
+section.export .export-panel .fc-panel-content .action-row {
+  margin-bottom: 21px;
+}
+section.export .export-panel .fc-panel-content .action-img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 11px;
+  cursor: pointer;
+}
+section.export .export-panel .fc-panel-content .action-desc {
+  display: inline-block;
+  vertical-align: middle;
+}
+section.export .export-panel .fc-panel-content .action-send-by-email {
+  background: url('../images/sprites.png') no-repeat -953px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export .export-panel .fc-panel-content .action-send-by-email:hover {
+  background: url('../images/sprites.png') no-repeat -988px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export .export-panel .fc-panel-content .action-send-by-email:disabled {
+  background: url('../images/sprites.png') no-repeat -1023px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export .export-panel .fc-panel-content .action-data-to-file {
+  background: url('../images/sprites.png') no-repeat -1058px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export .export-panel .fc-panel-content .action-data-to-file:hover {
+  background: url('../images/sprites.png') no-repeat -1093px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export .export-panel .fc-panel-content .action-data-to-file:disabled {
+  background: url('../images/sprites.png') no-repeat -1128px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export .export-panel .fc-panel-content .action-data-to-image {
+  background: url('../images/sprites.png') no-repeat -1163px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export .export-panel .fc-panel-content .action-data-to-image:hover {
+  background: url('../images/sprites.png') no-repeat -1198px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export .export-panel .fc-panel-content .action-data-to-image:disabled {
+  background: url('../images/sprites.png') no-repeat -1233px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export .export-panel .fc-panel-content .action-copy-url {
+  background: url('../images/sprites.png') no-repeat -1268px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export .export-panel .fc-panel-content .action-copy-url:hover {
+  background: url('../images/sprites.png') no-repeat -1303px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export .export-panel .fc-panel-content .action-copy-url:disabled {
+  background: url('../images/sprites.png') no-repeat -1338px 0;
+  width: 30px;
+  height: 30px;
+}
+section.export .dialog-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+  display: none;
+  background-color: #424242;
+  opacity: 0.3;
+}
+section.export .copy-to-clipboard-dialog {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: default;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  width: 100%;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 1003;
+  display: none;
+  margin-top: -150px;
+  padding: 20px 30%;
+  background-color: #ffffff;
+}
+@media only screen and (max-width: 1100px) {
+  section.export .copy-to-clipboard-dialog {
+    padding: 20px 10%;
+  }
+}
+section.export .copy-to-clipboard-dialog .dialog-header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+section.export .copy-to-clipboard-dialog .url-input {
+  margin: 5px 0;
+  min-width: 300px;
+  width: 50%;
+}
+@media only screen and (max-width: 1100px) {
+  section.export .copy-to-clipboard-dialog .url-input {
+    min-width: 200px;
+  }
+}
+section.export .copy-to-clipboard-dialog .close-button {
+  position: absolute;
+  right: 30%;
+  bottom: 20px;
+}
+@media only screen and (max-width: 1100px) {
+  section.export .copy-to-clipboard-dialog .close-button {
+    right: 10%;
+  }
+}

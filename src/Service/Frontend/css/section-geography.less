@@ -1,0 +1,266 @@
+html {}
+
+@import "_variables";
+@import "_mixins";
+@import "_sprites";
+
+section.geography {
+  position: relative;
+  overflow: hidden;
+}
+
+.map-area-selection-panel {
+  .box-sizing(border-box);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: @side-panel-width;
+  padding-top: @area-selection-panel-padding;
+  word-wrap: break-word;
+  z-index: 1002;
+  overflow: hidden;
+
+  .area-selection-panel-controls {
+    height: 30px;
+    margin-bottom: 30px;
+    padding: 0 @panel-controls-padding;
+
+    .controls-btn {
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    .add-grid-btn {
+      .sprite-add-grid-icon;
+
+      float: left;
+      margin-right: 10px;
+
+      &:hover,
+      &.active {
+        .sprite-add-grid-icon-hover;
+      }
+
+      &.disabled {
+        .sprite-add-grid-icon-disabled;
+      }
+    }
+
+    .add-point-btn {
+      .sprite-add-point-icon;
+
+      float: left;
+
+      &:hover,
+      &.active {
+        .sprite-add-point-icon-hover;
+      }
+
+      &.disabled {
+        .sprite-add-point-icon-disabled;
+      }
+    }
+
+    .remove-areas-btn {
+      .sprite-close-icon;
+
+      float: right;
+
+      &:hover {
+        .sprite-close-icon-hover;
+      }
+
+      &.disabled {
+        .sprite-close-icon-disabled;
+      }
+    }
+  }
+
+  .separator-horizontal {
+    width: 100%;
+    height: 1px;
+    background-color: @bg-gray-lighter;
+  }
+
+  .fc-panel-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+  .area-selection {
+    .box-sizing(border-box);
+    padding: @area-selection-cell-padding @area-selection-cell-padding 0 @area-selection-cell-padding;
+    border: 2px solid transparent;
+    transition: border ease-out 0.4s;
+
+    &.editing {
+      border: 2px solid @border-tile-editing;
+    }
+
+    .save-btn {
+      .sprite-save-icon;
+
+      display: none;
+      vertical-align: middle;
+      float: right;
+      cursor: pointer;
+
+      &:hover {
+        .sprite-save-icon-hover;
+      }
+    }
+
+    .remove-area-btn {
+      .sprite-close-icon;
+
+      vertical-align: middle;
+      float: right;
+      cursor: pointer;
+      margin-right: 10px;
+
+      &:hover {
+        .sprite-close-icon-hover;
+      }
+
+      &.disabled {
+        .sprite-close-icon-disabled;
+      }
+    }
+
+    .toggle-edit-btn {
+      .sprite-edit-icon;
+
+      vertical-align: middle;
+      float: right;
+      cursor: pointer;
+
+      &:hover {
+        .sprite-edit-icon-hover;
+      }
+
+      &.disabled {
+        .sprite-edit-icon-disabled;
+      }
+    }
+
+    .area-controls {
+      height: 30px;
+      margin-bottom: 20px;
+    }
+
+    .separator-horizontal {
+      padding: 0 @area-selection-panel-padding;
+      margin: 0 -@area-selection-panel-padding;
+    }
+  }
+
+.area-grid {
+  color: @text-gray-lighter;
+
+  .area-name {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .area-name-input {
+    display: none;
+    margin-bottom: 20px;
+  }
+
+  .area-shorten {
+    overflow: hidden;
+  }
+
+  .area-coords-table {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .area-coords-cell {
+    display: inline-block;
+
+    label {
+      margin-right: 5px;
+    }
+  }
+
+  .area-coords-row {
+    margin-bottom: 20px;
+
+    .area-coords-cell:nth-child(2) {
+      margin-right: 30px;
+    }
+  }
+
+  .area-coords-header {
+    color: @text-gray-lighter-dark;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .area-coords-input {
+    display: inline-block;
+    width: 75px;
+  }
+
+  .area-controls {
+    transition: height ease-out 0.2s;
+  }
+}
+
+.area-point {
+  color: @text-gray-lighter;
+
+  .area-name {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .area-name-input {
+    display: none;
+    margin-bottom: 20px;
+  }
+
+  .area-shorten {
+    overflow: hidden;
+  }
+
+  .area-coords-table {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .area-coords-cell {
+    display: inline-block;
+
+    label {
+      margin-right: 5px;
+    }
+  }
+
+  .area-coords-row {
+    margin-bottom: 20px;
+
+    .area-coords-cell:nth-child(1) {
+      margin-right: 30px;
+    }
+  }
+
+  .area-coords-header {
+    color: @text-gray-lighter-dark;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .area-coords-input {
+    display: inline-block;
+    width: 75px;
+  }
+
+  .area-controls {
+    transition: height ease-out 0.2s;
+  }
+}

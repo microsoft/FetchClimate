@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="WebService.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WebRole name="Frontend" vmsize="Large">
+    <Startup>
+      <Task commandLine="startup.cmd" taskType="simple" executionContext="elevated" />
+    </Startup>
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+    </Endpoints>   
+    <ConfigurationSettings>
+      <Setting name="DatabaseConnectionString" />
+      <Setting name="BlobConnectionAccountName" />
+      <Setting name="BlobConnectionAccountKey" />
+      <Setting name="AllowedJobRegistrationSpan" />
+      <Setting name="MinPtsPerPartition" />
+      <Setting name="MaxPtsPerPartition" />
+      <Setting name="WaitingFastResultPeriodSec" />
+      <Setting name="JobTouchTimeTreshold" />
+      <Setting name="FrontendTraceLevel" />
+      <Setting name="JobManagerTraceLevel" />
+      <Setting name="JobStatusCheckIntervalMilisec" />
+      <Setting name="MinYearBoundary" />
+      <Setting name="MaxYearBoundary" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+    </ConfigurationSettings>
+  </WebRole>
+  <WorkerRole name="FetchWorker" vmsize="Large">
+    <ConfigurationSettings>
+      <Setting name="DatabaseConnectionString" />
+      <Setting name="BlobConnectionAccountName" />
+      <Setting name="BlobConnectionAccountKey" />
+      <Setting name="JobQueuePollingMilisec" />
+      <Setting name="JobTouchPeriod" />
+      <Setting name="FetchWorkerTraceLevel" />
+      <Setting name="JobManagerTraceLevel" />
+      <Setting name="FetchEngineTraceLevel" />
+      <Setting name="DataHandlerTraceLevel" />
+      <Setting name="HeavyJobsPermitedCount" />
+      <Setting name="LightJobExecutionTimeLimitSec" />
+      <Setting name="DaysBeforeJobDeletion" />
+      <Setting name="HoursBetweenCleanup" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+    </ConfigurationSettings>
+    <Endpoints>
+      <InternalEndpoint name="InternalEndpoint" protocol="http" port="8088" />
+    </Endpoints>
+    <LocalResources>
+      <LocalStorage name="localStorage1" sizeInMB="500736" cleanOnRoleRecycle="false" />
+    </LocalResources>
+    <Startup>
+      <Task commandLine="deployLibs.cmd" executionContext="elevated" taskType="simple">
+        <Environment>
+          <!-- Create the environment variable that informs the startup task whether it is running 
+               in the Compute Emulator or in the cloud. "%ComputeEmulatorRunning%"=="true" when 
+               running in the Compute Emulator, "%ComputeEmulatorRunning%"=="false" when running 
+               in the cloud. -->
+          <Variable name="ComputeEmulatorRunning">
+            <RoleInstanceValue xpath="/RoleEnvironment/Deployment/@emulated" />
+          </Variable>
+        </Environment>
+      </Task>
+    </Startup>
+    <Certificates>
+    </Certificates>
+  </WorkerRole>
+</ServiceDefinition>

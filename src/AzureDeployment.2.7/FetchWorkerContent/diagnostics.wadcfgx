@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DiagnosticsConfiguration xmlns="http://schemas.microsoft.com/ServiceHosting/2010/10/DiagnosticsConfiguration">
+  <PublicConfig xmlns="http://schemas.microsoft.com/ServiceHosting/2010/10/DiagnosticsConfiguration">
+    <WadCfg>
+      <DiagnosticMonitorConfiguration overallQuotaInMB="4096">
+        <DiagnosticInfrastructureLogs />
+        <PerformanceCounters>
+          <PerformanceCounterConfiguration counterSpecifier="\Processor(_Total)\% Processor Time" sampleRate="PT5M" />
+          <PerformanceCounterConfiguration counterSpecifier="\Memory\Page Faults/sec" sampleRate="PT5M" />
+          <PerformanceCounterConfiguration counterSpecifier="\LogicalDisk(_Total)\Disk Read Bytes/sec" sampleRate="PT5M" />
+        </PerformanceCounters>
+        <WindowsEventLog scheduledTransferPeriod="PT1M">
+          <DataSource name="Application!*" />
+        </WindowsEventLog>
+        <EtwProviders>
+          <EtwEventSourceProviderConfiguration provider="AssemblyStoreEvents">
+            <DefaultEvents eventDestination="AssemblyStoreEventsTable" />
+          </EtwEventSourceProviderConfiguration>
+        </EtwProviders>
+        <Logs scheduledTransferPeriod="PT1M" scheduledTransferLogLevelFilter="Verbose" />
+      </DiagnosticMonitorConfiguration>
+    </WadCfg>
+    <StorageAccount />
+  </PublicConfig>
+  <PrivateConfig xmlns="http://schemas.microsoft.com/ServiceHosting/2010/10/DiagnosticsConfiguration">
+    <StorageAccount endpoint="" />
+  </PrivateConfig>
+  <IsEnabled>true</IsEnabled>
+</DiagnosticsConfiguration>

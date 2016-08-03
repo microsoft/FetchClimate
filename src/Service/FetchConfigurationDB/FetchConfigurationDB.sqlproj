@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>FetchConfigurationDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{522ca176-32a1-4800-b891-3235f129d350}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureDatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>FetchConfigurationDB</RootNamespace>
+    <AssemblyName>FetchConfigurationDB</AssemblyName>
+    <ModelCollation>1033,CS</ModelCollation>
+    <DefaultFileStructure>BySchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>True</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CS_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <GenerateCreateScript>True</GenerateCreateScript>
+    <TargetConnectionString>Data Source=(localdb)v11.0;Initial Catalog=JobDB;Integrated Security=True;Connect Timeout=30</TargetConnectionString>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables\" />
+    <Folder Include="Functions\" />
+    <Folder Include="Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\VariableMappingHistory.sql" />
+    <Build Include="Tables\DataSourcesHistory.sql" />
+    <Build Include="Tables\FetchEngineHistory.sql" />
+    <Build Include="Tables\EnvironmentalVariables.sql" />
+    <Build Include="Tables\DataSources.sql" />
+    <Build Include="Functions\GetRelevantDataSources.sql" />
+    <Build Include="Functions\GetRelevantMappings.sql" />
+    <Build Include="Stored Procedures\GetMapping.sql" />
+    <Build Include="Stored Procedures\GetDataSources.sql" />
+    <Build Include="Stored Procedures\GetVariablesForDataSource.sql" />
+    <Build Include="Stored Procedures\GetTimeStamps.sql" />
+    <Build Include="Stored Procedures\GetLatestTimeStamp.sql" />
+    <Build Include="Stored Procedures\GetDataSourcesForVariable.sql" />
+    <Build Include="Stored Procedures\GetFetchEngine.sql" />
+    <Build Include="Stored Procedures\TruncateTables.sql" />
+    <Build Include="Stored Procedures\AddVariable.sql" />
+    <Build Include="Stored Procedures\AddDataSource.sql" />
+    <Build Include="Stored Procedures\SetDataSourceProcessor.sql" />
+    <Build Include="Stored Procedures\SetDataSourceUri.sql" />
+    <Build Include="Stored Procedures\SetFetchEngine.sql" />
+    <Build Include="Stored Procedures\GetEnvVariables.sql" />
+    <Build Include="Stored Procedures\SetMapping.sql" />
+    <Build Include="Stored Procedures\SetDataSourceDescription.sql" />
+    <Build Include="Stored Procedures\SetDataSourceCopyright.sql" />
+    <Build Include="Stored Procedures\SetEnvVariableUnits.sql" />
+    <Build Include="Stored Procedures\SetEnvVariableDescription.sql" />
+    <Build Include="Stored Procedures\GetFirstTimeStamp.sql" />
+    <Build Include="Stored Procedures\GetExactTimeStamp.sql" />
+  </ItemGroup>
+</Project>

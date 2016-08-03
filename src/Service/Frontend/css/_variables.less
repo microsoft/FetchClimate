@@ -1,0 +1,135 @@
+html {}
+
+// More colors and variables:
+// https://github.com/twbs/bootstrap/blob/master/less/variables.less
+
+// -------------------------------------------
+// Naming convention for colors:
+// [context-]color[-hue];
+// -------------------------------------------
+// Naming convention for element specific variables-properties:
+// element-[part-]property
+// -------------------------------------------
+
+
+// Typography
+// -------------------------
+
+// TODO: Add fallback fonts!
+@font-family-base: "Segoe UI Light";
+@font-family-light: "Segoe UI Light";
+
+// TODO: Add more from layers.zip/Layers-markup.pdf.
+@font-size-h1: 56px;
+@font-size-h2: 26px;
+@font-size-h3: 24px;
+@font-size-tile-name: 22px;
+@font-size-tile-description: 12px;
+
+@fc2-logo-font: @font-size-h3 @font-family-light;
+@section-title-font: @font-size-h1 @font-family-light;
+
+
+// Colors.
+// -------------------------
+
+@bg-white: #ffffff;
+@bg-gray-darker: #424242;
+@bg-gray: #ededed;
+@bg-gray-lighter: #d4d4d4;
+@bg-gray-dark: #999999;
+
+@text-white: #ffffff;
+@text-gray-darker: #333333;
+@text-gray-lighter: #999999;
+@text-gray-lighter-dark: #797979;
+
+@link-color: @text-gray-lighter;
+@link-active-color: @text-gray-darker;
+
+@tile-bg-color: #999;
+@tile-selected-bg-color: #333;
+
+@text-variable-name: #fff;
+@text-variable-description: rgba(255, 255, 255, 0.6);
+
+@char-search-mathced-color: #f00;
+
+@input-border-color: #919191;
+@button-border-color: #a1a1a1;
+@button-hover-color: #424242;
+
+@selected-item-bg-color: #6d6e6e;
+
+@map-overlay-color: #f4f2ee;
+@map-point-label-color: @text-white;
+@map-active-point-label-color: #d81e00;
+@map-region-label-color: @text-white;
+@map-active-region-label-color: @text-white;
+
+@border-tile-editing: #D32814;
+
+// Properties.
+// -------------------------
+
+@body-primary-color: @text-gray-darker;
+@panel-controls-padding: 20px;
+
+// Main menu.
+@nav-width: 40px; // Also defined in settings.js
+@nav-primary-bg: @bg-gray-darker;
+@nav-icon-active-bg: @bg-white;
+
+@side-panel-width: 300px; // Also defined in settings.js
+
+@time-tile-border-width: 0.3125em; // 5px / 16px
+
+@time-slice-panel-padding: 20px; // Also defined in settings.js
+
+
+
+// Map.
+@map-controls-width: 42px;
+@area-selection-cell-padding: 20px;
+@area-selection-panel-padding: 20px;
+
+// Background Images.
+// -------------------------
+
+@img-geography-icon: url(../images/geography-icon.png);
+@img-geography-icon-active: url(../images/geography-icon-active.png);
+@img-layers-icon: url(../images/layers-icon.png);
+@img-layers-icon-active: url(../images/layers-icon-active.png);
+@img-time-icon: url(../images/time-icon.png);
+@img-time-icon-active: url(../images/time-icon-active.png);
+@img-results-icon: url(../images/results-icon.png);
+@img-results-icon-active: url(../images/results-icon-active.png);
+@img-export-icon: url(../images/export-icon.png);
+@img-export-icon-active: url(../images/export-icon-active.png);
+@img-about-icon: url(../images/about-icon.png);
+@img-about-icon-active: url(../images/about-icon-active.png);
+@img-selected-icon: url(../images/selected-icon.png);
+@img-info-icon: url(../images/info-icon.png);
+@img-nav-back-icon: url(../images/nav-back-icon.png);
+@img-sort-icon: url(../images/sort-icon.png);
+@img-prev-page-icon: url(../images/prev-page-icon.png);
+@img-next-page-icon: url(../images/next-page-icon.png);
+@img-map-zoom-in-icon: url(../images/map-zoom-in-icon.png);
+@img-map-zoom-out-icon: url(../images/map-zoom-out-icon.png);
+@img-map-search-icon: url(../images/map-search-icon.png);
+@img-map-options-icon: url(../images/map-options-icon.png);
+@img-add-point-icon: url(../images/point-icon.png);
+@img-add-grid-icon: url(../images/region-icon.png);
+@img-cancel-icon: url(../images/cancel-icon.png);
+@img-edit-icon: url(../images/edit-icon.png);
+@img-slider-handle: url(../images/slider-handle.png);
+@img-dropdown-arrow-down: url(../images/dropdown-arrow-down.png);
+@img-dropdown-arrow-up: url(../images/dropdown-arrow-up.png);
+@img-palette-marker-arrow: url(../images/palette-marker-arrow.png);
+
+// Animations.
+// -------------------------
+
+// NOTE: http://preloaders.net/en/search/windows%208
+@fetch-progress-animation: url(../images/fetch-progress.gif);
+@search-progress-animation: url(../images/search-progress.gif);

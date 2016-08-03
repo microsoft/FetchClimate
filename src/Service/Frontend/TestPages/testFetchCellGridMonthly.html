@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test: fetch values in cells grid (monthly)</title>
+    <link rel="stylesheet" type="text/css" href="../css/testPages.css" />
+    <script src="../v1/Script/jquery-1.8.0.min.js"></script>
+    <script src="../v1/Script/FetchClimate.Request.js"></script>
+    <script src="testCommon.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            var request = new FetchClimate.Request(
+                new FetchClimate.CellGrid(40 + Math.random(), 50, 11, 60, 70, 21),
+                new FetchClimate.TemporalDomain([2000,2010], true, [1,32,60,91,121,152,162,213,244,274,305,335,366], true, [0,24], true),
+                "prate");
+
+            request.perform(function(s) {
+                $("#log").append("<p>" + s + "</p>");
+            }).then(
+                function (response) {
+                    $("#log").append("<p>Loading values...</p>");
+                    response.getValues().then(
+                        function (values) {
+                            $("#log").append("<p>Values loaded. " + arrayInfoToString(values) + "</p>");
+                            response.getProvenance().then(
+                                function (prov) {
+                                    $("#log").append("<p>Provenances loaded. " + arrayInfoToString(prov) + "</p>");
+                                    response.getUncertainty().then(
+                                        function (unc) {
+                                            $("#log").append("<p>Uncertainty loaded. " + arrayInfoToString(unc) + "</p>");
+                                            $("#result").addClass("successful-test").html("Test succeeded. Data size = " + jaggedArraySize(unc) * 3 + " elements</p>");
+                                        },
+                                        function () {
+                                            $("#result").addClass("failed-test").html("Test failed: error reading uncertainty");
+                                        });
+                                },
+                                function () {
+                                    $("#result").addClass("failed-test").html("Test failed: error reading provenance");
+                                });
+                        },
+                        function () {
+                            $("#result").addClass("failed-test").html("Test failed: error reading aggregated values");
+                        });
+                },
+                function (error) {
+                    $("#result").addClass("failed-test").html("Test failed: " + error);
+                });
+        });
+    </script>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="log"></div>
+</body>
+</html>

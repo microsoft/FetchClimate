@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ff05ce91-941c-4d04-8dda-9ffa26d8f6a1}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>Model</Name>
+    <RootNamespace>Model</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="GridDataHandlers.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GridDataHandlers.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>GridDataHandlers.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1519.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1646.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1836.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1519.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1519.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1519.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package5_1519.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package6_1519.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0026.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1033.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1236.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1305.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1324.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1519.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1548.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1549.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1646.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1840.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1842.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1849.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ScatteredPointsDataHandlers.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ScatteredPointsDataHandlers.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ScatteredPointsDataHandlers.classdiagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\Model.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="Assemblies.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Assemblies.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Assemblies.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Assemblies.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Assemblies.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CPCDataSource\CPCDataSource.csproj">
+      <Name>CPCDataSource</Name>
+      <Project>{2f4509c0-545c-4a58-85fd-30ee0e37412d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CRUCL2DataSource\CRUCL2DataSource.csproj">
+      <Name>CRUCL2DataSource</Name>
+      <Project>{2f15247f-a3de-40a3-bffb-48f8463c7eeb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ETOPO1DataSource\ETOPO1DataSource.csproj">
+      <Name>ETOPO1DataSource</Name>
+      <Project>{b0b9a3ef-0010-408c-8cba-04a48a9209b9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\GFDLDataSource\GFDLDataSource.csproj">
+      <Name>GFDLDataSource</Name>
+      <Project>{2d09646b-4420-4ef7-a0c7-d4da4e6fbc71}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\GTOPO30DataSource\GTOPO30DataSource.csproj">
+      <Name>GTOPO30DataSource</Name>
+      <Project>{e59ad189-7484-40b5-ab58-62b2d17da660}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\HADCM3DataSource\HADCM3DataSource.csproj">
+      <Name>HADCM3DataSource</Name>
+      <Project>{ccf88d30-286c-46d4-835d-df92c12f3e2b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MDLDataSource\MLDDataSource.csproj">
+      <Name>MLDDataSource</Name>
+      <Project>{cbf2f736-6162-4416-a373-4955e9723562}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\NCEPDataSource\NCEPDataSource.csproj">
+      <Name>NCEPDataSource</Name>
+      <Project>{31386e31-56c8-462d-a6fb-09c879fa1b0f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\WorldClim14DataSource\WorldClim14DataSource.csproj">
+      <Name>WorldClim14DataSource</Name>
+      <Project>{5135fdc4-25db-4bda-94b8-b7add0a11a4d}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Research.Science.Data, Version=1.3.14517.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>Microsoft.Research.Science.Data</Name>
+      <HintPath>..\..\ext\sds_1_3\Microsoft.Research.Science.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

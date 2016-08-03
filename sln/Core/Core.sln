@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSource", "..\..\src\Core\DataSource\DataSource.csproj", "{3773D82B-F9F4-4D9A-907E-3BD2E5CBDF55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FetchDiagnostics", "..\..\src\Core\FetchDiagnostics\FetchDiagnostics.csproj", "{F99548E8-95A5-4E41-A303-781651432F43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FetchConfigProvider", "..\..\src\Libraries\FetchConfigProvider\FetchConfigProvider.csproj", "{20F6738F-0655-4C08-BD2D-53A6F621206A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FetchCore", "..\..\src\Core\FetchCommon\FetchCore.csproj", "{BB21AD9B-37C3-4120-8AC5-236153A85E89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FetchStructures", "..\..\src\Libraries\FetchRequest\FetchStructures.csproj", "{C5BB5E4F-A9E8-41E0-BC8B-FBECC24F8E27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3773D82B-F9F4-4D9A-907E-3BD2E5CBDF55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3773D82B-F9F4-4D9A-907E-3BD2E5CBDF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3773D82B-F9F4-4D9A-907E-3BD2E5CBDF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3773D82B-F9F4-4D9A-907E-3BD2E5CBDF55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99548E8-95A5-4E41-A303-781651432F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99548E8-95A5-4E41-A303-781651432F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99548E8-95A5-4E41-A303-781651432F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99548E8-95A5-4E41-A303-781651432F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20F6738F-0655-4C08-BD2D-53A6F621206A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F6738F-0655-4C08-BD2D-53A6F621206A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F6738F-0655-4C08-BD2D-53A6F621206A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F6738F-0655-4C08-BD2D-53A6F621206A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB21AD9B-37C3-4120-8AC5-236153A85E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB21AD9B-37C3-4120-8AC5-236153A85E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB21AD9B-37C3-4120-8AC5-236153A85E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB21AD9B-37C3-4120-8AC5-236153A85E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5BB5E4F-A9E8-41E0-BC8B-FBECC24F8E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5BB5E4F-A9E8-41E0-BC8B-FBECC24F8E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5BB5E4F-A9E8-41E0-BC8B-FBECC24F8E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5BB5E4F-A9E8-41E0-BC8B-FBECC24F8E27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

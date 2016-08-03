@@ -1,0 +1,356 @@
+html {
+}
+
+@import "_variables";
+@import "_mixins";
+@import "_sprites";
+
+section.time {
+    .box-sizing(border-box);
+    height: 100%;
+    background: @bg-gray;
+    position: relative;
+
+    .time-selection-panel {
+        .box-sizing(border-box);
+        display: inline-block;
+        vertical-align: top;
+        width: @side-panel-width;
+        padding: 20px 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        .separator-horizontal {
+            width: 100%;
+            height: 1px;
+            background-color: @bg-gray-lighter;
+        }
+
+        .time-selection-panel-controls {
+            height: 30px;
+            margin-bottom: 30px;
+            padding-right: 20px;
+
+            .controls-btn {
+                vertical-align: middle;
+                cursor: pointer;
+            }
+
+            .edit-time-btn {
+                .sprite-edit-icon;
+                float: right;
+                margin-left:10px;
+
+                &:hover {
+                    .sprite-edit-icon-hover;
+                }
+
+                &.disabled {
+                    .sprite-edit-icon-disabled;
+                }
+            }
+
+            .reset-time-btn {
+                .sprite-close-icon;
+                float: right;
+
+                &:hover {
+                    .sprite-close-icon-hover;
+                }
+
+                &.disabled {
+                    .sprite-close-icon-disabled;
+                }
+            }
+        }
+
+
+        .time-toggle-tile {
+            .box-sizing(border-box);
+            min-height: 75px;
+            /*padding: 10px 20px;*/
+            color: @text-variable-name;
+            /*background-color: @tile-bg-color;*/
+            /*border-top: 1px solid #E3E3E3;*/
+            // cursor: pointer;
+
+            .time-selection-panel-controls {
+                height: 20px;
+                margin-bottom: 20px;
+            }
+
+            .tile-title {
+                padding: 0px 20px 10px 20px;
+                font-size: 1.5em;
+                color: @text-gray-lighter;
+            }
+
+            .tile-info {
+                padding: 0px 20px 10px 20px;
+                font-size: 1.0em;
+                color: @text-gray-darker;
+            }
+
+            .tile-extra-info {
+                padding: 0px 20px 10px 20px;
+                font-size: 0.9em;
+                color: @text-gray-lighter;
+            }
+        }
+    }
+
+    .time-selection-control-wrapper {
+        .box-sizing(border-box);
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+        width: 100%;
+        padding-left: @side-panel-width;
+        background: transparent;
+
+        .time-selection-tabs-container {
+            margin: 20px;
+            font-size: 1.25em;
+
+            .time-selection-tab-header {
+                display: inline;
+                margin-right: 40px;
+                cursor: pointer;
+
+                &.selected {
+                    font-weight:bold
+                }
+            }
+        }
+
+        .time-selection-control {
+            .box-sizing(border-box);
+            display: none;
+            min-height: 100%;
+            padding-left: 20px;
+            padding-top: 20px;   
+            overflow-y: auto;         
+
+            h3 {
+                margin-top: 0;
+            }
+
+            .control-controls {
+                margin-bottom: 20px;
+
+                label,
+                span {
+                    vertical-align: middle;
+                }
+
+                label {
+                    cursor: pointer;
+                }
+            }
+
+            .time-control-input {
+                .box-sizing(border-box);
+                height: 2em;
+                width: 3.5em;
+                border: 2px solid @input-border-color;
+                vertical-align: middle;
+            }
+
+            .time-control-select {
+                vertical-align: middle;
+            }
+
+            .chunk-select-container {
+                display: none;
+
+                &.visible {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+
+            &.active {
+                display: block;
+            }
+        }
+
+        .time-selection-control.year-control {
+            min-width: 41.5em;
+
+            .prev-btn {
+                .sprite-prev-page-icon;
+                display: inline-block;
+                margin-right: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    .sprite-prev-page-icon-hover;
+                }
+
+                &.disabled {
+                    .sprite-prev-page-icon-disabled;
+                }
+            }
+
+            .next-btn {
+                .sprite-next-page-icon;
+                display: inline-block;
+                cursor: pointer;
+
+                &:hover {
+                    .sprite-next-page-icon-hover;
+                }
+
+                &.disabled {
+                    .sprite-next-page-icon-disabled;
+                }
+            }
+
+            tr {
+                border-bottom: @time-tile-border-width solid @bg-gray;
+            }
+
+                tr .year-table-cell {
+                    .noselect;
+                    .box-sizing(border-box);
+                    padding: 0;
+                    width: 4em;
+                    height: 2.5em;
+                    background: @tile-bg-color;
+                    color: @text-white;
+                    text-align: center;
+                    border-right: @time-tile-border-width solid @bg-gray;
+                    cursor: pointer;
+
+                    &.selected {
+                        .box-sizing(border-box);
+                        background: @tile-selected-bg-color;
+                    }
+
+                        &.selected:last-child {
+                            border-right: @time-tile-border-width solid @bg-gray !important;
+                        }
+
+                    &.average {
+                        border-right: none;
+                    }
+
+                    &.chunk {
+                        border-right: none;
+                    }
+                }
+        }
+
+        .time-selection-control.day-control {
+            min-width: 62.5em;
+
+            .days-select-container {
+                display: none;
+
+                &.visible {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+
+            .days-table-row:before {
+                content: attr(data-month);
+                margin-right: 16px;
+            }
+
+            tr:first-child {
+                .day-table-cell {
+                    background: @bg-gray;
+                    color: #333;
+                }
+
+                &:before {
+                    content: "";
+                }
+            }
+
+            tr {
+                border-bottom: @time-tile-border-width solid @bg-gray;
+            }
+
+                tr .day-table-cell {
+                    .noselect;
+                    .box-sizing(border-box);
+                    cursor: pointer;
+                    width: 1.875em;
+                    height: 2em;
+                    padding: 0;
+                    background: @tile-bg-color;
+                    color: @text-white;
+                    text-align: center;
+                    border-right: @time-tile-border-width solid @bg-gray;
+                    border-top: @time-tile-border-width solid @bg-gray;
+
+                    &.selected {
+                        background: @tile-selected-bg-color;
+                    }
+
+                        &.selected:last-child {
+                            border-right: @time-tile-border-width solid @bg-gray !important;
+                        }
+
+                    &.average {
+                        border-right: none !important;
+                    }
+
+                    &.chunk {
+                        border-right: none !important;
+                    }
+                }
+        }
+
+        .time-selection-control.hour-control {
+            min-width: 46.625em;
+
+            .hours-select-container {
+                display: none;
+
+                &.visible {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+
+            tr {
+                border-bottom: @time-tile-border-width solid @bg-gray;
+            }
+
+                tr .hour-table-cell {
+                    .noselect;
+                    .box-sizing(border-box);
+                    cursor: pointer;
+                    width: 1.875em;
+                    height: 2em;
+                    padding: 0;
+                    background: @tile-bg-color;
+                    color: @text-white;
+                    text-align: center;
+                    border-right: @time-tile-border-width solid @bg-gray;
+
+                    &.selected {
+                        background: @tile-selected-bg-color;
+                    }
+
+                        &.selected:last-child {
+                            border-right: @time-tile-border-width solid @bg-gray !important;
+                        }
+
+                    &.average {
+                        border-right: none !important;
+                    }
+
+                    &.chunk {
+                        border-right: none !important;
+                    }
+                }
+        }
+    }
+}

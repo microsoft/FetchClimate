@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FetchClimate2Configuration" Class="FetchConfigurationDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localDB)\v11.0;Initial Catalog=FetchClimate2Configuration;Integrated Security=True" SettingsObjectName="Microsoft.Research.Science.FetchClimate2.Properties.Settings" SettingsPropertyName="FetchClimate2ConfigurationConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DataSources" Member="DataSources">
+    <Type Name="DataSource">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="DataSource_VariableMappingHistory" Member="VariableMappingHistories" ThisKey="ID" OtherKey="DataSourceID" Type="VariableMappingHistory" />
+      <Association Name="DataSource_DataSourcesHistory" Member="DataSourcesHistories" ThisKey="ID" OtherKey="ID" Type="DataSourcesHistory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VariableMappingHistory" Member="VariableMappingHistories">
+    <Type Name="VariableMappingHistory">
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DataSourceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DataSourceVariable" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="EnvironmentalVariable" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="IsProvided" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsEnabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="DataSource_VariableMappingHistory" Member="DataSource" ThisKey="DataSourceID" OtherKey="ID" Type="DataSource" IsForeignKey="true" />
+      <Association Name="EnvironmentalVariable_VariableMappingHistory" Member="EnvironmentalVariable1" ThisKey="EnvironmentalVariable" OtherKey="DisplayName" Type="EnvironmentalVariable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataSourcesHistory" Member="DataSourcesHistories">
+    <Type Name="DataSourcesHistory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Uri" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FullClrTypeName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Copyright" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="RemoteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RemoteName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Association Name="DataSource_DataSourcesHistory" Member="DataSource" ThisKey="ID" OtherKey="ID" Type="DataSource" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EnvironmentalVariables" Member="EnvironmentalVariables">
+    <Type Name="EnvironmentalVariable">
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(64) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Units" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="EnvironmentalVariable_VariableMappingHistory" Member="VariableMappingHistories" ThisKey="DisplayName" OtherKey="EnvironmentalVariable" Type="VariableMappingHistory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FetchEngineHistory" Member="FetchEngineHistories">
+    <Type Name="FetchEngineHistory">
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullClrTypeName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AddDataSource" Method="AddDataSource">
+    <Parameter Name="DisplayName" Parameter="displayName" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Copyright" Parameter="copyright" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TypeName" Parameter="typeName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Uri" Parameter="uri" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="RemoteID" Parameter="remoteID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RemoteName" Parameter="remoteName" Type="System.String" DbType="NVarChar(64)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TruncateTables" Method="TruncateTables">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddVariable" Method="AddVariable">
+    <Parameter Name="DisplayName" Parameter="displayName" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="Units" Parameter="units" Type="System.String" DbType="NVarChar(64)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetDataSources" Method="GetDataSources">
+    <Parameter Name="TimeStamp" Parameter="timeStamp" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="GetDataSourcesResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Copyright" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FullClrTypeName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Uri" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="RemoteName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="RemoteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetDataSourcesForVariable" Method="GetDataSourcesForVariable">
+    <Parameter Name="TimeStamp" Parameter="timeStamp" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="EnvVarName" Parameter="envVarName" Type="System.String" DbType="NVarChar(64)" />
+    <ElementType Name="GetDataSourcesForVariableResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Copyright" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FullClrTypeName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RemoteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RemoteName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Uri" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetEnvVariables" Method="GetEnvVariables">
+    <ElementType Name="GetEnvVariablesResult">
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Units" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetExactTimeStamp" Method="GetExactTimeStamp">
+    <Parameter Name="TimeStamp" Parameter="timeStamp" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="GetExactTimeStampResult">
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetFetchEngine" Method="GetFetchEngine">
+    <Parameter Name="TimeStamp" Parameter="timeStamp" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="GetFetchEngineResult">
+      <Column Name="FullClrTypeName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetFirstTimeStamp" Method="GetFirstTimeStamp">
+    <ElementType Name="GetFirstTimeStampResult">
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetLatestTimeStamp" Method="GetLatestTimeStamp">
+    <ElementType Name="GetLatestTimeStampResult">
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetMapping" Method="GetMapping">
+    <Parameter Name="TimeStamp" Parameter="timeStamp" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DataSourceName" Parameter="dataSourceName" Type="System.String" DbType="VarChar(45)" />
+    <ElementType Name="GetMappingResult">
+      <Column Name="FetchVariableName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="DataVariableName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="IsOutbound" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetTimeStamps" Method="GetTimeStamps">
+    <ElementType Name="GetTimeStampsResult">
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetVariablesForDataSource" Method="GetVariablesForDataSource">
+    <Parameter Name="TimeStamp" Parameter="timeStamp" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DataSourceName" Parameter="dataSourceName" Type="System.String" DbType="NVarChar(64)" />
+    <ElementType Name="GetVariablesForDataSourceResult">
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Units" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SetDataSourceCopyright" Method="SetDataSourceCopyright">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="Copyright" Parameter="copyright" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SetDataSourceDescription" Method="SetDataSourceDescription">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SetDataSourceProcessor" Method="SetDataSourceProcessor">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="TypeName" Parameter="typeName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="RemoteID" Parameter="remoteID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RemoteName" Parameter="remoteName" Type="System.String" DbType="NVarChar(64)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SetDataSourceUri" Method="SetDataSourceUri">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="Uri" Parameter="uri" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SetEnvVariableDescription" Method="SetEnvVariableDescription">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SetEnvVariableUnits" Method="SetEnvVariableUnits">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="Units" Parameter="units" Type="System.String" DbType="NVarChar(64)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SetFetchEngine" Method="SetFetchEngine">
+    <Parameter Name="TypeName" Parameter="typeName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SetMapping" Method="SetMapping">
+    <Parameter Name="DataSourceName" Parameter="dataSourceName" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="EnvironmaentalVariable" Parameter="environmaentalVariable" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="NewDataSourceName" Parameter="newDataSourceName" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="NewIsProvided" Parameter="newIsProvided" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NewIsEnabled" Parameter="newIsEnabled" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetRelevantDataSources" Method="GetRelevantDataSources" IsComposable="true">
+    <Parameter Name="timeStamp" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="GetRelevantDataSourcesResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="Uri" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FullClrTypeName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Copyright" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRelevantMappings" Method="GetRelevantMappings" IsComposable="true">
+    <Parameter Name="timeStamp" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="GetRelevantMappingsResult">
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataSourceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DataSourceName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="DataSourceVariable" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="EnvironmentalVariable" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="IsProvided" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsEnabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,2020 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1e6f87dc-4eb0-41c8-880d-82383e1eef71"
+  name="TimeSeries"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="e8ef6005-4b82-4dde-8843-79897e2e127b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="3cf51bab-b6de-4a5c-bc77-9bbf30e046dd"
+        name="TimeIntegratorBasedAverager"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="d39ab4fc-06de-48eb-aadd-b4e74e700eb0"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ff726a9d-f5b3-4c61-a4e0-0d743c4191b4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8a7e39fe-04a3-4533-ad59-60716517a4ba">
+                <propertyInstance
+                  Id="be869dc5-e32a-49d0-937f-4d29dd98301c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a6a8ac4a-e4f5-4e66-9b5e-c056eb39e086">
+                <propertyInstance
+                  Id="3fab8a7e-165d-4b8b-9e8a-a19cc42b52c9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="77a7ff91-54b6-4223-bac2-5b20b7c3794a">
+                <propertyInstance
+                  Id="0ab15b4a-e8ce-4dd2-9a2b-29f34f01d5ae"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="797940ae-873a-4650-a391-d611f142c301">
+                <propertyInstance
+                  Id="6bfeef31-09cf-4fb2-9387-ce27b652bd45"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bb606964-4b80-4db9-bc65-ac3e93d6ac27">
+                <propertyInstance
+                  Id="b55f748f-b7fb-4189-a677-5b59552fef05"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="ba67527d-bf54-4997-962d-ab6d4eed7fe7">
+            <interfaceMoniker
+              Id="94ade19e-e3b7-4f84-affa-97f3ed9f4710"
+              LastKnownName="IStorageTimeSeriesAverager&lt;RealValueNodes‎&gt;"
+              LastKnownLocation="Package_0026.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="357425d7-fd0c-4968-b52d-e27ad5e2f4d5">
+            <interfaceMoniker
+              Id="a3e752ad-a130-4d6c-8bef-177fcdf93885"
+              LastKnownName="ITimeSeriesAverager"
+              LastKnownLocation="Package_0026.uml" />
+          </interfaceRealization>
+          <dependency
+            Id="ef8dec87-b202-4f67-9706-16e95cb46dd1">
+            <interfaceMoniker
+              Id="9f2cf635-8e13-4c07-acf9-8cfc4327b0ab"
+              LastKnownName="ICellRequestMap"
+              LastKnownLocation="Package_1548.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="205be89b-f108-48bc-a8a5-d39927740e78"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="e8c5944a-4a45-4bdd-b8fa-8b4043b92ce1"
+              LastKnownName="IStationLocator"
+              LastKnownLocation="Package_1305.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9720cf9b-9e46-4c9a-8c3d-7401d01aab19"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="797ad9ba-8647-4a62-9e09-3b5bd403a1a8"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="637053c9-3fda-490d-905f-396930ea2627"
+            name="timeDimNumber"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="eee0920b-8928-48ed-91e9-d91b9f8e9450"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3DtimeDimNumber"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a96a21bb-79ee-48c3-afd0-f25b6d26000e"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd453b36-b8f9-4635-9209-82d03a73a6d9">
+                    <propertyInstance
+                      Id="9afbe915-fd30-4421-852e-094f5e9ad018"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bfa51f3a-8d3b-465a-8b46-d9a253733b6e">
+                    <propertyInstance
+                      Id="7872d5b2-50fa-452f-bd46-de729b6c8eae"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="271f722a-634f-43bb-a4c0-fb5b78dd14a7">
+                    <propertyInstance
+                      Id="a2d75485-8b50-4b92-b2e6-97f5f22e75be"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e1ad798-bd1c-4756-9604-c6b4f68f29dd">
+                    <propertyInstance
+                      Id="7316d10c-5c62-4e8c-814a-6a63da335549"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ca2ea38-9085-4d0b-a2a8-68f9ff48e6ef">
+                    <propertyInstance
+                      Id="fba2715b-8953-4b9d-a2f0-554c485c8c17"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="0149cf41-23d4-4148-878f-52f2d1b0b249"
+                LastKnownName="Dictionary&lt;String‎, Int32‎&gt;"
+                LastKnownLocation="Package1_1646.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b758c2f8-c247-4532-9683-b2b9edaa7a00"
+            name="stationsDimNumber"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d13a6506-4912-432a-a922-77f15f5dbf16"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3DstationsDimNumber"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d5d6c0eb-2b35-4a98-9a82-fe1a5bd568a8"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2f6544d-2f80-4f2c-9361-e2a581779f2e">
+                    <propertyInstance
+                      Id="57a2dd7b-b873-4309-8e63-7c36963b9eaf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c364d9b-f195-48f2-bf9f-16bf822995fe">
+                    <propertyInstance
+                      Id="c11a66d1-04d2-4d3e-8e43-c4eb750fd349"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d5209874-c054-4def-9a79-df938eba38af">
+                    <propertyInstance
+                      Id="c5e42944-4dfc-4603-bc20-0813c1482abd"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6616abc8-8647-47b1-95be-c62af7796bfa">
+                    <propertyInstance
+                      Id="689ba7c4-f644-4f0a-809b-25bbbe72de22"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb88eddf-0fa1-4c31-8314-6030c323597a">
+                    <propertyInstance
+                      Id="5516206a-410e-4495-80f2-ed051febd1a3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="0149cf41-23d4-4148-878f-52f2d1b0b249"
+                LastKnownName="Dictionary&lt;String‎, Int32‎&gt;"
+                LastKnownLocation="Package1_1646.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f8efcada-7436-4355-ba00-29c2f02cb8f8"
+            name="dataRepresentationDictionary"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ffc1383f-279f-4a28-8acb-3c0829f66687"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3DdataRepresentationDictionary"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="14d6b67f-2351-48c9-9b6f-93efd4f0b951"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="202a5b17-31d7-4f12-9462-bdbc74506ebb">
+                    <propertyInstance
+                      Id="69dca397-b960-45f0-a328-087b95d22da1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86770221-5d2d-4d27-9297-98a586b5fcde">
+                    <propertyInstance
+                      Id="ac3a9a55-e26a-4105-9abe-7c477c355c60"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6964b36-6736-4d89-8039-459f0beab370">
+                    <propertyInstance
+                      Id="92790189-5d2e-4d97-98c8-1288bbd197a8"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36d5fd10-68f0-4d74-9392-f1ffd1eb6050">
+                    <propertyInstance
+                      Id="85105321-61a3-44be-9fa7-44c208285147"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de35a7a8-e417-4080-9cfe-57dea6613354">
+                    <propertyInstance
+                      Id="88d1ffb7-d1b3-4ee8-aab7-908e458614a7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="d12a0c95-0362-4609-bae2-63eb71282002"
+                LastKnownName="DataRepresentationDictionary"
+                LastKnownLocation="Package3_1519.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="10d0a5a2-7a82-4298-982e-c7d8abad9249"
+            name="stationLocator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6dedee94-1487-4ade-8056-11ce8e535834"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3DstationLocator"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b5ec2b49-b176-4fd8-a2a7-e4bdda6e09ec"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d3836bd-b890-4661-805e-5d778305994d">
+                    <propertyInstance
+                      Id="43969d4c-3e68-4159-b1ad-b137395f367c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5177eb4e-d878-4bc5-a44d-c61485b821d7">
+                    <propertyInstance
+                      Id="d6b8aa44-df83-40ae-a9ff-129af3e5c813"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="214a5de4-0c1a-494d-8d25-97500783abce">
+                    <propertyInstance
+                      Id="75ece679-dbb3-4b29-8f7f-bd066802374b"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6fac1310-dd6e-445b-b526-d9b70e9cd42a">
+                    <propertyInstance
+                      Id="23ab9eed-49e4-46ad-aa45-525d4957d16e"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a0f43fd-d488-4870-9c05-154d99d918ce">
+                    <propertyInstance
+                      Id="93e7b8c6-f729-4e62-9bf1-4bddacfa8b37"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="e8c5944a-4a45-4bdd-b8fa-8b4043b92ce1"
+                LastKnownName="IStationLocator"
+                LastKnownLocation="Package_1305.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e990cac8-cf00-43cf-82fc-e6518f851b11"
+            name="timeIntegrator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="69c23149-50ca-4891-b7c4-a786d4ff9557"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3DtimeIntegrator"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a46d43c0-f7a9-487d-8c1f-0a65e9c1d933"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0b33339-2170-4f58-8f17-975508cdf612">
+                    <propertyInstance
+                      Id="4d87f8a4-f3b2-41f8-99b2-b689f4fd1481"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d5b6a96-d24a-4d1b-9042-d7ab345531ca">
+                    <propertyInstance
+                      Id="7e866a0a-b592-4dca-bb16-ddb553f5cd11"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3118d81e-9d4e-496e-8526-114a21912b02">
+                    <propertyInstance
+                      Id="996546b6-ad20-4323-92cb-ed1379783302"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40633caa-813a-4c1c-9d81-85f488497937">
+                    <propertyInstance
+                      Id="3ffb9645-8691-4107-be1f-97394339c4a3"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc3f786b-0c39-4284-a44c-589eb6ee52cf">
+                    <propertyInstance
+                      Id="235f3c9e-5ab4-4e0f-b8d9-281b2c49c2f5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="1cf5cd8f-78c7-46ad-b8bc-beea993674f1"
+                LastKnownName="ITimeAxisIntegrator2"
+                LastKnownLocation="Package_1842.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="735dff76-842d-4e4a-a899-aec9f9611f61"
+            name="traceSource"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a98ed792-b4e3-4557-93a3-56e06ee45a9f"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3DtraceSource"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="16860876-68b4-454b-b273-04e8fea59c85"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eea47d2f-455f-42ca-9dfd-85dbc43f7d7b">
+                    <propertyInstance
+                      Id="66936679-52d0-4431-9efe-826a67f07818"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69177aa2-20e9-4fee-a69d-0ebcb67fcdb1">
+                    <propertyInstance
+                      Id="7d1ac066-8c8f-4934-b6ae-a42f7536203d"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06c87c40-618e-4b13-9ef6-a2deaed00331">
+                    <propertyInstance
+                      Id="cb4ea89e-0a90-47db-aac5-0f20984efb57"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c99cd16e-641c-4af1-9594-127898c979f6">
+                    <propertyInstance
+                      Id="66a76ec0-f63e-409b-babe-3837579a0f68"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34fdf68c-260d-44a6-881a-b5872f50df15">
+                    <propertyInstance
+                      Id="1e5e9538-035c-4dd2-9cd7-823345c9f12b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="7b632ac7-a0a7-4cde-b212-72332f19e4ed"
+                LastKnownName="TraceSource"
+                LastKnownLocation="Package1_1836.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="465026a0-8eea-4d49-a49f-1289700cd5ea"
+            name="stationsLats"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isOrdered="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6f163fd2-31a9-4101-aa0c-ccff2635e4be"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3DstationsLats"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7fc3b7bc-6f0d-4e22-a8a6-6dbc35ea6931"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb40c3d6-2e7a-462e-ad20-7076ef058d14">
+                    <propertyInstance
+                      Id="cf0bbd8e-c95d-4e9c-bdc3-44f4677636b9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d6bbaa9-8521-430d-bde6-34ef7bf91740">
+                    <propertyInstance
+                      Id="fcdd3c6c-1d8c-4561-b70a-843bdac59aa6"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f03c4688-649c-4350-979f-69db2bbf679a">
+                    <propertyInstance
+                      Id="83fdcc50-4d5d-4cbc-aeef-5547ee4bc5b7"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67e7f806-16f2-4a05-82c2-3f7ca6f0d533">
+                    <propertyInstance
+                      Id="8d0d8abf-af38-49ae-a2d1-8293809fdfca"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="feb73464-130a-40be-8c13-b06d3e69b377">
+                    <propertyInstance
+                      Id="6180617b-bd83-41bb-9acd-ab8d27774269"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString
+                Id="1bbc1c79-178c-48e2-bf99-a1100b506e2b"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="618e8f09-9ba7-483f-8efa-d513fc7ace69"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="29ca5287-e950-467d-ab6c-76dfcf5d5f55"
+                LastKnownName="Double"
+                LastKnownLocation="Package4_1519.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1a397212-3548-4cc1-9e67-aa74b62b4a79"
+            name="stationsLons"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isOrdered="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4c2e7b37-b48b-4a93-bf76-020d34bf532c"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3DstationsLons"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="99fecf0d-f1c4-4a10-b6ab-e6a35d9f5de8"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba0f5764-4ca8-4c85-8109-aa6d81cce085">
+                    <propertyInstance
+                      Id="1d1bc645-e0f0-489f-bede-5c4ca0e645fa"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d284564b-e7ad-4f95-bc6c-628bbf96ad26">
+                    <propertyInstance
+                      Id="114be833-cfbb-485c-8969-1564768d97ed"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5a7e6805-6bb5-4784-bf1e-79095ab49b92">
+                    <propertyInstance
+                      Id="212ef665-032a-41bb-9342-c0f6021421b2"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d37910d-c3e2-4aee-a19b-a826c321b184">
+                    <propertyInstance
+                      Id="0950e759-991a-451a-b3bf-2bf94cdfee68"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2238e625-f7db-4b8f-9108-c05f1aaa1d99">
+                    <propertyInstance
+                      Id="60859232-ffcd-4e7f-ac15-df82a72aa3e4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString
+                Id="80a35e7a-ac2a-4f31-a912-29035ce3a1d4"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="3326d813-9a8a-466e-9780-9d8ea83dc1b6"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="29ca5287-e950-467d-ab6c-76dfcf5d5f55"
+                LastKnownName="Double"
+                LastKnownLocation="Package4_1519.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e5d91b6a-048a-41d9-98ba-ff9348110f14"
+            name="TimeIntegratorBasedAverager"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="68e8204a-f348-470e-a76f-f323ca7d7d44"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DDataStorageDefinition)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5a495007-69c7-495a-9cb9-b2c294a138e9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a2b8076-0cc9-4ddf-9359-ad5abb6ac207">
+                    <propertyInstance
+                      Id="a330c8b9-9816-454b-90ea-b6fdd76cd2b5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5aad376-c4f0-4255-b359-ed9225b409ce">
+                    <propertyInstance
+                      Id="e7a99e37-9ed1-4c70-8de8-5fd7c2c34e15"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77377a44-e704-403e-8635-f3542cfcd2a5">
+                    <propertyInstance
+                      Id="f4cecc7d-04c0-4cca-8168-3def461e9be3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="051b47a2-10db-4ef8-9ac0-51c964841b13">
+                    <propertyInstance
+                      Id="9d572a97-d79e-4fa3-9db3-77c276785ebd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7706127d-d599-4315-b17b-ab31bca01db7">
+                    <propertyInstance
+                      Id="6ac7fdb8-2f8f-4ae4-80c5-ad7316af68e5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="206525c8-868d-44dd-a92b-557fb8953c5f">
+                    <propertyInstance
+                      Id="f8396d49-4f1f-4690-932a-4025fd688bd3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3c825766-f606-4a07-a95d-336c5b3edcd4"
+                  name="storageDefinition"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3c4de058-4138-458a-b245-edd9239ccd49"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DDataStorageDefinition)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DstorageDefinition"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5f96c5aa-e114-471e-877b-9f4426f97142"
+                      LastKnownName="DataStorageDefinition"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c1000047-643f-4b89-b9d9-5bca638f1595"
+                  name="timeIntegrator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2c52c1d0-cbb0-48e2-a379-8be4558b5791"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DDataStorageDefinition)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DtimeIntegrator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="1cf5cd8f-78c7-46ad-b8bc-beea993674f1"
+                      LastKnownName="ITimeAxisIntegrator2"
+                      LastKnownLocation="Package_1842.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="84b136a3-c798-43f8-b173-95f7bb9b5d7b"
+                  name="stationLocator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="52b3245d-7054-4311-b76d-c8be95e97d67"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DDataStorageDefinition)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DstationLocator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="e8c5944a-4a45-4bdd-b8fa-8b4043b92ce1"
+                      LastKnownName="IStationLocator"
+                      LastKnownLocation="Package_1305.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3c22f4f9-c6cb-49b3-bbef-afa216cd80b4"
+                  name="lats"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="f51716f7-0ef4-43ea-a3f4-99b7c93a6902"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DDataStorageDefinition)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dlats"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="09c63313-cab4-4b98-989c-d74f27ca2924"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="9acb181f-a4ad-4b22-a9a1-77fa54529801"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="29ca5287-e950-467d-ab6c-76dfcf5d5f55"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package4_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0b661054-2744-40a0-91ca-8cb4c313e470"
+                  name="lons"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="7f5252a2-80de-4d79-92d4-a699c3d69731"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DDataStorageDefinition)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dlons"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="20668c37-9269-4d2c-bb2e-a38c654fce4a"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b9965397-9424-4884-90c3-b2ef2bb413d2"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="29ca5287-e950-467d-ab6c-76dfcf5d5f55"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package4_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="85252b45-f153-4a43-898e-182858766ee9"
+                  name="stationsDimName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9e347509-59ec-49e7-bee2-3bc9ea501f48"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DDataStorageDefinition)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DDouble ArrayRank%3D1 ParentType%3DDouble))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DstationsDimName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d4146c2a-dbd4-4b39-8943-0cadc87d59ee"
+            name="GetAveragedTimeSeriesAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="97293288-5f7f-46c3-be74-efc185b9658c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3D(Name%3DGetAveragedTimeSeriesAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DIRequestContext)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DGeoCellTuple)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e2f1c084-bc78-404a-9524-83f046ec097e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83e083e0-e0fd-4072-bd2f-dac2e1183045">
+                    <propertyInstance
+                      Id="d0f97d4e-d4fc-483b-b701-fecec77e5b2e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8380be22-63a7-4bac-983b-d753f721025f">
+                    <propertyInstance
+                      Id="d435e5a1-1944-42e4-a6e5-8ef6e300ea30"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="652b9b8a-5a3d-47f2-bfee-2643e25585d5">
+                    <propertyInstance
+                      Id="d2c4e844-8ebd-4f41-82ab-e2161bc8e2b4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0e82907b-695c-44cc-b684-4111e1677a55">
+                    <propertyInstance
+                      Id="7abbe8b6-2cbf-4366-b32a-c4f225e903fd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4cf8e3bf-a100-445e-b19e-9077f7ec64c6">
+                    <propertyInstance
+                      Id="2b145722-5cb9-45f8-96a8-c4951f697f37"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe84011f-2983-4a0b-852b-9c1b34030251">
+                    <propertyInstance
+                      Id="e51b7bd9-daf2-449f-8627-24a240d64e6a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f84e4a85-d44d-4682-ab17-d9dc3897edd3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2349aaad-d7b1-43d9-bcf6-a54bb71cc744"
+                      LastKnownName="Task&lt;TNodes‎&gt;"
+                      LastKnownLocation="Package6_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="64f1ec50-358c-4096-b034-6f5ea85b77eb"
+                  name="context"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="455ced0c-ec02-49ea-8517-6047967cd11a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3D(Name%3DGetAveragedTimeSeriesAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DIRequestContext)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DGeoCellTuple)]) ParameterIdentifier%3Dcontext"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="deba4f54-8ad5-491a-8b68-010bbcf6dea6"
+                      LastKnownName="IRequestContext"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="498fb814-329c-430b-9598-5d3df3272582"
+                  name="cell"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ca223487-94d9-4373-a93b-f4f5b7402303"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAverager Member%3D(Name%3DGetAveragedTimeSeriesAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DIRequestContext)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DGeoCellTuple)]) ParameterIdentifier%3Dcell"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="84233070-693b-4780-a6f8-17f5a088c498"
+                      LastKnownName="GeoCellTuple"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c578908e-2d69-42eb-90f1-eb5bac0e3df2"
+            name="GetAveragedTimeSeriesAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bc78bb8a-4757-4741-8790-5e679d9494f0"
+                  name="storgeContext"
+                  direction="In">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="6da73ff7-8d42-4339-9ac5-2687c86a115f"
+                      LastKnownName="IStorageContext"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="565d4d8a-8042-4065-be59-b62e6549a19b"
+                  name="cell"
+                  direction="In">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="84233070-693b-4780-a6f8-17f5a088c498"
+                      LastKnownName="GeoCellTuple"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f1f0bd57-20f1-4557-a909-0f4667fcb4e1"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2349aaad-d7b1-43d9-bcf6-a54bb71cc744"
+                      LastKnownName="Task&lt;TNodes‎&gt;"
+                      LastKnownLocation="Package6_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ba0e1625-3ece-4b90-9346-e3c5f448121f"
+            name="GetAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="263bbe38-081c-4ecc-9b1f-9abdda933fb8"
+                  name="cell"
+                  direction="In">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="4494ad13-d99a-416d-a09e-a524312f6166"
+                      LastKnownName="ICellRequst"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="71db83cf-c760-4093-904b-d4bd3761aeb0"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ccba0856-c6e7-4051-a158-769075f86554"
+                      LastKnownName="Task&lt;T‎&gt;"
+                      LastKnownLocation="Package6_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e8c5944a-4a45-4bdd-b8fa-8b4043b92ce1"
+        name="IStationLocator"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="95c39656-8da2-463a-aec8-a401d75a8396"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8c6f698f-fc74-4963-b5a8-dcb9324bd298"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="38a71549-1319-4af7-b124-42ea5e84f339">
+                <propertyInstance
+                  Id="796401b9-ac43-4e18-8aa6-c309515a55c1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="06b5ff11-fdda-4638-9362-5af972019b7a">
+                <propertyInstance
+                  Id="70538ace-0939-4964-810f-789a7114b1fc"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="95b60a0b-c775-444e-8f3a-ab52f4d40fed">
+                <propertyInstance
+                  Id="4a3e8cce-dc62-4922-b344-20a654663090"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="62e4af5c-2312-46f8-ad02-12adccf5e43a">
+                <propertyInstance
+                  Id="35563ef2-2b1a-4f2a-b456-e6794e0ca8b8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="6f3f7553-14c1-46b2-a749-6e6c91dfc6da"
+            name="GetRelevantStationsIndices"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="483c8387-2253-4fe0-b2b7-45492152ece0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator Member%3D(Name%3DGetRelevantStationsIndices OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DGeoCellTuple)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="927fcd4f-4f41-47a8-980b-f35466382bd3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="572cfaaf-01f2-455f-971f-052e3fd73f35">
+                    <propertyInstance
+                      Id="412737be-054d-4f23-902d-e7c977758281"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95f57cce-8d98-46a6-b1e6-dcfa271decdc">
+                    <propertyInstance
+                      Id="86e7efd4-9d42-4300-8867-9ed0fe6f8343"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1b19f49-7db9-48f5-9859-44c46823aa7e">
+                    <propertyInstance
+                      Id="76f5e449-cbf4-471b-b89f-2862fdaf0389"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84448607-de55-43a5-b823-05ed70b43242">
+                    <propertyInstance
+                      Id="a51d70f1-d569-4e84-867b-39c22b5ac4b1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d35ead92-b1a9-49f3-8985-26e246be99c9">
+                    <propertyInstance
+                      Id="72944d11-811a-4b0d-9317-9ee7347d8b9b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4790bd07-7cb7-4065-b7f1-3718a2e2d177">
+                    <propertyInstance
+                      Id="d0ed6ba1-cdac-4941-9bbe-1f766543cb69"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="91147d35-5d74-493e-b17d-11065f548ed3"
+                  direction="Return"
+                  isOrdered="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="af6e4bc5-d2b6-4f69-8932-bc1609ecafdf"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c7be813d-e979-4abd-bf1b-a40d90858eaa"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3332def7-f5d7-479b-bd9b-c8b90e82a97f"
+                  name="cell"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6c2ffdae-e2e7-411d-86ed-d2e5a62e4b34"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator Member%3D(Name%3DGetRelevantStationsIndices OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DGeoCellTuple)]) ParameterIdentifier%3Dcell"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="84233070-693b-4780-a6f8-17f5a088c498"
+                      LastKnownName="GeoCellTuple"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2a32d59a-3f98-4fc4-a17d-3a5d782f0831"
+        name="TimeIntegratorBasedAveragerFactory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="04fc033d-da17-4ad8-99f2-04aff4a25c49"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAveragerFactory"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="df428b7e-160a-4a97-a17e-e25c47c22ac6"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ede3a99b-1226-4626-ae99-e7185d78add0">
+                <propertyInstance
+                  Id="81fec527-0003-44b8-a513-0c14156a6cf6"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b664885a-808f-4f63-891d-6b69ef1daa35">
+                <propertyInstance
+                  Id="69a110a2-ecf9-452d-b6a2-0bf5a3b30211"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="927b3a85-129b-4ace-a09c-955461e2198b">
+                <propertyInstance
+                  Id="6f968b3f-d21f-4a51-92f5-bdf9dfd84263"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="07b8495e-1111-40d0-9861-5a8f03cba6d7">
+                <propertyInstance
+                  Id="1de5601e-cfe6-45a9-85b5-c7aad74709ab"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="389c44aa-2507-4c3e-aeca-b51321c8e56a">
+                <propertyInstance
+                  Id="d49fbc5a-3339-4190-b372-7cdd5d8538e9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="e23d774e-a62b-4b06-89e5-c34b81d8359f">
+            <interfaceMoniker
+              Id="34ece337-de1b-42c2-a485-7611ec971c90"
+              LastKnownName="ICellRequestMapFactory"
+              LastKnownLocation="Package_1548.uml" />
+          </interfaceRealization>
+          <dependency
+            Id="463e2fce-b296-4dd8-b434-3a2e287df1f1">
+            <classMoniker
+              Id="3cf51bab-b6de-4a5c-bc77-9bbf30e046dd"
+              LastKnownName="TimeIntegratorBasedAverager"
+              LastKnownLocation="Package_1305.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c9bcb289-e156-4ba6-970b-567f53757c5f"
+            name="CreateAsync"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="68de6e86-f9da-456a-8fa7-7606a3818b40"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAveragerFactory Member%3D(Name%3DCreateAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DIStorageContext)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="51d80cfc-01b6-4af9-80c5-bca541ad59b8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36455176-e38b-4163-a5d5-82c1d13f47a5">
+                    <propertyInstance
+                      Id="509964de-038b-4eb0-9d30-b332604d7b95"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7e8c286-e99e-497f-94aa-aac42014917b">
+                    <propertyInstance
+                      Id="46a7471d-210f-4852-9083-13570af3fd6a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="63d6be74-f477-4285-9c41-09a74dbf4d2d">
+                    <propertyInstance
+                      Id="fbbee049-6ac7-4798-9aa9-b81c47d81bd4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e3d8a19-a552-4a13-97d6-90d1365ed7f5">
+                    <propertyInstance
+                      Id="0dcc7d74-f17f-48f9-b6e6-94ad1f5cc3f8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f39ad900-d62f-4e8e-b00c-2498dae10e3b">
+                    <propertyInstance
+                      Id="a11a4c75-293a-4499-95b5-e5f9554eb9b7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d642c632-6393-476d-8b44-9f0867eebe45">
+                    <propertyInstance
+                      Id="c0aaa71a-00e9-47f3-92bf-eff4e3dd519b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a7252fc3-5755-47d0-bbb8-cf880dbdbd4d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="eaaf273c-faaa-4c99-a653-a5ef30bd62c0"
+                      LastKnownName="Task&lt;IStorageTimeSeriesAverager‎&lt;RealValueNodes‎&gt;‎&gt;"
+                      LastKnownLocation="Package6_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="85616425-8523-425d-8e9e-149bd0602fec"
+                  name="storageContext"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7ed0dd02-93ab-4b14-b8bc-99074a764cda"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAveragerFactory Member%3D(Name%3DCreateAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DIStorageContext)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DstorageContext"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="6da73ff7-8d42-4339-9ac5-2687c86a115f"
+                      LastKnownName="IStorageContext"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="447d8bad-e566-41c3-ad89-63fbba247dc5"
+                  name="timeIntegrator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ae573d49-7f64-42b6-999d-ba5ab336452d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAveragerFactory Member%3D(Name%3DCreateAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DIStorageContext)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DtimeIntegrator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="1cf5cd8f-78c7-46ad-b8bc-beea993674f1"
+                      LastKnownName="ITimeAxisIntegrator2"
+                      LastKnownLocation="Package_1842.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9172d237-6d63-4a23-81b7-0e16401f65ee"
+                  name="stationLocator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="47b89ce9-a872-49c7-8434-b9ef70ce125f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAveragerFactory Member%3D(Name%3DCreateAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DIStorageContext)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DstationLocator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="e8c5944a-4a45-4bdd-b8fa-8b4043b92ce1"
+                      LastKnownName="IStationLocator"
+                      LastKnownLocation="Package_1305.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e74a5c12-5cd2-49bf-abec-51545fe008cc"
+                  name="latAxisName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="caf3e091-92fc-4501-881b-9accf8e8c881"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAveragerFactory Member%3D(Name%3DCreateAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DIStorageContext)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DlatAxisName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d989b819-1bed-4bce-990d-98da3c5d23f1"
+                  name="lonAxisName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="88bbe767-08ef-475f-8721-3a5c73e2d683"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAveragerFactory Member%3D(Name%3DCreateAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FDataSource%2Fbin%2FDebug%2FDataSource.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DIStorageContext)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.UncertaintyEvaluators Type%3DITimeAxisIntegrator2)%2C(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DIStationLocator)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DlonAxisName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="845a2ec5-56ec-4de7-b0f7-86767324f699"
+            name="TimeIntegratorBasedAveragerFactory"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="28976bff-6a6e-49ea-af08-9e9535b2efc3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DTimeIntegratorBasedAveragerFactory Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="70854c29-fbe9-4fa5-a587-54fd0f7c24e8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f92ecf99-d607-4a20-8efa-7e5343b06309">
+                    <propertyInstance
+                      Id="d7d20c5a-6dca-4650-b1e0-d793dbcc2d4d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef04f793-7339-41ab-b677-0b20e203a419">
+                    <propertyInstance
+                      Id="44322685-b634-4937-8219-119072e1f042"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66d6b48d-49f7-43d0-86b1-9459f43a0ce2">
+                    <propertyInstance
+                      Id="c73c91ea-e459-4c93-bcc0-3e697158c098"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54706403-786d-43c8-95a4-eba752aa8789">
+                    <propertyInstance
+                      Id="f7a40d80-74b7-4bef-a390-f695cf21d950"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e50636c-d67b-483b-b74d-7af2484df9fc">
+                    <propertyInstance
+                      Id="5d81372b-7f9e-4c62-820f-2e5646893eff"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3639e2de-8953-460f-9ed9-cb2ff9c29b0f">
+                    <propertyInstance
+                      Id="d5d01460-4361-4568-9a0d-402d17cb8b4e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="a45eb3ac-69aa-436e-9f37-3e6bb3812a3f"
+            name="CreateAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6024d118-8f6e-4068-b83e-0f9adabd8ef5"
+                  name="context"
+                  direction="In">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="6da73ff7-8d42-4339-9ac5-2687c86a115f"
+                      LastKnownName="IStorageContext"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6d3f3709-4bad-46d4-acf6-d364f191140f"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="74b7c5fc-6ee6-4238-a087-181452f2ca67"
+                      LastKnownName="Task&lt;ITimeSeriesAverager‎&lt;TNodes‎&gt;‎&gt;"
+                      LastKnownLocation="Package6_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2d51d1a7-c2e4-432c-9db7-d1d65f153299"
+            name="CreateAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="12c92efb-3327-44fe-a296-e4a53eae9911"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b61394d4-3c1e-4d06-8783-42fea45ee5a7"
+                      LastKnownName="Task&lt;IGeoCellTupleMap‎&lt;T‎&gt;‎&gt;"
+                      LastKnownLocation="Package6_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a4f0e049-667b-4f48-9a28-79cec25aa390"
+            name="CreateAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="071bf1eb-2fd3-4997-aea1-7a7b5274ad61"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="add4d70e-676f-40bb-bbaa-78f05ea39ce3"
+                      LastKnownName="Task&lt;ICellRequestMap‎&lt;T‎&gt;‎&gt;"
+                      LastKnownLocation="Package6_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="67e52a2a-b0bf-4a93-aad4-87dba39d8f13"
+        name="AllStationsStationLocator"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="dcab7722-d38e-4d02-accc-a4f042fa83b3"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DAllStationsStationLocator"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="cf858dbb-2033-4d43-9edd-237272a116ae"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="21612db2-bf2c-43ff-b5a6-185afda35fa5">
+                <propertyInstance
+                  Id="5383182d-508e-4d81-b807-d5046a95b3cd"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="895adeea-7f06-466a-8cf6-d5820696c8c3">
+                <propertyInstance
+                  Id="2ebcfeb3-52c5-41a9-81a7-e05d2c9356e7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="67d51b78-6345-44d8-bbd1-e439a56df2e6">
+                <propertyInstance
+                  Id="1c28301f-2b94-4a42-a829-8a3bf1ec3f43"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="575f54ab-3be5-46da-8e84-920862559953">
+                <propertyInstance
+                  Id="c9ec763f-17a4-4466-aa24-3f6fb2a278f5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="161640fe-1c16-414c-ac69-e6a899f77b71">
+                <propertyInstance
+                  Id="ab4f9509-8054-42e3-8591-4822fe73e516"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="076f55c1-e601-4c3a-85af-d6767900f40c">
+            <interfaceMoniker
+              Id="e8c5944a-4a45-4bdd-b8fa-8b4043b92ce1"
+              LastKnownName="IStationLocator"
+              LastKnownLocation="Package_1305.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="4fd7a5e5-e26b-4b68-a6fc-64c3ec9a9261"
+            name="results"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isOrdered="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="fbd17c6a-1f71-444a-bbef-0bc30a18c313"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DAllStationsStationLocator Member%3Dresults"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="681b6ac3-1d6e-43d9-af5f-02e6c7fc8861"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1a632e2-21e8-454d-8600-480072fc39b0">
+                    <propertyInstance
+                      Id="700e5b06-b8b6-40d5-8c3b-1597ca547d92"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2d38b1f-ac1c-495d-9fbf-4584fd3f01e1">
+                    <propertyInstance
+                      Id="536be5aa-74d5-4168-97c9-fe6735d67316"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f466f880-183e-4460-a362-bd9e3136d816">
+                    <propertyInstance
+                      Id="8dbde763-d460-42a5-beda-f166d1fb443a"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d056dea1-970f-4782-9e90-2afeafad16ad">
+                    <propertyInstance
+                      Id="72c3841f-3b77-4c51-a24f-0c35506f12a7"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40b94a43-bdec-4cbb-a6ce-ec7f97d01647">
+                    <propertyInstance
+                      Id="021e268c-1bfa-482b-916b-4644659f03a0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString
+                Id="5d180c51-b4ba-42db-b57c-a0d121467740"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="71036d4d-3993-46e2-8a5b-baec83447f88"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Model.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="497e65ed-1f2e-4b7b-bd37-19daebe4c046"
+            name="AllStationsStationLocator"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a06d4132-83b5-4bb9-8f90-32bb570760bc"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DAllStationsStationLocator Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e3e3f905-3424-45d2-ac3e-14027b3a05b0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7015273a-9158-4476-97a6-a447342cb84b">
+                    <propertyInstance
+                      Id="62772594-ab64-4b87-a7be-bde9db9f597d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7c1210a-e9fd-4079-ba6a-8ebda96e70eb">
+                    <propertyInstance
+                      Id="22d087b3-eba0-469b-9f74-55b0fc74b752"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5175890-0517-4e8a-a24f-6de16e2c1173">
+                    <propertyInstance
+                      Id="172f5634-ed23-4c85-9a7b-c061c615ec88"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="72188c2e-7ce6-45a6-9019-319390fd6db4">
+                    <propertyInstance
+                      Id="a5471511-7f41-4137-b64f-650127f6d25f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d6ec720-e9a4-4a9f-ae32-32a0e93f1058">
+                    <propertyInstance
+                      Id="92ba0314-ae62-404d-999a-9a34f6a0726d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bf21b94b-0025-420e-954c-7f2eb6053185">
+                    <propertyInstance
+                      Id="c7c896eb-4945-483a-98a0-a4310ae214b5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a3ec9cdf-7ff5-4ea3-80d5-45ee629ef6b2"
+                  name="stationCount"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6abf53bb-630f-4f31-83b7-f10d841a0d00"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DAllStationsStationLocator Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DstationCount"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1f106b04-fc58-4e3a-b0aa-179fef7900b5"
+            name="GetRelevantStationsIndices"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4cd387a6-68a3-4c83-bf3e-87dd8ea5e8f8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DAllStationsStationLocator Member%3D(Name%3DGetRelevantStationsIndices OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DGeoCellTuple)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="324a47ad-63b0-43bc-b1cb-ea9258ef58b5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3126e7a-e5b0-4df6-b2d2-f08e9ec51796">
+                    <propertyInstance
+                      Id="0f1fedb2-6e3c-42ef-a3a6-0989488663aa"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6ed9b97-5053-4326-a069-2061e2d5fed5">
+                    <propertyInstance
+                      Id="9a866d2c-33a4-4f3d-af67-623f5739b8f5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78cff895-13f8-49b3-8fe6-830362f2783f">
+                    <propertyInstance
+                      Id="2772c88f-19e2-440e-87bb-b6f0139132c9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="646a6d01-dfed-48ee-8595-c60b6044991c">
+                    <propertyInstance
+                      Id="6ccb1315-36c8-4564-8363-9855c4308578"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9601f17-ebd0-4b15-bec4-3a0f5262a052">
+                    <propertyInstance
+                      Id="9d09de91-7e16-484c-96c1-137572aa67f7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="05c0b46b-c989-4a6e-936e-8c505139e489">
+                    <propertyInstance
+                      Id="a319184c-81f3-4d8d-ae33-b246ef6776aa"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f038708-1f8d-43b2-b3af-09872ea1b453"
+                  direction="Return"
+                  isOrdered="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="423c3691-ebf1-4dfd-9f57-11916e03552c"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ef22bf84-d4a9-470f-9e63-cdfaead622fe"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a73bd5e6-8c79-4de7-8e25-044ea3cc5b9c"
+                  name="cell"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1fff904b-12b7-4d41-9383-04bc188a35ad"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2.DataHandlers.ScatteredPoints.TimeSeries Type%3DAllStationsStationLocator Member%3D(Name%3DGetRelevantStationsIndices OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2Fsources%2Fvstfmsrc%2FFetchClimate%2FFetchClimate%2FNNI%2Fsrc%2FFetchMath%2Fbin%2FDebug%2FFetchMath.dll Namespace%3DMicrosoft.Research.Science.FetchClimate2 Type%3DGeoCellTuple)]) ParameterIdentifier%3Dcell"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="84233070-693b-4780-a6f8-17f5a088c498"
+                      LastKnownName="GeoCellTuple"
+                      LastKnownLocation="Package3_1519.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,23 @@
+provenance,sd,values,lon,lat,years,days,hours
+409,12.7432031917511,78.9045244645211,7.17112486398948,46.9062076439149,1990,1,0
+409,12.7432031917511,52.821841758378,28.1769842389895,53.9439835552733,2011,366,24
+409,12.7432031917511,55.0144257390496,38.0207342389895,55.8637725605901,,,
+409,12.7432031917511,52.5993451087401,30.7258123639895,59.8344828401749,,,
+409,12.7432031917511,68.9306263523199,11.0383123639895,59.9226957871484,,,
+
+ID,Column,Variable Name,Data Type,Rank,Missing Value,Dimensions
+1,A,provenance,UInt16,1,,i:5
+2,B,sd,Double,1,,i:5
+3,C,values,Double,1,,i:5
+4,D,lon,Double,1,,i:5
+5,E,lat,Double,1,,i:5
+6,F,years,Int32,1,,t_y:2
+7,G,days,Int32,1,,t_d:2
+8,H,hours,Int32,1,,t_h:2
+
+Variable,Key,Type,Value
+0,environmentVariable,String,prate
+0,timeStamp,DateTime,10/11/2013 12:23:47
+6,IsIntervals,Boolean,True
+7,IsIntervals,Boolean,True
+8,IsIntervals,Boolean,True

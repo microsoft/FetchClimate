@@ -1,0 +1,158 @@
+html { }
+
+@import "_variables";
+@import "_mixins";
+@import "_sprites";
+
+section.export {
+  .box-sizing(border-box);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+
+  .export-panel {
+    .box-sizing(border-box);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    padding: 20px 0;
+    width: @side-panel-width;
+    vertical-align: top;
+    overflow: hidden;
+
+    .fc-panel-content {
+      padding: 20px;
+
+      .action-type {
+        &:nth-child(odd) {
+          margin-bottom: 40px;
+        }
+      }
+      strong {
+        display: block;
+        margin-bottom: 25px;
+      }
+  
+      .action-row {
+        margin-bottom: 21px;
+      }
+
+      .action-img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 11px;
+        cursor: pointer;
+      }
+
+      .action-desc {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .action-send-by-email {
+        .sprite-send-by-email-icon;
+
+        &:hover {
+          .sprite-send-by-email-icon-hover;
+        }
+
+        &:disabled {
+          .sprite-send-by-email-icon-disabled;
+        }
+      }
+
+      .action-data-to-file {
+        .sprite-data-to-file-icon;
+
+        &:hover {
+          .sprite-data-to-file-icon-hover;
+        }
+
+        &:disabled {
+          .sprite-data-to-file-icon-disabled;
+        }
+      }
+
+      .action-data-to-image {
+        .sprite-data-to-image-icon;
+
+        &:hover {
+          .sprite-data-to-image-icon-hover;
+        }
+
+        &:disabled {
+          .sprite-data-to-image-icon-disabled;
+        }
+      }
+
+      .action-copy-url {
+        .sprite-copy-url-icon;
+
+        &:hover {
+          .sprite-copy-url-icon-hover;
+        }
+
+        &:disabled {
+          .sprite-copy-url-icon-disabled;
+        }
+      }
+    }
+  }
+
+  .dialog-overlay {
+    .square(100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1002;
+    display: none;
+    background-color: @bg-gray-darker;
+    opacity: 0.3;
+  }
+
+  .copy-to-clipboard-dialog {
+    .box-sizing();
+    .unselectable();
+    .size(100%, 300px);
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 1003;
+    display: none;
+    margin-top: -150px;
+    padding: 20px 30%;
+    background-color: @bg-white;
+
+    @media only screen and (max-width: 1100px) {
+      padding: 20px 10%;
+    }
+
+    .dialog-header {
+      .text-overflow();
+      margin-bottom: 20px;
+      font-size: 36px;
+    }
+
+    .url-input {
+      margin: 5px 0;
+      min-width: 300px;
+      width: 50%;
+
+      @media only screen and (max-width: 1100px) {
+        min-width: 200px;
+      }
+    }
+
+    .close-button {
+      position: absolute;
+      right: 30%;
+      bottom: 20px;
+
+      @media only screen and (max-width: 1100px) {
+        right: 10%;
+      }
+    }
+  }
+}

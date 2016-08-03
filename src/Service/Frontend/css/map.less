@@ -1,0 +1,202 @@
+﻿html {}
+
+@import "_variables";
+@import "_mixins";
+@import "_sprites";
+
+.geo-panel {
+  .square(100%);
+  position: relative;
+  display: none;
+  margin-left: @side-panel-width;
+  width: ~"-webkit-calc(100% - @{side-panel-width})";
+  width: ~"-moz-calc(100% - @{side-panel-width})";
+  width: ~"calc(100% - @{side-panel-width})";
+
+  .geo-plot {
+    .square(100%);
+    display: block;
+    background: transparent;
+
+    .geo-draggable {
+      overflow: hidden;
+
+      .geo-content {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+
+  .MicrosoftMap {
+    z-index: 1001 !important;
+
+    button {
+      display: none;
+    }
+
+    .period-overlay {
+      position: fixed;
+      background-color: @map-overlay-color;
+      opacity: 0.7;
+      z-index: 1002;
+    }
+
+    .point-label {
+      color: @map-point-label-color;
+      white-space: nowrap;
+      font-weight: bold;
+      font-size: 18px;
+
+      &.active {
+        color: @map-active-point-label-color;
+      }
+    }
+
+    .region-label {
+      .text-overflow();
+      color: @map-region-label-color;
+      font-weight: bold;
+      font-size: 18px;
+
+      &.active {
+        color: @map-active-region-label-color;
+      }
+    }
+  }
+
+  .geo-map-controls {
+    .size(@map-controls-width, 4 * @map-controls-width);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1001;
+    margin-top: -2 * @map-controls-width;
+
+    ul {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      .fc-map-icon {
+        .square(@map-controls-width);
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &.zoom-in {
+          background-image: @img-map-zoom-in-icon;
+        }
+
+        &.zoom-out {
+          background-image: @img-map-zoom-out-icon;
+        }
+
+        &.search {
+          background-image: @img-map-search-icon;
+        }
+
+        &.options {
+          background-image: @img-map-options-icon;
+        }
+      }
+    }
+  }
+}
+
+.map-search-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: @side-panel-width;
+  padding: 20px;
+  word-wrap: break-word;
+  z-index: 1002;
+
+  .fc-panel-content {
+    position: relative;
+  }
+
+  .search-input {
+    font-size: 16px;
+    width: 85%;
+  }
+
+  .search-message {
+    display: none;
+    margin: 20px 0;
+  }
+
+  .search-progress {
+    .square(32px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    background-image: @search-progress-animation;
+  }
+}
+
+.map-options-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: @side-panel-width;
+  padding: 20px;
+  word-wrap: break-word;
+  z-index: 1002;
+
+  .control-header {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .map-type-selector {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .opacity-slider {
+  }
+}
+
+// Search autocomplete.
+// TODO: Move this to local copy of jQueryUI?
+.ui-autocomplete {
+  .box-sizing();
+  z-index: 1002 !important;
+  padding: 0 !important;
+  width: 0.85 * @side-panel-width - 40px;
+  border: 2px solid @input-border-color !important;
+  border-top: none !important;
+}
+
+.ui-menu-item {
+  position: relative !important;
+  z-index: 1002 !important;
+  border-bottom: 2px solid @input-border-color !important;
+  font-size: 16px !important;
+
+  &:last-child {
+    border-bottom: none !important;
+  }
+
+  .ui-corner-all {
+    padding: 10px 5px !important;
+  }
+}
+
+.ui-corner-all {
+  border-radius: 0 !important;
+}
+
+.ui-state-focus {
+  padding: 10px 5px !important;
+  background: none !important;
+  background-color: @selected-item-bg-color !important;
+  color: @text-white !important;
+}

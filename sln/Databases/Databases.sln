@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FetchConfigurationDB", "..\..\src\Service\FetchConfigurationDB\FetchConfigurationDB.sqlproj", "{522CA176-32A1-4800-B891-3235F129D350}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "JobDB", "..\..\src\Service\JobDB\JobDB.sqlproj", "{21BFF2E0-F6D3-4AA3-8F4D-6BFEE22D5545}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://vstfmsrc:8080/tfs/cscience
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\..\\src\\Service\\FetchConfigurationDB\\FetchConfigurationDB.sqlproj
+		SccProjectName1 = ../../src/Service/FetchConfigurationDB
+		SccLocalPath1 = ..\\..\\src\\Service\\FetchConfigurationDB
+		SccProjectUniqueName2 = ..\\..\\src\\Service\\JobDB\\JobDB.sqlproj
+		SccProjectName2 = ../../src/Service/JobDB
+		SccLocalPath2 = ..\\..\\src\\Service\\JobDB
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{522CA176-32A1-4800-B891-3235F129D350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522CA176-32A1-4800-B891-3235F129D350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522CA176-32A1-4800-B891-3235F129D350}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{522CA176-32A1-4800-B891-3235F129D350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522CA176-32A1-4800-B891-3235F129D350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522CA176-32A1-4800-B891-3235F129D350}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{21BFF2E0-F6D3-4AA3-8F4D-6BFEE22D5545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21BFF2E0-F6D3-4AA3-8F4D-6BFEE22D5545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21BFF2E0-F6D3-4AA3-8F4D-6BFEE22D5545}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{21BFF2E0-F6D3-4AA3-8F4D-6BFEE22D5545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21BFF2E0-F6D3-4AA3-8F4D-6BFEE22D5545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21BFF2E0-F6D3-4AA3-8F4D-6BFEE22D5545}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
